@@ -1,4 +1,14 @@
 {
+  "name": "brain-diver",
+  "author": "mizunoto",
+  "private": false,
+  "license": "CC0-1.0",
+  "repository": "https://github.com/brain-diver/brain-diver.git",
+  "bugs": {
+    "url": "https://github.com/brain-diver/brain-diver/issues"
+  },
+  "homepage": "https://github.com/brain-diver/brain-diver#readme",
+  "version": "1.0.0",
   "devDependencies": {
     "@langchain/textsplitters": "^0.1.0",
     "langchain": "^0.3.31"
