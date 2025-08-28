@@ -3,8 +3,8 @@
     "pageContent": "# 隔絶輪廻のブレインダイバー：プロジェクト・コンパイラ\r\n\r\n## はじめに",
     "metadata": {
       "source": "private\\compiler.md",
-      "access_level": "public",
-      "star_level": "level0",
+      "access_level": "secret",
+      "level": "level1",
       "loc": {
         "lines": {
           "from": 1,
@@ -18,7 +18,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -32,7 +32,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -46,7 +46,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level5",
+      "level": "level5",
       "loc": {
         "lines": {
           "from": 2,
@@ -60,7 +60,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -74,7 +74,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -88,7 +88,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -102,7 +102,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -116,7 +116,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -130,7 +130,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -144,7 +144,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -158,7 +158,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -172,7 +172,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -186,7 +186,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -200,7 +200,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -214,7 +214,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -228,7 +228,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -242,7 +242,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -256,7 +256,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -270,7 +270,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -284,7 +284,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -298,7 +298,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -312,7 +312,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -326,7 +326,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -340,7 +340,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -354,7 +354,7 @@
     "metadata": {
       "source": "private\\compiler.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -367,8 +367,8 @@
     "pageContent": "# 隔絶輪廻のブレインダイバー：ディープログ・データ\r\n\r\n## 文書の目的と警告",
     "metadata": {
       "source": "private\\deep_log.md",
-      "access_level": "public",
-      "star_level": "level0",
+      "access_level": "secret",
+      "level": "level1",
       "loc": {
         "lines": {
           "from": 1,
@@ -382,7 +382,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -396,7 +396,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -410,7 +410,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -424,7 +424,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -438,7 +438,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -452,7 +452,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -466,7 +466,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -480,7 +480,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -494,7 +494,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -508,7 +508,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -522,7 +522,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -536,7 +536,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level4",
+      "level": "level4",
       "loc": {
         "lines": {
           "from": 2,
@@ -550,7 +550,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -564,7 +564,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -578,7 +578,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -592,7 +592,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -606,7 +606,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level6",
+      "level": "level6",
       "loc": {
         "lines": {
           "from": 2,
@@ -620,7 +620,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level5",
+      "level": "level5",
       "loc": {
         "lines": {
           "from": 2,
@@ -634,7 +634,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -648,7 +648,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level5",
+      "level": "level5",
       "loc": {
         "lines": {
           "from": 2,
@@ -662,7 +662,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level3",
+      "level": "level3",
       "loc": {
         "lines": {
           "from": 2,
@@ -676,7 +676,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level4",
+      "level": "level4",
       "loc": {
         "lines": {
           "from": 2,
@@ -690,7 +690,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level4",
+      "level": "level4",
       "loc": {
         "lines": {
           "from": 2,
@@ -704,7 +704,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level5",
+      "level": "level5",
       "loc": {
         "lines": {
           "from": 2,
@@ -718,7 +718,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level5",
+      "level": "level5",
       "loc": {
         "lines": {
           "from": 2,
@@ -732,7 +732,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level5",
+      "level": "level5",
       "loc": {
         "lines": {
           "from": 2,
@@ -746,7 +746,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level1",
+      "level": "level1",
       "loc": {
         "lines": {
           "from": 2,
@@ -760,7 +760,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level3",
+      "level": "level3",
       "loc": {
         "lines": {
           "from": 2,
@@ -774,7 +774,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level4",
+      "level": "level4",
       "loc": {
         "lines": {
           "from": 2,
@@ -788,7 +788,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level3",
+      "level": "level3",
       "loc": {
         "lines": {
           "from": 2,
@@ -802,7 +802,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level3",
+      "level": "level3",
       "loc": {
         "lines": {
           "from": 2,
@@ -816,7 +816,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level6",
+      "level": "level6",
       "loc": {
         "lines": {
           "from": 2,
@@ -830,7 +830,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level6",
+      "level": "level6",
       "loc": {
         "lines": {
           "from": 2,
@@ -844,7 +844,7 @@
     "metadata": {
       "source": "private\\deep_log.md",
       "access_level": "secret",
-      "star_level": "level7",
+      "level": "level7",
       "loc": {
         "lines": {
           "from": 2,
@@ -858,7 +858,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 1,
@@ -872,7 +872,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -886,7 +886,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -900,7 +900,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -914,7 +914,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -928,7 +928,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -942,7 +942,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -956,7 +956,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -970,7 +970,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -984,7 +984,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -998,7 +998,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -1012,7 +1012,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 16,
@@ -1026,7 +1026,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 23,
@@ -1040,7 +1040,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -1054,7 +1054,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -1068,7 +1068,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -1082,7 +1082,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -1096,7 +1096,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,
@@ -1110,7 +1110,7 @@
     "metadata": {
       "source": "public\\protocol.md",
       "access_level": "public",
-      "star_level": "level0",
+      "level": "level0",
       "loc": {
         "lines": {
           "from": 2,

@@ -3,6 +3,8 @@ import * as path from "path";
 import { MarkdownTextSplitter } from "langchain/text_splitter";
 import { Document } from "langchain/document";
 
+const levelPrefix = 'level';
+
 async function getMarkdownFiles(dir) {
     const dirents = await fs.readdir(dir, { withFileTypes: true });
     const files = await Promise.all(
@@ -16,20 +18,17 @@ async function getMarkdownFiles(dir) {
 
 /**
  * レベル名からメタデータを生成するヘルパー関数
- * @param {string} levelName - 'public', 'star_3' などのレベル名
+ * @param {string} levelName - 'level0', 'level3' などのレベル名
  * @param {string} sourcePath - ファイルの相対パス
  * @returns {object} - メタデータオブジェクト
  */
 function getMetadataFromLevel(levelName, sourcePath) {
-    const isSecret = levelName.startsWith('level');
-    const metadata = {
+    const isSecret = levelName !== `${levelPrefix}0`;
+    return {
         source: sourcePath,
-        access_level: levelName !== 'level0' ? 'secret' : 'public',
+        access_level: isSecret ? 'secret' : 'public',
+        level: levelName,
     };
-    if (isSecret) {
-        metadata.star_level = levelName;
-    }
-    return metadata;
 }
 
 async function main() {
@@ -52,7 +51,7 @@ async function main() {
         returnIntermediateDocuments: false,
     });
 
-    const secretTagRegex = /<!--\s*SECRET:\s*([\w-]+)\s*-->/g;
+    const secretTagRegex = new RegExp('<!--\s*SECRET:\s*(', levelprefix, '\d+)\s*', 'g');
 
     for (const filePath of allFiles) {
         console.log(`処理中: ${filePath}`);
@@ -60,18 +59,16 @@ async function main() {
         const relativePath = path.relative(sourceDir, filePath);
         const pathParts = relativePath.split(path.sep);
 
-        // VVVVVV ここからが新しいロジック VVVVVV
+        // VVVVVV ここが新しいロジック VVVVVV
+        // --- ファイルパスからデフォルトのレベルを決定 ---
+        // publicフォルダ内ならlevel0、それ以外（secret/private）ならlevel1をデフォルトとする
+        const isPublic = pathParts[0] === 'public';
+        let currentLevel = isPublic ? 'level0' : 'level1';
+        // ^^^^^^ ここが新しいロジック ^^^^^^
 
-        // --- ステップ1: ファイルパスからデフォルトのレベルを決定 ---
-        let currentLevel = 'level0';
-        if (pathParts[0] === 'secret' && pathParts.length > 1) {
-            // 例: 'secret/star_3/file.md' -> 'star_3'
-            currentLevel = pathParts[1];
-        }
 
-        // --- ステップ2: SECRETタグでファイルをブロックに分割 ---
         const blocks = fileContent.split(secretTagRegex);
-        let textAccumulator = blocks[0]; // 最初のタグより前のテキスト
+        let textAccumulator = blocks[0];
 
         for (let i = 1; i < blocks.length; i += 2) {
             const nextLevel = blocks[i];
@@ -97,7 +94,6 @@ async function main() {
         }
     }
 
-    // 結果をJSONファイルとして出力
     await fs.mkdir(outputDir, { recursive: true });
     await fs.writeFile(outputFile, JSON.stringify(allChunks, null, 2));
 
