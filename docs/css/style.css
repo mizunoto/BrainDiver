@@ -1,0 +1,195 @@
+:root {
+    --color-bg-dark: #100f1c; /* Very dark blue-purple */
+    --color-bg-medium: #1a1a2e; /* Slightly lighter for content areas */
+    --color-bg-light: #252540; /* For chunk backgrounds */
+    --color-text-primary: #e0e0e0; /* Light gray for main text */
+    --color-text-secondary: #a0a0ff; /* Muted blue for metadata */
+    --color-neon-blue: #00f0ff; /* Bright cyan */
+    --color-neon-purple: #bf00ff; /* Bright purple */
+    --color-border-dark: #3a3a5a; /* Dark border */
+    --color-border-light: #5a5a80; /* Lighter border for highlights */
+
+    /* Using system fonts for broad compatibility. For a true cyberpunk feel, consider external fonts like 'Orbitron' or 'Rajdhani' for --font-primary and 'Roboto Mono' or 'Fira Code' for --font-secondary. */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: 'Cascadia Code', 'Fira Code', 'Roboto Mono', monospace;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: var(--font-secondary);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-dark);
+    line-height: 1.6;
+    overflow: hidden; /* Prevent body scroll, app-container handles it */
+}
+
+/* Custom Scrollbar Styles for a futuristic look */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-bg-medium);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-neon-blue);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neon-purple);
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    width: 280px;
+    background-color: var(--color-bg-medium);
+    border-right: 1px solid var(--color-border-dark);
+    padding: 1.5em 1em;
+    overflow-y: auto;
+    flex-shrink: 0;
+    box-shadow: 2px 0 10px rgba(0, 240, 255, 0.1); /* Subtle neon shadow */
+}
+
+.nav-title {
+    font-family: var(--font-primary);
+    color: var(--color-neon-blue);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-shadow: 0 0 8px var(--color-neon-blue); /* Neon glow */
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding: 0.8em 1em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    color: var(--color-text-primary);
+    font-size: 0.95em;
+}
+
+.nav-menu li:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    border-color: var(--color-neon-blue);
+    color: var(--color-neon-blue);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+    transform: translateX(5px);
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 2.5em 3em;
+    overflow-y: auto;
+    background-color: var(--color-bg-dark); /* Match body background */
+}
+
+.welcome-title, .content-title {
+    font-family: var(--font-primary);
+    color: var(--color-neon-purple);
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    text-shadow: 0 0 12px var(--color-neon-purple);
+    border-bottom: 1px dashed var(--color-border-light);
+    padding-bottom: 0.5em;
+}
+
+.welcome-text {
+    font-size: 1.1em;
+    color: var(--color-text-primary);
+}
+
+/* Chunk Styling */
+.document-chunk {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 15px rgba(191, 0, 255, 0.08); /* Subtle purple glow */
+    transition: all 0.3s ease;
+}
+
+.document-chunk:hover {
+    border-color: var(--color-neon-purple);
+    box-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
+}
+
+.chunk-header {
+    font-family: var(--font-primary);
+    color: var(--color-neon-blue);
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    text-shadow: 0 0 6px var(--color-neon-blue);
+}
+
+.chunk-content {
+    color: var(--color-text-primary);
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.chunk-metadata {
+    font-family: var(--font-secondary);
+    font-size: 0.85em;
+    color: var(--color-text-secondary);
+    border-top: 1px dashed var(--color-border-dark);
+    padding-top: 0.8em;
+    margin-top: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border-dark);
+        padding-bottom: 1em;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu li {
+        margin: 0.5em;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 1.5em;
+    }
+
+    .welcome-title, .content-title {
+        font-size: 2em;
+    }
+
+    .chunk-header {
+        font-size: 1.5em;
+    }
+}

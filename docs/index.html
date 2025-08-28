@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrainDiver ドキュメント</title>
-    <style>
-        /* 簡単なデザイン */
-        body { font-family: sans-serif; display: flex; margin: 0; }
-        nav { width: 250px; border-right: 1px solid #ccc; padding: 1em; height: 100vh; overflow-y: auto; }
-        main { flex-grow: 1; padding: 2em; }
-        nav ul { list-style: none; padding: 0; }
-        nav li { cursor: pointer; padding: 0.5em; border-radius: 4px; }
-        nav li:hover { background-color: #f0f0f0; }
-        .chunk { border: 1px solid #eee; padding: 1em; margin-bottom: 1em; border-radius: 8px; }
-        .chunk h3 { margin-top: 0; }
-        .metadata { font-size: 0.8em; color: #666; font-family: monospace; }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
+    <div class="app-container">
+        <!-- 左側のナビゲーションメニュー -->
+        <nav class="sidebar-nav">
+            <h2 class="nav-title">ドキュメント一覧</h2>
+            <ul id="document-menu" class="nav-menu">
+                <!-- ここにJSでファイルリストが挿入されます -->
+            </ul>
+        </nav>
 
-    <!-- 左側のナビゲーションメニュー（JSが自動で生成します） -->
-    <nav>
-        <h2>ドキュメント一覧</h2>
-        <ul id="document-menu">
-            <!-- ここにJSでファイルリストが挿入されます -->
-        </ul>
-    </nav>
-
-    <!-- 右側のコンテンツ表示エリア -->
-    <main id="content-area">
-        <h1>ドキュメントへようこそ</h1>
-        <p>左のメニューから表示したいドキュメントを選択してください。</p>
-    </main>
+        <!-- 右側のコンテンツ表示エリア -->
+        <main id="content-area" class="main-content">
+            <h1 class="welcome-title">ドキュメントへようこそ</h1>
+            <p class="welcome-text">左のメニューから表示したいドキュメントを選択してください。</p>
+        </main>
+    </div>
 
     <script>
         // --- ここからがJavaScriptの魔法です ---
@@ -82,28 +74,29 @@
         // 4. メニュー項目がクリックされた時に、対応するコンテンツを表示する関数
         function displayContent(sourceFile) {
             contentArea.innerHTML = ''; // コンテンツエリアを初期化
-            
+
             const chunksToDisplay = groupedData[sourceFile];
             if (!chunksToDisplay) return;
 
             // ファイル名を見出しとして表示
             const h1 = document.createElement('h1');
+            h1.className = 'content-title'; // Apply new class for styling
             h1.textContent = sourceFile;
             contentArea.appendChild(h1);
 
             // 各チャンクをHTMLとして整形して表示
             chunksToDisplay.forEach(chunk => {
                 const chunkDiv = document.createElement('div');
-                chunkDiv.className = 'chunk';
-                
+                chunkDiv.className = 'document-chunk'; // Apply new class for styling
+
                 // メタデータから見出しを生成
                 const header = chunk.metadata.Header3 || chunk.metadata.Header2 || chunk.metadata.Header1 || 'コンテンツ';
                 const metadataInfo = `Level: ${chunk.metadata.level} | Access: ${chunk.metadata.access_level}`;
 
                 chunkDiv.innerHTML = `
-                    <h3>${header}</h3>
-                    <p>${chunk.pageContent.replace(/\n/g, '<br>')}</p>
-                    <div class="metadata">${metadataInfo}</div>
+                    <h3 class="chunk-header">${header}</h3>
+                    <p class="chunk-content">${chunk.pageContent.replace(/\n/g, '<br>')}</p>
+                    <div class="chunk-metadata">${metadataInfo}</div>
                 `;
                 contentArea.appendChild(chunkDiv);
             });
@@ -113,4 +106,5 @@
         loadData();
     </script>
 </body>
+
 </html>
