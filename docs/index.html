@@ -45,7 +45,7 @@
         async function loadData() {
             try {
                 // 同じリポジトリ内のdist/rag_database.jsonを読み込む
-                const response = await fetch('./dist/rag_database.json');
+                const response = await fetch('../dist/rag_database.json');
                 const chunks = await response.json();
 
                 // 2. チャンクをファイル名ごとにグループ化する
