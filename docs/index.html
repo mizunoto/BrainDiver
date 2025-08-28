@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainDiver ドキュメント</title>
+    <style>
+        /* 簡単なデザイン */
+        body { font-family: sans-serif; display: flex; margin: 0; }
+        nav { width: 250px; border-right: 1px solid #ccc; padding: 1em; height: 100vh; overflow-y: auto; }
+        main { flex-grow: 1; padding: 2em; }
+        nav ul { list-style: none; padding: 0; }
+        nav li { cursor: pointer; padding: 0.5em; border-radius: 4px; }
+        nav li:hover { background-color: #f0f0f0; }
+        .chunk { border: 1px solid #eee; padding: 1em; margin-bottom: 1em; border-radius: 8px; }
+        .chunk h3 { margin-top: 0; }
+        .metadata { font-size: 0.8em; color: #666; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+    <!-- 左側のナビゲーションメニュー（JSが自動で生成します） -->
+    <nav>
+        <h2>ドキュメント一覧</h2>
+        <ul id="document-menu">
+            <!-- ここにJSでファイルリストが挿入されます -->
+        </ul>
+    </nav>
+
+    <!-- 右側のコンテンツ表示エリア -->
+    <main id="content-area">
+        <h1>ドキュメントへようこそ</h1>
+        <p>左のメニューから表示したいドキュメントを選択してください。</p>
+    </main>
+
+    <script>
+        // --- ここからがJavaScriptの魔法です ---
+
+        // HTML要素を取得
+        const menu = document.getElementById('document-menu');
+        const contentArea = document.getElementById('content-area');
+        let groupedData = {}; // ファイルごとにチャンクをまとめるためのオブジェクト
+
+        // 1. ページが読み込まれたら、まずデータベースJSONを読み込む
+        async function loadData() {
+            try {
+                // 同じリポジトリ内のdist/rag_database.jsonを読み込む
+                const response = await fetch('./dist/rag_database.json');
+                const chunks = await response.json();
+
+                // 2. チャンクをファイル名ごとにグループ化する
+                groupedData = chunks.reduce((acc, chunk) => {
+                    const sourceFile = chunk.metadata.source;
+                    if (!acc[sourceFile]) {
+                        acc[sourceFile] = [];
+                    }
+                    acc[sourceFile].push(chunk);
+                    return acc;
+                }, {});
+
+                // 3. グループ化したデータをもとに、左のメニューを自動生成する
+                buildMenu();
+
+            } catch (error) {
+                console.error('データの読み込みに失敗しました:', error);
+                contentArea.innerHTML = '<h2>エラー</h2><p>ドキュメントの読み込みに失敗しました。</p>';
+            }
+        }
+
+        // 3. メニューをHTMLとして構築する関数
+        function buildMenu() {
+            menu.innerHTML = ''; // メニューを初期化
+            for (const sourceFile in groupedData) {
+                const li = document.createElement('li');
+                li.textContent = sourceFile;
+                // メニュー項目がクリックされた時のイベントを設定
+                li.addEventListener('click', () => displayContent(sourceFile));
+                menu.appendChild(li);
+            }
+        }
+
+        // 4. メニュー項目がクリックされた時に、対応するコンテンツを表示する関数
+        function displayContent(sourceFile) {
+            contentArea.innerHTML = ''; // コンテンツエリアを初期化
+            
+            const chunksToDisplay = groupedData[sourceFile];
+            if (!chunksToDisplay) return;
+
+            // ファイル名を見出しとして表示
+            const h1 = document.createElement('h1');
+            h1.textContent = sourceFile;
+            contentArea.appendChild(h1);
+
+            // 各チャンクをHTMLとして整形して表示
+            chunksToDisplay.forEach(chunk => {
+                const chunkDiv = document.createElement('div');
+                chunkDiv.className = 'chunk';
+                
+                // メタデータから見出しを生成
+                const header = chunk.metadata.Header3 || chunk.metadata.Header2 || chunk.metadata.Header1 || 'コンテンツ';
+                const metadataInfo = `Level: ${chunk.metadata.level} | Access: ${chunk.metadata.access_level}`;
+
+                chunkDiv.innerHTML = `
+                    <h3>${header}</h3>
+                    <p>${chunk.pageContent.replace(/\n/g, '<br>')}</p>
+                    <div class="metadata">${metadataInfo}</div>
+                `;
+                contentArea.appendChild(chunkDiv);
+            });
+        }
+
+        // 最初にデータをロードして、ウェブサイトを初期化
+        loadData();
+    </script>
+</body>
+</html>
