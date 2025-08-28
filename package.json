@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "langchain.js": "^1.0.9"
+  }
+}
