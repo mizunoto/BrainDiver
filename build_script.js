@@ -28,8 +28,8 @@ function getMetadataFromLevel(levelName, sourcePath) {
     const isSecret = levelName !== `${levelPrefix}0`;
     return {
         source: sourcePath,
-        access_level: isSecret ? 'secret' : 'public',
-        level: levelName,
+        access: isSecret ? 'secret' : 'public',
+        access_level: Number(levelName.replace(levelPrefix, '')),
     };
 }
 
