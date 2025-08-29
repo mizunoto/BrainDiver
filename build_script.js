@@ -114,10 +114,10 @@ async function main() {
 
   // 結合するファイルの順番を定義
   const orderedFiles = [
-    "public/Diver_s_Protocol.md",
-    "public/Data_Archive.md",
-    "secret/Deep_Log_Data.md",
-    "secret/Project_Compiler.md",
+    "public/protocol.md",
+    "public/archive.md",
+    "secret/deep_log.md",
+    "secret/compiler.md",
   ];
 
   let completeMarkdownContent = "";
