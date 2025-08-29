@@ -7,42 +7,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo"><a href="index.html">Brain Diver</a></div>
-        <nav class="navbar">
+    <header>
+        <h1>隔絶輪廻のブレインダイバー</h1>
+        <nav>
             <ul>
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="rules.html" class="active">ルール</a></li>
-                <li><a href="editor.html">エディター</a></li>
-                <li><a href="library.html">シナリオ</a></li>
+                <li><a href="library.html">ライブラリ</a></li>
+                <li><a href="editor.html">エディタ</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <section class="main-content">
-            <h2>ダイバーズ・プロトコル & データ・アーカイブ</h2>
-            <div class="flex-container">
-                <aside class="sidebar" id="rules-sidebar">
-                    <h3>項目一覧</h3>
-                    <ul id="rules-menu">
-                        <!-- Rules menu items will be injected here by JavaScript -->
-                        <li><a href="#" data-section-id="loading">Loading...</a></li>
-                    </ul>
-                </aside>
-                <article class="content-area" id="rules-content">
-                    <!-- Content for selected rule section will be displayed here by JavaScript -->
-                    <h3>選択された項目がここに表示されます</h3>
-                    <p>左側のメニューから項目を選択してください。</p>
-                </article>
-            </div>
-        </section>
+    <main>
+        <div class="content-split">
+            <aside class="menu-panel">
+                <h3>ルール項目</h3>
+                <nav id="rules-menu" class="menu-list">
+                    <!-- Rule categories and items will be dynamically loaded here by rules.js -->
+                    <p>読み込み中...</p>
+                </nav>
+            </aside>
+            <section class="content-panel" id="rules-content">
+                <h2>項目を選択してください</h2>
+                <p>左のメニューから、確認したいルールや資料の項目を選択してください。</p>
+                <p>「ダイバーズ・プロトコル」はゲームの核となるルールセット、<br>
+                   「データ・アーカイブ」は世界観や用語、NPCなどの資料集です。</p>
+            </section>
+        </div>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2077 隔絶輪廻のブレインダイバー. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2023 隔絶輪廻のブレインダイバー. All rights reserved.</p>
     </footer>
 
-    <script src="js/rules.js"></script>
+    <script src="js/rules.js" defer></script>
 </body>
 </html>

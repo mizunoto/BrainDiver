@@ -3,59 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隔絶輪廻のブレインダイバー - シナリオエディター</title>
+    <title>隔絶輪廻のブレインダイバー - エディタ</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo"><a href="index.html">Brain Diver</a></div>
-        <nav class="navbar">
+    <header>
+        <h1>隔絶輪廻のブレインダイバー</h1>
+        <nav>
             <ul>
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="rules.html">ルール</a></li>
-                <li><a href="editor.html" class="active">エディター</a></li>
-                <li><a href="library.html">シナリオ</a></li>
+                <li><a href="library.html">ライブラリ</a></li>
+                <li><a href="editor.html" class="active">エディタ</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <section class="main-content">
-            <h2>プロジェクト・コンパイラ (シナリオエディター)</h2>
-            <div class="editor-container">
-                <aside class="editor-sidebar" id="editor-sidebar">
-                    <h3>シナリオ構成</h3>
-                    <ul id="scenario-sections-menu">
-                        <li><a href="#" data-section="overview" class="active">概要</a></li>
-                        <li><a href="#" data-section="characters">登場人物</a></li>
-                        <li><a href="#" data-section="plot">プロット</a></li>
-                        <li><a href="#" data-section="locations">ロケーション</a></li>
-                        <li><a href="#" data-section="items">重要アイテム</a></li>
-                        <li><a href="#" data-section="npcs">NPC設定</a></li>
-                        <li><a href="#" data-section="log">セッションログ</a></li>
-                    </ul>
+    <main>
+        <div class="editor-container">
+            <h2>シナリオエディタ</h2>
+            <div class="editor-main">
+                <aside class="editor-menu-panel">
+                    <h3>テンプレート項目</h3>
+                    <nav id="editor-menu" class="editor-menu-list">
+                        <!-- Hierarchical menu for inserting templates will be loaded here -->
+                        <p>読み込み中...</p>
+                    </nav>
                 </aside>
-                <div class="editor-main">
-                    <div class="markdown-editor-section">
-                        <h3 id="editor-section-title">概要</h3>
-                        <div class="editor-area">
-                            <textarea id="markdown-input" class="editor-input" placeholder="ここにマークダウン形式で入力してください..."></textarea>
-                            <div id="markdown-preview" class="editor-preview"></div>
-                        </div>
-                        <div class="editor-actions">
-                            <button id="save-to-cookie-btn">Cookieに保存</button>
-                            <button id="download-md-btn">Markdownダウンロード</button>
-                        </div>
+                <section class="editor-textarea-wrapper">
+                    <textarea id="markdown-editor" placeholder="ここにシナリオのテキストを入力してください..."></textarea>
+                    <div class="editor-actions">
+                        <button id="load-cookie-button" class="editor-button">Cookieから読み込む</button>
+                        <button id="save-cookie-button" class="editor-button">Cookieに保存</button>
+                        <button id="download-md-button" class="editor-button primary">Markdownでダウンロード</button>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2077 隔絶輪廻のブレインダイバー. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2023 隔絶輪廻のブレインダイバー. All rights reserved.</p>
     </footer>
 
-    <script src="js/editor.js"></script>
+    <script src="js/editor.js" defer></script>
 </body>
 </html>

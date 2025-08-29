@@ -1,15 +1,20 @@
+// js/index.js
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Brain Diver Landing Page Loaded.');
+    console.log('隔絶輪廻のブレインダイバー: ランディングページへようこそ！');
 
-    // Example: Add a simple hover effect to link cards if not already handled by CSS
-    const linkCards = document.querySelectorAll('.link-card');
-    linkCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            // Add a class for JS-specific effects, if needed, beyond CSS :hover
-            // card.classList.add('hover-active');
-        });
-        card.addEventListener('mouseleave', () => {
-            // card.classList.remove('hover-active');
-        });
+    // Example: Add a class to body after content loads for a subtle fade-in effect via CSS
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 100);
+
+    // Simple active link highlighting (can be made more robust if needed)
+    const currentPath = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
     });
 });
