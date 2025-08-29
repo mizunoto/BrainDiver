@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loadCookieButton = document.getElementById('load-cookie-button');
     const saveCookieButton = document.getElementById('save-cookie-button');
     const downloadMdButton = document.getElementById('download-md-button');
-    const dataPath = '../dist/rag_database.json'; // Path to the JSON file
+    const dataPath = '/dist/rag_database.json'; // Path to the JSON file
     const editorCookieName = 'brain_diver_editor_content';
 
     // Helper function to insert text at cursor position in textarea
