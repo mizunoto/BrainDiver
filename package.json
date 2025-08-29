@@ -9,8 +9,12 @@
   },
   "homepage": "https://github.com/brain-diver/brain-diver#readme",
   "version": "1.0.0",
+  "scripts": {
+    "publish": "node build_script.js"
+  },
   "devDependencies": {
     "@langchain/textsplitters": "^0.1.0",
+    "archiver": "^7.0.1",
     "langchain": "^0.3.31"
   }
 }
