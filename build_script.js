@@ -64,7 +64,7 @@ async function main() {
         returnIntermediateDocuments: false,
     });
 
-    const secretTagRegex = new RegExp('<!--\s*SECRET:\s*(', levelprefix, '\d+)\s*', 'g');
+    const secretTagRegex = new RegExp('<!--\s*SECRET:\s*(level\d+)\s*', 'g');
 
     for (const filePath of allFiles) {
         console.log(`処理中: ${filePath}`);
