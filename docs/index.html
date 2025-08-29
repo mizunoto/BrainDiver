@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrainDiver ドキュメント</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/docs/css/style.css">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
         async function loadData() {
             try {
                 // 同じリポジトリ内のdist/rag_database.jsonを読み込む
-                const response = await fetch('../dist/rag_database.json');
+                const response = await fetch('/dist/rag_database.json');
                 const chunks = await response.json();
 
                 // 2. チャンクをファイル名ごとにグループ化する
