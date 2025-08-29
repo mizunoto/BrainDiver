@@ -2,6 +2,8 @@ import * as fs from "fs/promises";
 import * as path from "path";
 import { MarkdownTextSplitter } from "langchain/text_splitter";
 import { Document } from "langchain/document";
+import { createWriteStream } from "fs";
+import archiver from "archiver";
 
 const levelPrefix = 'level';
 
@@ -40,7 +42,7 @@ async function main() {
 
   const sourceDir = path.join(process.cwd(), "source");
   const outputDir = path.join(process.cwd(), "dist");
-  const releaseDir = path.join(outputDir, "release"); // リリース用フォルダ
+  const releaseDir = path.join(outputDir, "releases"); // リリース用フォルダ
 
   const dbOutputFile = path.join(outputDir, "rag_database.json");
   const mdOutputFilename = `BrainDiver_Complete_Rulebook_v${version}.md`;
