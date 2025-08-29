@@ -131,28 +131,34 @@ async function main() {
         completeMarkdownContent += content + "\n\n---\n\n"; // ファイル間に区切り線を入れる
     }
 
-    await fs.writeFile(mdOutputFile, completeMarkdownContent);
-    console.log(` -> ${mdOutputFile} に保存しました。`);
-    await fs.writeFile(dbReleaseFile, completeMarkdownContent);
-    console.log(` -> ${dbReleaseFile} に保存しました。`);
+    const args = process.argv.slice(2); // コマンドライン引数を取得
+    if (!args.includes('noRelease')) {
+        await fs.writeFile(mdOutputFile, completeMarkdownContent);
+        console.log(` -> ${mdOutputFile} に保存しました。`);
+        await fs.writeFile(dbReleaseFile, completeMarkdownContent);
+        console.log(` -> ${dbReleaseFile} に保存しました。`);
 
-    // --- ステップ3: ZIPパッケージの生成 (新規ロジック) ---
-    console.log("\n[3/3] ZIPリリースパッケージを生成中...");
-    const output = createWriteStream(zipOutputFile);
-    const archive = archiver('zip', { zlib: { level: 9 } }); // 高圧縮
+        // --- ステップ3: ZIPパッケージの生成 (新規ロジック) ---
+        console.log("\n[3/3] ZIPリリースパッケージを生成中...");
+        const output = createWriteStream(zipOutputFile);
+        const archive = archiver('zip', { zlib: { level: 9 } }); // 高圧縮
 
-    await new Promise((resolve, reject) => {
-        output.on('close', resolve);
-        archive.on('error', reject);
+        await new Promise((resolve, reject) => {
+            output.on('close', resolve);
+            archive.on('error', reject);
 
-        archive.pipe(output);
-        // ZIPに含めるファイルを追加
-        archive.file(dbOutputFile, { name: dbReleaseFilename });
-        archive.file(mdOutputFile, { name: mdOutputFilename });
-        archive.finalize();
-    });
+            archive.pipe(output);
+            // ZIPに含めるファイルを追加
+            archive.file(dbOutputFile, { name: dbReleaseFilename });
+            archive.file(mdOutputFile, { name: mdOutputFilename });
+            archive.finalize();
+        });
 
-    console.log(` -> ${zipOutputFile} に保存しました。`);
+        console.log(` -> ${zipOutputFile} に保存しました。`);
+    } else {
+        console.log('リリースファイルの出力をスキップします。');
+    }
+
     console.log(`\nビルドプロセスが完了しました！`);
 }
 

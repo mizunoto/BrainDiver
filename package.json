@@ -10,7 +10,9 @@
   "homepage": "https://github.com/brain-diver/brain-diver#readme",
   "version": "1.0.0",
   "scripts": {
-    "publish": "node build_script.js"
+    "build": "node build_script.js noRelease",
+    "release": "node build_script.js",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@langchain/textsplitters": "^0.1.0",
