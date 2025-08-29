@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隔絶輪廻のブレインダイバー - シナリオ一覧</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html">Brain Diver</a></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="rules.html">ルール</a></li>
+                <li><a href="editor.html">エディター</a></li>
+                <li><a href="library.html" class="active">シナリオ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="main-content">
+            <h2>データ・アーカイブ (シナリオ一覧)</h2>
+            <div class="flex-container">
+                <aside class="sidebar" id="library-sidebar">
+                    <h3>シナリオリスト</h3>
+                    <ul id="scenario-list-menu">
+                        <!-- Scenario list items will be injected here by JavaScript -->
+                        <li><a href="#" data-scenario-id="loading">Loading...</a></li>
+                    </ul>
+                </aside>
+                <article class="content-area" id="scenario-details-content">
+                    <!-- Content for selected scenario will be displayed here by JavaScript -->
+                    <h3>選択されたシナリオ概要がここに表示されます</h3>
+                    <p>左側のメニューからシナリオを選択してください。</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2077 隔絶輪廻のブレインダイバー. All rights reserved.</p>
+    </footer>
+
+    <script src="js/library.js"></script>
+</body>
+</html>

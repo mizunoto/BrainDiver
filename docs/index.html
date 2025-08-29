@@ -4,107 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrainDiver ドキュメント</title>
-    <link rel="stylesheet" href="/docs/css/style.css">
+    <title>隔絶輪廻のブレインダイバー - 公式サイト</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="app-container">
-        <!-- 左側のナビゲーションメニュー -->
-        <nav class="sidebar-nav">
-            <h2 class="nav-title">ドキュメント一覧</h2>
-            <ul id="document-menu" class="nav-menu">
-                <!-- ここにJSでファイルリストが挿入されます -->
+    <header class="header">
+        <div class="logo"><a href="index.html">Brain Diver</a></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">ホーム</a></li>
+                <li><a href="rules.html">ルール</a></li>
+                <li><a href="editor.html">エディター</a></li>
+                <li><a href="library.html">シナリオ</a></li>
             </ul>
         </nav>
+    </header>
 
-        <!-- 右側のコンテンツ表示エリア -->
-        <main id="content-area" class="main-content">
-            <h1 class="welcome-title">ドキュメントへようこそ</h1>
-            <p class="welcome-text">左のメニューから表示したいドキュメントを選択してください。</p>
-        </main>
-    </div>
+    <main class="container">
+        <section class="main-content">
+            <div class="hero-section">
+                <h1>隔絶輪廻のブレインダイバー</h1>
+                <p>AIをGMとする退廃的サイバーパンクTRPG。あなたの意識はデータとなり、未知の深淵へとダイブする。</p>
+                <p>このシステムは、探索、謎解き、そして倫理的なジレンマに焦点を当てています。</p>
+            </div>
 
-    <script>
-        // --- ここからがJavaScriptの魔法です ---
+            <div class="links-section">
+                <div class="link-card prominent">
+                    <h3>ダイバーズ・プロトコル</h3>
+                    <p>ゲームの基本ルールとガイドラインを確認する。</p>
+                    <a href="rules.html" class="button">ルールを読む</a>
+                </div>
+                <div class="link-card prominent">
+                    <h3>Discordサーバー 「chaTRPG」</h3>
+                    <p>公式Discordサーバーで仲間と交流し、セッションを募集する。</p>
+                    <a href="https://discord.gg/your-discord-invite" target="_blank" class="button">サーバーに参加</a>
+                </div>
+                <div class="link-card subdued">
+                    <h3>プロジェクト・コンパイラ</h3>
+                    <p>オリジナルのシナリオを作成・編集する。</p>
+                    <a href="editor.html" class="button">エディターを開く</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        // HTML要素を取得
-        const menu = document.getElementById('document-menu');
-        const contentArea = document.getElementById('content-area');
-        let groupedData = {}; // ファイルごとにチャンクをまとめるためのオブジェクト
+    <footer class="footer">
+        <p>&copy; 2077 隔絶輪廻のブレインダイバー. All rights reserved.</p>
+    </footer>
 
-        // 1. ページが読み込まれたら、まずデータベースJSONを読み込む
-        async function loadData() {
-            try {
-                // 同じリポジトリ内のdist/rag_database.jsonを読み込む
-                const response = await fetch('/dist/rag_database.json');
-                const chunks = await response.json();
-
-                // 2. チャンクをファイル名ごとにグループ化する
-                groupedData = chunks.reduce((acc, chunk) => {
-                    const sourceFile = chunk.metadata.source;
-                    if (!acc[sourceFile]) {
-                        acc[sourceFile] = [];
-                    }
-                    acc[sourceFile].push(chunk);
-                    return acc;
-                }, {});
-
-                // 3. グループ化したデータをもとに、左のメニューを自動生成する
-                buildMenu();
-
-            } catch (error) {
-                console.error('データの読み込みに失敗しました:', error);
-                contentArea.innerHTML = '<h2>エラー</h2><p>ドキュメントの読み込みに失敗しました。</p>';
-            }
-        }
-
-        // 3. メニューをHTMLとして構築する関数
-        function buildMenu() {
-            menu.innerHTML = ''; // メニューを初期化
-            for (const sourceFile in groupedData) {
-                const li = document.createElement('li');
-                li.textContent = sourceFile;
-                // メニュー項目がクリックされた時のイベントを設定
-                li.addEventListener('click', () => displayContent(sourceFile));
-                menu.appendChild(li);
-            }
-        }
-
-        // 4. メニュー項目がクリックされた時に、対応するコンテンツを表示する関数
-        function displayContent(sourceFile) {
-            contentArea.innerHTML = ''; // コンテンツエリアを初期化
-
-            const chunksToDisplay = groupedData[sourceFile];
-            if (!chunksToDisplay) return;
-
-            // ファイル名を見出しとして表示
-            const h1 = document.createElement('h1');
-            h1.className = 'content-title'; // Apply new class for styling
-            h1.textContent = sourceFile;
-            contentArea.appendChild(h1);
-
-            // 各チャンクをHTMLとして整形して表示
-            chunksToDisplay.forEach(chunk => {
-                const chunkDiv = document.createElement('div');
-                chunkDiv.className = 'document-chunk'; // Apply new class for styling
-
-                // メタデータから見出しを生成
-                const header = chunk.metadata.Header3 || chunk.metadata.Header2 || chunk.metadata.Header1 || 'コンテンツ';
-                const metadataInfo = `Level: ${chunk.metadata.level} | Access: ${chunk.metadata.access_level}`;
-
-                chunkDiv.innerHTML = `
-                    <h3 class="chunk-header">${header}</h3>
-                    <p class="chunk-content">${chunk.pageContent.replace(/\n/g, '<br>')}</p>
-                    <div class="chunk-metadata">${metadataInfo}</div>
-                `;
-                contentArea.appendChild(chunkDiv);
-            });
-        }
-
-        // 最初にデータをロードして、ウェブサイトを初期化
-        loadData();
-    </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
