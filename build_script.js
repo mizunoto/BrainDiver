@@ -45,8 +45,10 @@ async function main() {
     const releaseDir = path.join(outputDir, "releases", version); // リリース用フォルダ
 
     const dbOutputFile = path.join(outputDir, "rag_database.json");
-    const mdOutputFilename = `BrainDiver_Complete_Rulebook_v${version}.md`;
-    const mdOutputFile = path.join(releaseDir, mdOutputFilename);
+    const fullRuleOutputFilename = `BrainDiver_Complete_Rulebook_v${version}.md`;
+    const fullRuleOutputFile = path.join(releaseDir, fullRuleOutputFilename);
+    const handoutOutputFilename = `BrainDiver_Player_Handout_v${version}.md`;
+    const handoutOutputFile = path.join(releaseDir, handoutOutputFilename);
     const dbReleaseFilename = `rag_database_v${version}.json`;
     const dbReleaseFile = path.join(releaseDir, dbReleaseFilename);
     const zipOutputFilename = `BrainDiver_Release_v${version}.zip`;
@@ -133,8 +135,10 @@ async function main() {
 
     const args = process.argv.slice(2); // コマンドライン引数を取得
     if (!args.includes('noRelease')) {
-        await fs.writeFile(mdOutputFile, completeMarkdownContent);
-        console.log(` -> ${mdOutputFile} に保存しました。`);
+        await fs.writeFile(fullRuleOutputFile, completeMarkdownContent);
+        console.log(` -> ${fullRuleOutputFile} に保存しました。`);
+        await fs.writeFile(handoutOutputFile, completeMarkdownContent);
+        console.log(` -> ${handoutOutputFile} に保存しました。`);
         await fs.writeFile(dbReleaseFile, completeMarkdownContent);
         console.log(` -> ${dbReleaseFile} に保存しました。`);
 
@@ -150,7 +154,8 @@ async function main() {
             archive.pipe(output);
             // ZIPに含めるファイルを追加
             archive.file(dbOutputFile, { name: dbReleaseFilename });
-            archive.file(mdOutputFile, { name: mdOutputFilename });
+            archive.file(fullRuleOutputFile, { name: fullRuleOutputFilename });
+            archive.file(handoutOutputFile, { name: handoutOutputFilename });
             archive.finalize();
         });
 
