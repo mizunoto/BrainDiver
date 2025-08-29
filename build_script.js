@@ -34,25 +34,27 @@ function getMetadataFromLevel(levelName, sourcePath) {
 }
 
 async function main() {
-  // --- ステップ0: バージョンとパスの準備 ---
-  const packageJsonPath = path.join(process.cwd(), "package.json");
-  const packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf-8"));
-  const version = packageJson.version;
-  console.log(`プロジェクトバージョン: ${version} のビルドを開始します...`);
+    // --- ステップ0: バージョンとパスの準備 ---
+    const packageJsonPath = path.join(process.cwd(), "package.json");
+    const packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf-8"));
+    const version = packageJson.version;
+    console.log(`プロジェクトバージョン: ${version} のビルドを開始します...`);
 
-  const sourceDir = path.join(process.cwd(), "source");
-  const outputDir = path.join(process.cwd(), "dist");
-  const releaseDir = path.join(outputDir, "releases"); // リリース用フォルダ
+    const sourceDir = path.join(process.cwd(), "source");
+    const outputDir = path.join(process.cwd(), "dist");
+    const releaseDir = path.join(outputDir, "releases", version); // リリース用フォルダ
 
-  const dbOutputFile = path.join(outputDir, "rag_database.json");
-  const mdOutputFilename = `BrainDiver_Complete_Rulebook_v${version}.md`;
-  const mdOutputFile = path.join(releaseDir, mdOutputFilename);
-  const zipOutputFilename = `BrainDiver_Release_v${version}.zip`;
-  const zipOutputFile = path.join(releaseDir, zipOutputFilename);
+    const dbOutputFile = path.join(outputDir, "rag_database.json");
+    const mdOutputFilename = `BrainDiver_Complete_Rulebook_v${version}.md`;
+    const mdOutputFile = path.join(releaseDir, mdOutputFilename);
+    const dbReleaseFilename = `rag_database_v${version}.json`;
+    const dbReleaseFile = path.join(releaseDir, dbReleaseFilename);
+    const zipOutputFilename = `BrainDiver_Release_v${version}.zip`;
+    const zipOutputFile = path.join(releaseDir, zipOutputFilename);
 
-  // --- ステップ1: rag_database.json の生成 (既存のロジック) ---
-  console.log("\n[1/3] RAGデータベースを生成中...");
-  // (ここのロジックは非常に長いため、省略しますが、v8のままで変更ありません)
+    // --- ステップ1: rag_database.json の生成 (既存のロジック) ---
+    console.log("\n[1/3] RAGデータベースを生成中...");
+    // (ここのロジックは非常に長いため、省略しますが、v8のままで変更ありません)
     const allFiles = await getMarkdownFiles(sourceDir);
     console.log(`発見したファイル数: ${allFiles.length}`);
 
@@ -106,50 +108,52 @@ async function main() {
             allChunks.push(...splitDocs);
         }
     }
-  await fs.mkdir(outputDir, { recursive: true });
-  await fs.writeFile(dbOutputFile, JSON.stringify(allChunks, null, 2));
-  console.log(` -> ${dbOutputFile} に保存しました。`);
+    await fs.mkdir(outputDir, { recursive: true });
+    await fs.writeFile(dbOutputFile, JSON.stringify(allChunks, null, 2));
+    console.log(` -> ${dbOutputFile} に保存しました。`);
 
-  // --- ステップ2: 単一Markdownファイルの生成 (新規ロジック) ---
-  console.log("\n[2/3] リリース用Markdownファイルを生成中...");
-  await fs.mkdir(releaseDir, { recursive: true });
+    // --- ステップ2: 単一Markdownファイルの生成 (新規ロジック) ---
+    console.log("\n[2/3] リリース用Markdownファイルを生成中...");
+    await fs.mkdir(releaseDir, { recursive: true });
 
-  // 結合するファイルの順番を定義
-  const orderedFiles = [
-    "public/protocol.md",
-    "public/archive.md",
-    "secret/deep_log.md",
-    "secret/compiler.md",
-  ];
+    // 結合するファイルの順番を定義
+    const orderedFiles = [
+        "public/protocol.md",
+        "public/archive.md",
+        "secret/deep_log.md",
+        "secret/compiler.md",
+    ];
 
-  let completeMarkdownContent = "";
-  for (const file of orderedFiles) {
-    const filePath = path.join(sourceDir, file);
-    const content = await fs.readFile(filePath, "utf-8");
-    completeMarkdownContent += content + "\n\n---\n\n"; // ファイル間に区切り線を入れる
-  }
+    let completeMarkdownContent = "";
+    for (const file of orderedFiles) {
+        const filePath = path.join(sourceDir, file);
+        const content = await fs.readFile(filePath, "utf-8");
+        completeMarkdownContent += content + "\n\n---\n\n"; // ファイル間に区切り線を入れる
+    }
 
-  await fs.writeFile(mdOutputFile, completeMarkdownContent);
-  console.log(` -> ${mdOutputFile} に保存しました。`);
-  
-  // --- ステップ3: ZIPパッケージの生成 (新規ロジック) ---
-  console.log("\n[3/3] ZIPリリースパッケージを生成中...");
-  const output = createWriteStream(zipOutputFile);
-  const archive = archiver('zip', { zlib: { level: 9 } }); // 高圧縮
+    await fs.writeFile(mdOutputFile, completeMarkdownContent);
+    console.log(` -> ${mdOutputFile} に保存しました。`);
+    await fs.writeFile(dbReleaseFile, completeMarkdownContent);
+    console.log(` -> ${dbReleaseFile} に保存しました。`);
 
-  await new Promise((resolve, reject) => {
-    output.on('close', resolve);
-    archive.on('error', reject);
+    // --- ステップ3: ZIPパッケージの生成 (新規ロジック) ---
+    console.log("\n[3/3] ZIPリリースパッケージを生成中...");
+    const output = createWriteStream(zipOutputFile);
+    const archive = archiver('zip', { zlib: { level: 9 } }); // 高圧縮
 
-    archive.pipe(output);
-    // ZIPに含めるファイルを追加
-    archive.file(dbOutputFile, { name: 'rag_database.json' });
-    archive.file(mdOutputFile, { name: mdOutputFilename });
-    archive.finalize();
-  });
+    await new Promise((resolve, reject) => {
+        output.on('close', resolve);
+        archive.on('error', reject);
 
-  console.log(` -> ${zipOutputFile} に保存しました。`);
-  console.log(`\nビルドプロセスが完了しました！`);
+        archive.pipe(output);
+        // ZIPに含めるファイルを追加
+        archive.file(dbOutputFile, { name: dbReleaseFilename });
+        archive.file(mdOutputFile, { name: mdOutputFilename });
+        archive.finalize();
+    });
+
+    console.log(` -> ${zipOutputFile} に保存しました。`);
+    console.log(`\nビルドプロセスが完了しました！`);
 }
 
 main().catch(console.error);
