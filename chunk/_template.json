@@ -4,9 +4,11 @@
   "index_level": 0,
   "under": null,
   "after": null,
-  "access_level": 0,
   "genre": [],
-  "params": {
-    "description": "チャンクの説明文"
-  }
+  "params": [
+    {
+      "access_level": 0,
+      "description": "チャンクの説明文"
+    }
+  ]
 }
