@@ -8,7 +8,7 @@
     "url": "https://github.com/brain-diver/brain-diver/issues"
   },
   "homepage": "https://github.com/brain-diver/brain-diver#readme",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "scripts": {
     "build": "node build_script.js noRelease",
     "release": "node build_script.js",
