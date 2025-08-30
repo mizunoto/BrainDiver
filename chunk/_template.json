@@ -1,0 +1,12 @@
+{
+  "name": "サンプル",
+  "priority": 0,
+  "index_level": 0,
+  "under": null,
+  "after": null,
+  "access_level": 0,
+  "genre": [],
+  "params": {
+    "description": "チャンクの説明文"
+  }
+}
