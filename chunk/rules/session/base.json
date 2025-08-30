@@ -1,0 +1,19 @@
+{
+    "name": "拠点での準備",
+    "priority": 0,
+    "under": "セッション開始",
+    "genre": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "チャンクの説明文"
+        },
+        {
+            "access_level": 1,
+            
+            "type": "description",
+            "description": "チャンクの説明文"
+        }
+    ]
+}

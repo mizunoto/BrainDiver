@@ -1,0 +1,17 @@
+{
+    "name": "キャンペーンの開始",
+    "priority": 0,
+    "under": "ゲームの進行方法",
+    "after": null,
+    "genre": [
+        "rules",
+        "section"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": ""
+        }
+    ]
+}

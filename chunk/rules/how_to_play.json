@@ -1,0 +1,17 @@
+{
+    "name": "ゲームの進行方法",
+    "priority": 0,
+    "under": "ルールとシステム",
+    "after": null,
+    "genre": [
+        "section",
+        "rules"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "ゲームは以下の手順に沿って進行します。"
+        }
+    ]
+}

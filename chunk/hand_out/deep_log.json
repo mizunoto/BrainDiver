@@ -1,0 +1,21 @@
+{
+    "name": "隔絶輪廻のブレインダイバー：ディープログ・データ",
+    "priority": 0,
+    "under": null,
+    "after": null,
+    "genre": [
+        "hand_out"
+    ],
+    "params": [
+        {
+            "access_level": 7,
+            "type": "description",
+            "description": "GM向けハンドアウト"
+        },
+        {
+            "access_level": 7,
+            "type": "include",
+            "include": []
+        }
+    ]
+}

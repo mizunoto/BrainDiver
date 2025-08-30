@@ -1,0 +1,17 @@
+{
+    "name": "装備の売却",
+    "priority": 0,
+    "under": "マーケットの利用",
+    "after": "アイテムの購入",
+    "genre": [
+        "rules",
+        "equip"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "不要な装備を売却することができます。特性のついた装備は通常より高く売れます。"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "輪転街への帰還",
+    "priority": 0,
+    "under": "HPが0になった時の扱い",
+    "after": null,
+    "genre": [
+        "rules"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "HPが0になった場合、キャラクターは一時的に意識を失い、戦闘中であれば戦闘から離脱します。プレイヤー全員のHPが0になった場合、進行中のセッションはそこで終了し、全員を輪転街へ帰還させます。"
+        }
+    ]
+}

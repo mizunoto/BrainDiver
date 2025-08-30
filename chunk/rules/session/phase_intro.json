@@ -1,0 +1,14 @@
+{
+    "name": "導入フェーズ",
+    "priority": 0,
+    "under": "セッション開始",
+    "after": null,
+    "genre": ["rules"],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "GMがシナリオの導入を読み上げ、プレイヤーに状況を伝えるフェーズです。"
+        }
+    ]
+}

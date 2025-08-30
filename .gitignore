@@ -139,3 +139,4 @@ vite.config.ts.timestamp-*
 
 dist/releases
 old_version
+tmp.js

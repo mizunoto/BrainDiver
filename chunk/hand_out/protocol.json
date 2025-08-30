@@ -1,0 +1,27 @@
+{
+    "name": "隔絶輪廻のブレインダイバー：ダイバーズ・プロトコル",
+    "priority": 0,
+    "under": null,
+    "after": null,
+    "genre": [
+        "hand_out"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "ルールブック"
+        },
+        {
+            "access_level": 0,
+            "type": "include",
+            "include": [
+                "protocol/section/first.json",
+                "protocol/section/introduction.json",
+                "protocol/rules/how_to_play.json",
+                "protocol/rules/canpain.json",
+                "protocol/rules/status.json"
+            ]
+        }
+    ]
+}

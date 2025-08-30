@@ -1,0 +1,16 @@
+{
+    "name": "ルールとシステム",
+    "priority": 0,
+    "under": null,
+    "after": null,
+    "genre": [
+        "section"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "このゲームのルールとシステムは以下で構成されます。"
+        }
+    ]
+}

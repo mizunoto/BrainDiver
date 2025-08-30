@@ -1,0 +1,16 @@
+{
+    "name": "セッション評価",
+    "priority": 0,
+    "under": "セッション開始",
+    "after": "クライマックス",
+    "genre": [
+        "rules"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "シナリオが完了し、GMがシナリオの評価基準に基づき報酬を付与するフェーズです。"
+        }
+    ]
+}

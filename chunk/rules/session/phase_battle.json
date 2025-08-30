@@ -1,0 +1,14 @@
+{
+    "name": "進行フェーズ時の戦闘",
+    "priority": 0,
+    "under": "進行フェーズ",
+    "after": null,
+    "genre": ["rules"],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "description": "不意の遭遇や奇襲判定の成功により、敵あるいは味方の最初の1ターン目が行動妨害状態で始まる可能性があります。"
+        }
+    ]
+}
