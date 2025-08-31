@@ -1,0 +1,18 @@
+{
+    "name": "スキルの習得",
+    "id": "skill",
+    "priority": 0,
+    "genre": [
+        "market",
+        "skill",
+        "buy"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "スキルデータを購入して電子脳にインストールすることで、対象のスキルレベルを1上げることができます。スキルを購入するには要求ステータスを満たしている必要があります。"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "name": "ステータス",
+    "id": "status",
+    "priority": 0,
+    "genre": [
+        "system",
+        "status",
+        "description"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "status_hp"
+        },
+        {
+            "filter": 0,
+            "id": "status_hac"
+        },
+        {
+            "filter": 0,
+            "id": "status_str"
+        },
+        {
+            "filter": 0,
+            "id": "status_dex"
+        },
+        {
+            "filter": 0,
+            "id": "status_int"
+        },
+        {
+            "filter": 0,
+            "id": "status_cha"
+        },
+        {
+            "filter": 0,
+            "id": "status_luk"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "キャラクターのステータスは以下の7項目で構成されます。キャラクター作成の際にHP以外の各ステータスに5～20の範囲で合計50ポイントを自由に割り振ります。HPの初期値は20固定です。"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "判定",
+    "id": "judge",
+    "priority": 0,
+    "genre": [
+        "system",
+        "judge",
+        "description"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "critical"
+        },
+        {
+            "filter": 0,
+            "id": "fumble"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "プレイヤーの判定、対抗判定は1D100で行います。ダイスの出目が目標値以下で成功判定です。"
+        },
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "目標値は ステータス1種+関連スキルレベル1種+アイテムなどによる補正値 により算出されます。"
+        }
+    ]
+}

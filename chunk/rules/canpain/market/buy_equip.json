@@ -1,0 +1,18 @@
+{
+    "name": "装備の購入",
+    "id": "buy_equip",
+    "priority": 0,
+    "genre": [
+        "market",
+        "equip",
+        "buy"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "装備を購入することができます。購入した装備は輪転街の拠点に保管されます。"
+        }
+    ]
+}

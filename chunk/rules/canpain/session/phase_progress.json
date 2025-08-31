@@ -1,0 +1,23 @@
+{
+    "name": "進行フェーズ",
+    "id": "phase_progress",
+    "priority": 0,
+    "genre": [
+        "session",
+        "progress",
+        "judge"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "phase_battle"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "プレイヤーが情報を集めたり、探索しながら目的を遂行するフェーズです。任意の判定を行う場合、プレイヤーは目的、判定に使用するステータス・スキル・アイテムを宣言し、GMが妥当と判断すれば判定を行います。"
+        }
+    ]
+}

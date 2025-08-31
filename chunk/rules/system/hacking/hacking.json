@@ -1,0 +1,27 @@
+{
+    "name": "ハッキングシステム",
+    "id": "hacking",
+    "priority": 0,
+    "genre": [
+        "system",
+        "hack",
+        "section"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "relic_hack"
+        },
+        {
+            "filter": 0,
+            "id": "combat_hack"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "キャラクターはHACを使用して特殊行動として様々なハッキングを行うことができます。戦闘時には敵がハッキングしてくることもあるので注意が必要です。ハッキングを行うと遺跡や敵の情報を垣間見る可能性があります。"
+        }
+    ]
+}

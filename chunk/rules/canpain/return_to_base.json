@@ -1,0 +1,17 @@
+{
+    "name": "輪転街への帰還",
+    "id": "return_to_base",
+    "priority": 0,
+    "genre": [
+        "system",
+        "rules"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "キャンペーン中にHPが0になった場合、キャラクターは一時的に意識を失い、戦闘中であれば戦闘から離脱します。プレイヤーが全員行動不能になった場合、進行中のセッションはそこで終了し、失敗扱いとなります。"
+        }
+    ]
+}

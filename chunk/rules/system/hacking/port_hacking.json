@@ -1,0 +1,42 @@
+{
+    "name": "ポート・ハッキング",
+    "id": "port_hacking",
+    "priority": 0,
+    "genre": [
+        "system",
+        "hacking",
+        "judge"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "arm_unit"
+        },
+        {
+            "filter": 0,
+            "id": "leg_unit"
+        }
+    ],
+    "params": [
+        {
+            "type": "description",
+            "value": "敵に対するハッキングは全てポート・ハッキングという扱いになります。基本的に以下の2部位の他、シナリオによって設定された特殊な部位への干渉を試みることができ、成功すると該当する効果が発生します。"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "HAC",
+            "skill": "クラッキング",
+            "adjust": "処理負荷|あり",
+            "description": "ポート・ハッキング判定"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "HAC",
+            "skill": "ファイアウォール",
+            "adjust": "処理負荷|あり",
+            "description": "ポート・ハッキング対抗判定"
+        }
+    ]
+}

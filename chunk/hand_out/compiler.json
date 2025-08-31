@@ -1,21 +1,21 @@
 {
     "name": "隔絶輪廻のブレインダイバー：プロジェクト・コンパイラ",
-    "priority": 0,
-    "under": null,
-    "after": null,
+    "id": "compiler",
+    "priority": -1,
     "genre": [
-        "hand_out"
+        "hand_out",
+        "compiler",
+        "rules",
+        "system",
+        "scenario",
+        "tools"
     ],
+    "include": [],
     "params": [
         {
-            "access_level": 7,
+            "access_level": 0,
             "type": "description",
-            "description": "シナリオ作成ガイドライン"
-        },
-        {
-            "access_level": 7,
-            "type": "include",
-            "include": []
+            "value": "シナリオ作成ガイドライン"
         }
     ]
 }

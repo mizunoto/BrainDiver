@@ -1,0 +1,26 @@
+{
+    "name": "HPが0になった時の扱い",
+    "id": "on_failure",
+    "priority": 0,
+    "genre": [
+        "system",
+        "rules"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "return_to_base"
+        },
+        {
+            "filter": 0,
+            "id": "character_lost"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "キャンペーン中にプレイヤーのHPが0になった場合の扱いを取り決めます。"
+        }
+    ]
+}

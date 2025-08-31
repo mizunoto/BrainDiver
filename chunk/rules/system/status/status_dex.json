@@ -1,0 +1,17 @@
+{
+    "name": "DEX",
+    "id": "status_dex",
+    "priority": 0,
+    "genre": [
+        "status",
+        "DEX"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "器用さを表します。遠距離攻撃の命中、精密な機械の操作、罠の解除といった行動の成否に影響します。  "
+        }
+    ]
+}

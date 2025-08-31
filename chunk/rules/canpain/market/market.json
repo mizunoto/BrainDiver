@@ -1,0 +1,45 @@
+{
+    "name": "マーケットの利用",
+    "id": "market",
+    "priority": 0,
+    "genre": [
+        "market",
+        "system",
+        "rules"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "skill"
+        },
+        {
+            "filter": 0,
+            "id": "buy_equip"
+        },
+        {
+            "filter": 0,
+            "id": "buy_item"
+        },
+        {
+            "filter": 0,
+            "id": "negotiate_discount"
+        },
+        {
+            "filter": 0,
+            "id": "sell_equip"
+        },
+        {
+            "filter": 0,
+            "id": "sell_item"
+        },
+        {
+            "filter": 0,
+            "id": "sell_data_core"
+        }
+    ],
+    "params": [{
+        "access_level": 0,
+        "type": "description",
+        "value": "共通通貨ℂを消費して利用できるマーケットです。セッション間の準備期間に利用することができます。"
+    }]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "HAC",
+    "id": "status_hac",
+    "priority": 0,
+    "genre": [
+        "status",
+        "HAC"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "ハッキング能力値。遺跡の設備の操作に使用したり、電子的な脅威や周囲の電子的探査、戦闘での特殊行動などに使用します。"
+        }
+    ]
+}

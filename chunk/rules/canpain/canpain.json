@@ -1,0 +1,35 @@
+{
+    "name": "キャンペーンの開始",
+    "id": "canpain",
+    "priority": 0,
+    "genre": [
+        "canpain",
+        "section",
+        "rules"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "on_failure"
+        },
+        {
+            "filter": 0,
+            "id": "character_create"
+        },
+        {
+            "filter": 0,
+            "id": "session_start"
+        },
+        {
+            "filter": 0,
+            "id": "base"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "複数のシナリオで構成された一連のキャンペーンを開始します。"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "name": "ゲームの進行方法",
+    "id": "how_to_play",
+    "priority": 0,
+    "genre": [
+        "section",
+        "description"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "canpain"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "ゲームは、次の手順で進めます。"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "HP",
+    "id": "status_hp",
+    "priority": 0,
+    "genre": [
+        "status",
+        "HP"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "体力や耐久力を表す最も基本的なステータスです。どれだけのダメージに耐えられるかを決定します。戦闘や罠などで減少し0になるとシナリオ失敗となります。"
+        }
+    ]
+}

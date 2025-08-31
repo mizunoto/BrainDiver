@@ -1,0 +1,31 @@
+{
+    "name": "成長",
+    "id": "train",
+    "priority": 0,
+    "genre": [
+        "system",
+        "train",
+        "description"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "use_data_core"
+        },
+        {
+            "filter": 0,
+            "id": "change_equip"
+        },
+        {
+            "filter": 0,
+            "id": "skill"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "キャラクターは以下の方法で成長・強化することができます"
+        }
+    ]
+}

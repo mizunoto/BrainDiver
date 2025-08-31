@@ -1,0 +1,17 @@
+{
+    "name": "導入フェーズ",
+    "id": "phase_intro",
+    "priority": 0,
+    "genre": [
+        "session",
+        "intro"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "GMがシナリオの導入を読み上げ、プレイヤーに状況を伝えるフェーズです。"
+        }
+    ]
+}

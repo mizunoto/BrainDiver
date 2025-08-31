@@ -1,0 +1,19 @@
+{
+    "name": "使用武器について",
+    "id": "combat_weapon",
+    "priority": 0,
+    "genre": [
+        "system",
+        "combat",
+        "description",
+        "weapon"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "攻撃は現在取り出している武器種によって行われます。武器種の変更は戦闘中でも可能ですが、変更に1行動消費します。"
+        }
+    ]
+}

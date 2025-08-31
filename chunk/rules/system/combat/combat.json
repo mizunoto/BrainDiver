@@ -1,0 +1,43 @@
+{
+    "name": "戦闘",
+    "id": "combat",
+    "priority": 0,
+    "genre": [
+        "system",
+        "combat",
+        "section"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "combat_turn"
+        },
+        {
+            "filter": 0,
+            "id": "combat_energy"
+        },
+        {
+            "filter": 0,
+            "id": "combat_weapon"
+        },
+        {
+            "filter": 0,
+            "id": "combat_hit_rate"
+        },
+        {
+            "filter": 0,
+            "id": "combat_avoidance"
+        },
+        {
+            "filter": 0,
+            "id": "combat_damage"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "この項目では戦闘の流れを解説します。"
+        }
+    ]
+}

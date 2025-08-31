@@ -1,14 +1,8 @@
 {
     "name": "サンプル",
+    "id": "_template",
     "priority": 0,
-    "under": null,
-    "after": null,
     "genre": [],
-    "params": [
-        {
-            "access_level": 0,
-            "type": "description",
-            "description": "チャンクの説明文"
-        }
-    ]
+    "include": [],
+    "params": []
 }

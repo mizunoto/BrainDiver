@@ -1,0 +1,27 @@
+{
+    "name": "相場判定",
+    "id": "market_price",
+    "priority": 0,
+    "genre": [
+        "market",
+        "price",
+        "judge",
+        "LUK"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "セッション間に一度だけデータ・コアの販売価格の相場判定を行うことができます。LUKによって判定を行い、販売価格に出目(%)上乗せされます。これは次のセッション開始まで固定されます。"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "LUK",
+            "skill": "使用不可",
+            "adjust": "なし",
+            "value": "相場判定"
+        }
+    ]
+}

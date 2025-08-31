@@ -1,0 +1,34 @@
+{
+    "name": "セッション開始",
+    "id": "session_start",
+    "priority": 0,
+    "genre": [
+        "session",
+        "section"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "session_start"
+        },
+        {
+            "filter": 0,
+            "id": "session_progress"
+        },
+        {
+            "filter": 0,
+            "id": "session_climax"
+        },
+        {
+            "filter": 0,
+            "id": "session_estimate"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "セッションを始めます。"
+        }
+    ]
+}

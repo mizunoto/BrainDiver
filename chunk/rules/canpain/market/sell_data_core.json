@@ -1,0 +1,24 @@
+{
+    "name": "データ・コアの売却",
+    "id": "sell_data_core",
+    "priority": 0,
+    "genre": [
+        "market",
+        "item",
+        "data_core",
+        "sell"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "market_price"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "データ・コアは使用できる他、売却することもできます。"
+        }
+    ]
+}

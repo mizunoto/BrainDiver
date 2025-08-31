@@ -1,0 +1,31 @@
+{
+    "name": "戦闘時のハッキングについて",
+    "id": "combat_hack",
+    "priority": 0,
+    "genre": [
+        "system",
+        "hacking",
+        "description"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "port_hacking"
+        },
+        {
+            "filter": 0,
+            "id": "process_overload"
+        },
+        {
+            "filter": 0,
+            "id": "mind_jack"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "戦闘時におけるハッキングは特殊行動として扱い、攻撃に関する判定は適用されません。"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "アーム・ユニット",
+    "id": "arm_unit",
+    "priority": 0,
+    "genre": [
+        "system",
+        "hacking",
+        "combat",
+        "port"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "port",
+            "success": "対象は次のターン攻撃行動ができなくなる。"
+        }
+    ]
+}

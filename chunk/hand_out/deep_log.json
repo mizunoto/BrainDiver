@@ -1,21 +1,17 @@
 {
     "name": "隔絶輪廻のブレインダイバー：ディープログ・データ",
-    "priority": 0,
-    "under": null,
-    "after": null,
+    "id": "deep_log",
+    "priority": -1,
     "genre": [
-        "hand_out"
+        "hand_out",
+        "deep_log",
+        "scenario",
+        "secret"
     ],
-    "params": [
-        {
-            "access_level": 7,
-            "type": "description",
-            "description": "GM向けハンドアウト"
-        },
-        {
-            "access_level": 7,
-            "type": "include",
-            "include": []
-        }
-    ]
+    "include": [],
+    "params": [{
+        "access_level": 0,
+        "type": "description",
+        "value": "GM向けハンドアウト"
+    }]
 }

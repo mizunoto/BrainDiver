@@ -1,0 +1,19 @@
+{
+    "name": "レッグ・ユニット",
+    "id": "leg_unit",
+    "priority": 0,
+    "genre": [
+        "system",
+        "hacking",
+        "combat",
+        "port"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "port",
+            "success": "対象は行動妨害状態となり、次のターン行動順が遅れる。"
+        }
+    ]
+}

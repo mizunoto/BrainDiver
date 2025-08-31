@@ -1,0 +1,19 @@
+{
+    "name": "処理負荷",
+    "id": "process_overload",
+    "priority": 0,
+    "genre": [
+        "system",
+        "hacking",
+        "description",
+        "combat"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "対象が5ダメージ受ける毎に1ポイント、最大5ポイント蓄積します。対象に対するハッキングの補正値に加算されます。対象に対するハッキングが成功したターンに0にリセットされます。プレイヤーにも存在するパラメータです。"
+        }
+    ]
+}

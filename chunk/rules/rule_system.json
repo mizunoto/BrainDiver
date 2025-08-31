@@ -1,0 +1,37 @@
+{
+    "name": "ルールとシステム",
+    "id": "rule_system",
+    "priority": 0,
+    "genre": [
+        "section"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "status"
+        },
+        {
+            "filter": 0,
+            "id": "judge"
+        },
+        {
+            "filter": 0,
+            "id": "train"
+        },
+        {
+            "filter": 0,
+            "id": "hack"
+        },
+        {
+            "filter": 0,
+            "id": "combat"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "この項ではルールとシステムを説明します。"
+        }
+    ]
+}

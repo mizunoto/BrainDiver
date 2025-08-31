@@ -1,0 +1,27 @@
+{
+    "name": "セッション間にできること",
+    "id": "post_session",
+    "priority": 0,
+    "genre": [
+        "section",
+        "canpain",
+        "description"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "base"
+        },
+        {
+            "filter": 0,
+            "id": "market"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "一つのセッションが終わってから、次のセッションに進む前に次の行動ができます。"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "セッション評価",
+    "id": "session_estimate",
+    "priority": 0,
+    "genre": [
+        "session",
+        "estimate"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "シナリオが完了し、GMがシナリオの評価基準に基づき報酬を付与するフェーズです。"
+        }
+    ]
+}

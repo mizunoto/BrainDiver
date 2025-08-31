@@ -1,0 +1,19 @@
+{
+    "name": "ファンブル",
+    "id": "fumble",
+    "priority": 0,
+    "genre": [
+        "system",
+        "fumble",
+        "description",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "出目が96～100だった場合無条件で大失敗となり、予期せぬ悪い結果をもたらします。"
+        }
+    ]
+}

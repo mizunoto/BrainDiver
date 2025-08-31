@@ -1,0 +1,31 @@
+{
+    "name": "キャラクター作成",
+    "id": "character_create",
+    "priority": 0,
+    "genre": [
+        "character",
+        "canpain",
+        "rules",
+        "status",
+        "system",
+        "equip"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "プレイヤーは新しいキャラクターを作成し、そのステータスをバックグラウンドを設定します。"
+        },
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "ステータスはHP以外の6つのステータス、HAC、STR、DEX、INT、CHA、LUKにそれぞれ下限5、上限20として合計50ポイントを割り振ります。"
+        },
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "初期装備として電磁ナイフ、レーザーピストル、カーボンアーマー、小型タンクが与えられます。"
+        }
+    ]
+}

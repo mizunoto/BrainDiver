@@ -1,0 +1,23 @@
+{
+    "name": "装備の変更",
+    "id": "change_equip",
+    "priority": 0,
+    "genre": [
+        "system",
+        "equip",
+        "item"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "現在の装備と所持している装備を入れ替えることができます。輪転街の拠点に保管してある装備は輪転街でしか取り出すことはできません。"
+        },
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "武器は近接、遠距離の2種、防具・エネルギータンクはそれぞれ1種、合計で4つの部位に装備することが可能です。"
+        }
+    ]
+}

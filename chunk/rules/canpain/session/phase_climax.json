@@ -1,0 +1,17 @@
+{
+    "name": "クライマックス",
+    "id": "phase_climax",
+    "priority": 0,
+    "genre": [
+        "session",
+        "climax"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "シナリオの最終目標を達成するための最終局面です。"
+        }
+    ]
+}

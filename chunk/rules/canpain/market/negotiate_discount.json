@@ -1,0 +1,28 @@
+{
+    "name": "値引き判定",
+    "id": "negotiate_discount",
+    "priority": 0,
+    "genre": [
+        "market",
+        "item",
+        "buy",
+        "judge",
+        "CHA"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "セッション間に一度だけアイテムを値引きすることができます。判定はCHAと交渉術などのスキルを使用し行われます。"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "CHA",
+            "skill": "交渉術|自己申告",
+            "adjust": "なし",
+            "value": "値引き判定"
+        }
+    ]
+}

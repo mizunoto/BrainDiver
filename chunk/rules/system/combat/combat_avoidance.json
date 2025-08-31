@@ -1,0 +1,28 @@
+{
+    "name": "回避判定",
+    "id": "combat_avoidance",
+    "priority": 0,
+    "genre": [
+        "system",
+        "combat",
+        "judge",
+        "HAC",
+        "DEX"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "回避判定は1D100で行い、出目が目標値以下で成功です。目標値は ステータス(DEX/HAC÷2)+関連スキルレベル+補正値 により算出されます。"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "DEX|HAC",
+            "skill": "ジャミング",
+            "adjust": "あり",
+            "description": "回避判定"
+        }
+    ]
+}

@@ -1,21 +1,19 @@
 {
     "name": "隔絶輪廻のブレインダイバー：サイド・リポジトリ",
-    "priority": 0,
-    "under": null,
-    "after": null,
+    "id": "repository",
+    "priority": -1,
     "genre": [
-        "hand_out"
+        "hand_out",
+        "repository",
+        "item",
+        "glossary"
     ],
+    "include": [],
     "params": [
         {
             "access_level": 0,
             "type": "description",
-            "description": "資料集"
-        },
-        {
-            "access_level": 0,
-            "type": "include",
-            "include": []
+            "value": "資料集"
         }
     ]
 }
