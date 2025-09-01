@@ -1,6 +1,5 @@
 {
     "name": "セッション開始",
-    "id": "session_start",
     "priority": 0,
     "genre": [
         "session",

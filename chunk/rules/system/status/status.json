@@ -1,6 +1,5 @@
 {
     "name": "ステータス",
-    "id": "status",
     "priority": 0,
     "genre": [
         "system",

@@ -1,12 +1,17 @@
 {
     "name": "アイテムの購入",
-    "id": "buy_item",
     "priority": 0,
-    "genre": ["market", "item", "buy"],
+    "genre": [
+        "market",
+        "item",
+        "buy"
+    ],
     "include": [],
-    "params": [{
-        "access_level": 0,
-        "type": "description",
-        "value": "アイテムを購入することができます。アイテムの所持数には上限があります。"
-    }]
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "アイテムを購入することができます。アイテムの所持数には上限があります。"
+        }
+    ]
 }

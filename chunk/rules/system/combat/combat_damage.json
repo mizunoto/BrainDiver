@@ -1,6 +1,5 @@
 {
     "name": "ダメージと防御",
-    "id": "combat_damage",
     "priority": 0,
     "genre": [
         "system",

@@ -1,6 +1,5 @@
 {
     "name": "装備の購入",
-    "id": "buy_equip",
     "priority": 0,
     "genre": [
         "market",

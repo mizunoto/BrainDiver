@@ -1,6 +1,5 @@
 {
     "name": "キャラクター作成",
-    "id": "character_create",
     "priority": 0,
     "genre": [
         "character",

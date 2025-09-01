@@ -1,6 +1,5 @@
 {
     "name": "HPが0になった時の扱い",
-    "id": "on_failure",
     "priority": 0,
     "genre": [
         "system",

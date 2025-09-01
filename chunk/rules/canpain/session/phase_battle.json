@@ -1,6 +1,5 @@
 {
     "name": "進行フェーズ時の戦闘",
-    "id": "phase_battle",
     "priority": 0,
     "genre": [
         "battle",

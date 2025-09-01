@@ -1,6 +1,5 @@
 {
     "name": "アイテムの売却",
-    "id": "sell_item",
     "priority": 0,
     "genre": [
         "market",

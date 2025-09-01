@@ -1,6 +1,5 @@
 {
     "name": "HAC",
-    "id": "status_hac",
     "priority": 0,
     "genre": [
         "status",

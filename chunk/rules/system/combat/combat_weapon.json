@@ -1,6 +1,5 @@
 {
     "name": "使用武器について",
-    "id": "combat_weapon",
     "priority": 0,
     "genre": [
         "system",

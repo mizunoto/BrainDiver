@@ -1,6 +1,5 @@
 {
     "name": "装備の変更",
-    "id": "change_equip",
     "priority": 0,
     "genre": [
         "system",

@@ -1,6 +1,5 @@
 {
     "name": "判定",
-    "id": "judge",
     "priority": 0,
     "genre": [
         "system",

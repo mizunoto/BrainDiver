@@ -1,6 +1,5 @@
 {
     "name": "戦闘中のエネルギーについて",
-    "id": "combat_energy",
     "priority": 0,
     "genre": [
         "system",

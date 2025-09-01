@@ -1,6 +1,5 @@
 {
     "name": "マーケットの利用",
-    "id": "market",
     "priority": 0,
     "genre": [
         "market",
@@ -37,9 +36,11 @@
             "id": "sell_data_core"
         }
     ],
-    "params": [{
-        "access_level": 0,
-        "type": "description",
-        "value": "共通通貨ℂを消費して利用できるマーケットです。セッション間の準備期間に利用することができます。"
-    }]
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "共通通貨ℂを消費して利用できるマーケットです。セッション間の準備期間に利用することができます。"
+        }
+    ]
 }

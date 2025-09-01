@@ -1,6 +1,5 @@
 {
     "name": "値引き判定",
-    "id": "negotiate_discount",
     "priority": 0,
     "genre": [
         "market",

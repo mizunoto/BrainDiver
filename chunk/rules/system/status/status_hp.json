@@ -1,6 +1,5 @@
 {
     "name": "HP",
-    "id": "status_hp",
     "priority": 0,
     "genre": [
         "status",

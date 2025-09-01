@@ -1,6 +1,5 @@
 {
     "name": "INT",
-    "id": "status_int",
     "priority": 0,
     "genre": [
         "status",

@@ -1,6 +1,5 @@
 {
     "name": "データ・コアの売却",
-    "id": "sell_data_core",
     "priority": 0,
     "genre": [
         "market",

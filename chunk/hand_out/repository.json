@@ -1,14 +1,32 @@
 {
     "name": "隔絶輪廻のブレインダイバー：サイド・リポジトリ",
-    "id": "repository",
     "priority": -1,
     "genre": [
         "hand_out",
         "repository",
         "item",
-        "glossary"
+        "glossary",
+        "npc",
+        "skill"
     ],
-    "include": [],
+    "include": [
+        {
+            "filter": 0,
+            "id": "glossary"
+        },
+        {
+            "filter": 0,
+            "id": "npc_list"
+        },
+        {
+            "filter": 0,
+            "id": "item_list"
+        },
+        {
+            "filter": 0,
+            "id": "skill_list"
+        }
+    ],
     "params": [
         {
             "access_level": 0,

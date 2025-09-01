@@ -1,6 +1,5 @@
 {
     "name": "回避判定",
-    "id": "combat_avoidance",
     "priority": 0,
     "genre": [
         "system",

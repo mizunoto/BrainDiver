@@ -1,12 +1,16 @@
 {
     "name": "初めに",
-    "id": "first",
     "priority": 0,
-    "genre": ["section", "description"],
+    "genre": [
+        "section",
+        "description"
+    ],
     "include": [],
-    "params": [{
-        "access_level": 0,
-        "type": "description",
-        "value": "生成AIがGMを務めることを前提に設計された、新時代のTRPG「隔絶輪廻のブレインダイバー」は、プレイヤーとGM（ゲームマスター）が協力して物語を紡ぐテーブルトーク・ロールプレイングゲームです。プレイヤーは、退廃的なSF世界で様々な任務に挑み、自分の選択で物語を動かしていきます。"
-    }]
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "生成AIがGMを務めることを前提に設計された、新時代のTRPG「隔絶輪廻のブレインダイバー」は、プレイヤーとGM（ゲームマスター）が協力して物語を紡ぐテーブルトーク・ロールプレイングゲームです。プレイヤーは、退廃的なSF世界で様々な任務に挑み、自分の選択で物語を動かしていきます。"
+        }
+    ]
 }

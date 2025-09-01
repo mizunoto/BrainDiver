@@ -1,6 +1,5 @@
 {
     "name": "命中判定",
-    "id": "combat_hit_rate",
     "priority": 0,
     "genre": [
         "system",

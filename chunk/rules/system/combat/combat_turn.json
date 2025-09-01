@@ -1,6 +1,5 @@
 {
     "name": "ターン制について",
-    "id": "combat_turn",
     "priority": 0,
     "genre": [
         "system",

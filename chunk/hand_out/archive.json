@@ -1,6 +1,5 @@
 {
     "name": "隔絶輪廻のブレインダイバー：パーマネント・アーカイブ",
-    "id": "archive",
     "priority": -1,
     "genre": [
         "hand_out",
@@ -8,10 +7,12 @@
         "scenario"
     ],
     "include": [],
-    "params": [{
-        "access_level": 0,
-        "type": "description",
-        "value": "シナリオ一覧"
-    }],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "シナリオ一覧"
+        }
+    ],
     "plan": "組み込みシナリオ一覧を作成する。"
 }

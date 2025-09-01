@@ -1,6 +1,5 @@
 {
     "name": "相場判定",
-    "id": "market_price",
     "priority": 0,
     "genre": [
         "market",

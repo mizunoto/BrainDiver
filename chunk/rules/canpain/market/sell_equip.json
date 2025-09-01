@@ -1,6 +1,5 @@
 {
     "name": "装備の売却",
-    "id": "sell_equip",
     "priority": 0,
     "genre": [
         "market",

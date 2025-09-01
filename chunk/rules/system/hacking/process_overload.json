@@ -1,6 +1,5 @@
 {
     "name": "処理負荷",
-    "id": "process_overload",
     "priority": 0,
     "genre": [
         "system",

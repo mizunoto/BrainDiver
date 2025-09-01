@@ -1,6 +1,5 @@
 {
     "name": "CHA",
-    "id": "status_cha",
     "priority": 0,
     "genre": [
         "status",
