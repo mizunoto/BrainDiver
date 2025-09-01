@@ -9,10 +9,6 @@
     "include": [
         {
             "filter": 0,
-            "id": "session_start"
-        },
-        {
-            "filter": 0,
             "id": "session_progress"
         },
         {
