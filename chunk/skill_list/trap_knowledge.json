@@ -1,0 +1,39 @@
+{
+    "name": "罠知識",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "DEX",
+        "INT",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "罠について詳しくなる。遺跡の調査でより多くの情報を得ることができる。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "DEX",
+                    "INT"
+                ],
+                "default_amount": 25
+            },
+            "value": "罠知識"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "DEX",
+            "skill": "罠知識",
+            "adjust": "あり",
+            "value": "罠解除判定"
+        }
+    ]
+}

@@ -7,12 +7,12 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "return_to_base"
+            "access_filter": 0,
+            "chunk_id": "return_to_base"
         },
         {
-            "filter": 0,
-            "id": "character_lost"
+            "access_filter": 0,
+            "chunk_id": "character_lost"
         }
     ],
     "params": [

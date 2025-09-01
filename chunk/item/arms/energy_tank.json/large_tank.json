@@ -1,0 +1,30 @@
+{
+    "name": "大容量タンク",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "armor",
+        "item",
+        "equip",
+        "energy"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "大容量のエネルギータンク。"
+        },
+        {
+            "access_level": 0,
+            "type": "tank",
+            "capacity": 100,
+            "accumulate": 7,
+            "required": {
+                "STR": 25
+            },
+            "worth": 8000,
+            "value": "大容量タンク"
+        }
+    ]
+}

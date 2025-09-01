@@ -1,0 +1,37 @@
+{
+    "name": "精密操作",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "DEX",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "細かい作業が得意になる。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "DEX"
+                ],
+                "default_amount": 15
+            },
+            "value": "軽業"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "DEX",
+            "skill": "精密操作",
+            "adjust": "あり",
+            "value": "精密操作判定"
+        }
+    ]
+}

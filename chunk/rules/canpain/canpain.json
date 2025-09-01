@@ -8,20 +8,20 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "on_failure"
+            "access_filter": 0,
+            "chunk_id": "on_failure"
         },
         {
-            "filter": 0,
-            "id": "character_create"
+            "access_filter": 0,
+            "chunk_id": "character_create"
         },
         {
-            "filter": 0,
-            "id": "session_start"
+            "access_filter": 0,
+            "chunk_id": "session_start"
         },
         {
-            "filter": 0,
-            "id": "base"
+            "access_filter": 0,
+            "chunk_id": "base"
         }
     ],
     "params": [

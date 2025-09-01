@@ -1,0 +1,25 @@
+{
+    "name": "強化プレートアーマー",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "armor",
+        "item",
+        "equip",
+        "DR"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "セラミックプレートで重要箇所を補強した防具。重量は増したが、防御力は飛躍的に向上している。"
+        },
+        {
+            "access_level": 0,
+            "type": "armor",
+            "DR": 2,
+            "value": "強化プレートアーマー"
+        }
+    ]
+}

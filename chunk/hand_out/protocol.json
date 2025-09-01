@@ -9,20 +9,20 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "first"
+            "access_filter": 0,
+            "chunk_id": "first"
         },
         {
-            "filter": 0,
-            "id": "introduction"
+            "access_filter": 0,
+            "chunk_id": "introduction"
         },
         {
-            "filter": 0,
-            "id": "how_to_play"
+            "access_filter": 0,
+            "chunk_id": "how_to_play"
         },
         {
-            "filter": 0,
-            "id": "rule_system"
+            "access_filter": 0,
+            "chunk_id": "rule_system"
         }
     ],
     "params": [

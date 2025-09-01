@@ -1,0 +1,39 @@
+{
+    "name": "データ解析 ",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "HAC",
+        "INT",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "破損したデータや暗号化されたデータの復元・解除ができる。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "HAC",
+                    "INT"
+                ],
+                "default_amount": 25
+            },
+            "value": "データ解析"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "HAC",
+            "skill": "データ解析",
+            "adjust": "あり",
+            "description": "レリック・ハック他"
+        }
+    ]
+}

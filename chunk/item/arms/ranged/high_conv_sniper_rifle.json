@@ -1,0 +1,31 @@
+{
+    "name": "高収束スナイパーライフル",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "ranged",
+        "heavy",
+        "weapon",
+        "item",
+        "equip",
+        "ATK"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "一撃の威力に全てを懸けた決戦兵器。エネルギー消費も相応に激しい。"
+        },
+        {
+            "access_level": 0,
+            "type": "heavy",
+            "ATK": 32,
+            "required": {
+                "DEX": 30
+            },
+            "worth": 10000,
+            "value": "高収束スナイパーライフル"
+        }
+    ]
+}

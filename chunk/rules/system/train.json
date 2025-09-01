@@ -8,16 +8,16 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "use_data_core"
+            "access_filter": 0,
+            "chunk_id": "use_data_core"
         },
         {
-            "filter": 0,
-            "id": "change_equip"
+            "access_filter": 0,
+            "chunk_id": "change_equip"
         },
         {
-            "filter": 0,
-            "id": "skill"
+            "access_filter": 0,
+            "chunk_id": "skill"
         }
     ],
     "params": [

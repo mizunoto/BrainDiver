@@ -1,0 +1,25 @@
+{
+    "name": "アイテムリスト",
+    "priority": 0,
+    "genre": [
+        "item",
+        "section"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "arms"
+        },
+        {
+            "filter": 0,
+            "id": "consumable"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "入手できるアイテムの一部です。"
+        }
+    ]
+}

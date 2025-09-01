@@ -1,0 +1,37 @@
+{
+    "name": "持久力",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "STR",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "体力を増やす。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "STR"
+                ],
+                "default_amount": 15
+            },
+            "value": "持久力"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "STR",
+            "skill": "持久力",
+            "adjust": "あり",
+            "value": "持久力"
+        }
+    ]
+}

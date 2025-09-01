@@ -1,0 +1,38 @@
+{
+    "name": "チャンクタイプ",
+    "priority": 0,
+    "genre": [
+        "ignore"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "ignore",
+            "value": {
+                "ignore": "文書化するときに無視するパラメータ",
+                "section": "MD出力する際のセクション",
+                "meta": "設計意図や今後の調整予定を書く場所",
+                "description": "客観的な説明文",
+                "flavor": "物語を豊かにするためのフレーバーテキスト",
+                "narrative": "物語のシーン描写",
+                "persona": "NPCの概要",
+                "system": "ゲームの根幹システムに関する説明",
+                "rule": "一般的なルール",
+                "judge": "判定に関するルール",
+                "status": "敵のステータス",
+                "status_criterion": "敵のステータス(目安)",
+                "skill": "スキルに関する説明",
+                "item": "アイテムに関する説明",
+                "arms": "武器に関する説明",
+                "armor": "防具に関する説明",
+                "tank": "エネルギータンクに関する説明"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "ignore",
+            "value": "tableの導入は見送り"
+        }
+    ]
+}

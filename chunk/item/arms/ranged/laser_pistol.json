@@ -1,0 +1,28 @@
+{
+    "name": "レーザーピストル",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "ranged",
+        "light",
+        "weapon",
+        "item",
+        "equip",
+        "ATK"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "取り回しに優れた標準的なレーザーハンドガン。"
+        },
+        {
+            "access_level": 0,
+            "type": "light",
+            "ATK": 8,
+            "worth": 120,
+            "value": "レーザーピストル"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "エネルギー回復アイテム",
+    "priority": 0,
+    "genre": [
+        "consumable",
+        "item",
+        "energy"
+    ],
+    "include": [
+        {
+            "access_filter": 0,
+            "chunk_id": "energy_pack_s"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "high_density_gel"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "エネルギー回復アイテムの一覧です。"
+        }
+    ]
+}

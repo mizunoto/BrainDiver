@@ -8,12 +8,12 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "critical"
+            "access_filter": 0,
+            "chunk_id": "critical"
         },
         {
-            "filter": 0,
-            "id": "fumble"
+            "access_filter": 0,
+            "chunk_id": "fumble"
         }
     ],
     "params": [

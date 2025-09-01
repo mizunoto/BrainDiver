@@ -7,8 +7,8 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "canpain"
+            "access_filter": 0,
+            "chunk_id": "canpain"
         }
     ],
     "params": [

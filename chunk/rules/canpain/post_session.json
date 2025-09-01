@@ -8,12 +8,12 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "base"
+            "access_filter": 0,
+            "chunk_id": "base"
         },
         {
-            "filter": 0,
-            "id": "market"
+            "access_filter": 0,
+            "chunk_id": "market"
         }
     ],
     "params": [

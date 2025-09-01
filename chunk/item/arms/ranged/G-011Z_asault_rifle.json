@@ -1,0 +1,31 @@
+{
+    "name": "G-011Zアサルトライフル",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "ranged",
+        "standard",
+        "weapon",
+        "item",
+        "equip",
+        "ATK"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "標準的なアサルトライフル。"
+        },
+        {
+            "access_level": 0,
+            "type": "standard",
+            "ATK": 16,
+            "required": {
+                "DEX": 15
+            },
+            "worth": 3000,
+            "value": "G-011Zアサルトライフル"
+        }
+    ]
+}

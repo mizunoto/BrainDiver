@@ -8,32 +8,32 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "status_hp"
+            "access_filter": 0,
+            "chunk_id": "status_hp"
         },
         {
-            "filter": 0,
-            "id": "status_hac"
+            "access_filter": 0,
+            "chunk_id": "status_hac"
         },
         {
-            "filter": 0,
-            "id": "status_str"
+            "access_filter": 0,
+            "chunk_id": "status_str"
         },
         {
-            "filter": 0,
-            "id": "status_dex"
+            "access_filter": 0,
+            "chunk_id": "status_dex"
         },
         {
-            "filter": 0,
-            "id": "status_int"
+            "access_filter": 0,
+            "chunk_id": "status_int"
         },
         {
-            "filter": 0,
-            "id": "status_cha"
+            "access_filter": 0,
+            "chunk_id": "status_cha"
         },
         {
-            "filter": 0,
-            "id": "status_luk"
+            "access_filter": 0,
+            "chunk_id": "status_luk"
         }
     ],
     "params": [

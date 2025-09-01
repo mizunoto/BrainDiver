@@ -1,0 +1,30 @@
+{
+    "name": "エネルギーパック(S)",
+    "priority": 0,
+    "genre": [
+        "consumable",
+        "item",
+        "energy",
+        "use",
+        "buy"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "「新人か？保険として持っておけ」、ストレイヤーの先達に訊けば大体この答えが返ってくる。"
+        },
+        {
+            "access_level": 0,
+            "type": "item",
+            "use": {
+                "type": "energy",
+                "amount": 20,
+                "description": "使用すると瞬時にエネルギーを20回復する"
+            },
+            "worth": 10,
+            "value": "エネルギーパック(S)"
+        }
+    ]
+}

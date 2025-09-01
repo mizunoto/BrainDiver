@@ -11,20 +11,20 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "glossary"
+            "access_filter": 0,
+            "chunk_id": "glossary"
         },
         {
-            "filter": 0,
-            "id": "npc_list"
+            "access_filter": 0,
+            "chunk_id": "npc_list"
         },
         {
-            "filter": 0,
-            "id": "item_list"
+            "access_filter": 0,
+            "chunk_id": "item_list"
         },
         {
-            "filter": 0,
-            "id": "skill_list"
+            "access_filter": 0,
+            "chunk_id": "skill_list"
         }
     ],
     "params": [

@@ -1,0 +1,26 @@
+{
+    "name": "用語集",
+    "priority": 0,
+    "genre": [
+        "glossary",
+        "section"
+    ],
+    "include": [
+        "lost_era",
+        "leasal_crack",
+        "sactum",
+        "rotary_city",
+        "strayer",
+        "digitalized_brain",
+        "automata",
+        "synthesis",
+        "electron"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "section",
+            "value": "作中に出てくる用語の解説です。"
+        }
+    ]
+}

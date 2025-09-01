@@ -8,16 +8,16 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "port_hacking"
+            "access_filter": 0,
+            "chunk_id": "port_hacking"
         },
         {
-            "filter": 0,
-            "id": "process_overload"
+            "access_filter": 0,
+            "chunk_id": "process_overload"
         },
         {
-            "filter": 0,
-            "id": "mind_jack"
+            "access_filter": 0,
+            "chunk_id": "mind_jack"
         }
     ],
     "params": [

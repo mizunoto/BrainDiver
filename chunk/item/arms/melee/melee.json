@@ -1,0 +1,54 @@
+{
+    "name": "近接武器",
+    "priority": 0,
+    "genre": [
+        "item",
+        "arms",
+        "melee",
+        "weapon",
+        "equip",
+        "ATK"
+    ],
+    "include": [
+        {
+            "access_filter": 0,
+            "chunk_id": "electro_knife"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "vibrate_blade"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "boost_hammer"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "近接武器の一覧です。"
+        },
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "近接攻撃の判定にはSTR、対抗判定にはDEX及びそれぞれ対象のスキルレベルを使用します。"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "STR",
+            "skill": "近接戦闘",
+            "adjust": "あり",
+            "description": "近接攻撃判定"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "DEX",
+            "skill": "ジャミング",
+            "adjust": "あり",
+            "description": "近接攻撃対抗判定"
+        }
+    ]
+}

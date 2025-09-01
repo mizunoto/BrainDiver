@@ -1,0 +1,17 @@
+{
+    "name": "シンセシス",
+    "priority": 0,
+    "genre": [
+        "glossary",
+        "enemy",
+        "synthesis"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "人類によく似た姿の存在。一体一体の強さは大したことはないが、その能力は集団で真価を発揮し、まるで全員が一つの生物かのように緻密な連携で翻弄してくる。"
+        }
+    ]
+}

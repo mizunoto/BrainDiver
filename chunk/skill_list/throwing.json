@@ -1,0 +1,39 @@
+{
+    "name": "投擲",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "STR",
+        "DEX",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "投げることができる。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "STR",
+                    "DEX"
+                ],
+                "default_amount": 25
+            },
+            "value": "投擲"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "STR",
+            "skill": "投擲",
+            "adjust": "あり",
+            "value": "投擲判定"
+        }
+    ]
+}

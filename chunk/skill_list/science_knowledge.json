@@ -1,0 +1,37 @@
+{
+    "name": "科学知識",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "INT",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "科学について詳しくなる。遺跡の調査でより多くの情報を得ることができる。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "INT"
+                ],
+                "default_amount": 15
+            },
+            "value": "科学知識"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "INT",
+            "skill": "科学知識",
+            "adjust": "あり",
+            "value": "科学知識判定"
+        }
+    ]
+}

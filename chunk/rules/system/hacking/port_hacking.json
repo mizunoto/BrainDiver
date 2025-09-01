@@ -8,12 +8,12 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "arm_unit"
+            "access_filter": 0,
+            "chunk_id": "arm_unit"
         },
         {
-            "filter": 0,
-            "id": "leg_unit"
+            "access_filter": 0,
+            "chunk_id": "leg_unit"
         }
     ],
     "params": [

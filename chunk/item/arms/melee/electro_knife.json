@@ -1,0 +1,28 @@
+{
+    "name": "電磁ナイフ",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "melee",
+        "light",
+        "weapon",
+        "item",
+        "equip",
+        "ATK"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "刀身に発生させた電磁場で切断力を高めた基本的なナイフ。"
+        },
+        {
+            "access_level": 0,
+            "type": "melee",
+            "ATK": 6,
+            "worth": 100,
+            "value": "電磁ナイフ"
+        }
+    ]
+}

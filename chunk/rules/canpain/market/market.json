@@ -8,32 +8,32 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "skill"
+            "access_filter": 0,
+            "chunk_id": "skill"
         },
         {
-            "filter": 0,
-            "id": "buy_equip"
+            "access_filter": 0,
+            "chunk_id": "buy_equip"
         },
         {
-            "filter": 0,
-            "id": "buy_item"
+            "access_filter": 0,
+            "chunk_id": "buy_item"
         },
         {
-            "filter": 0,
-            "id": "negotiate_discount"
+            "access_filter": 0,
+            "chunk_id": "negotiate_discount"
         },
         {
-            "filter": 0,
-            "id": "sell_equip"
+            "access_filter": 0,
+            "chunk_id": "sell_equip"
         },
         {
-            "filter": 0,
-            "id": "sell_item"
+            "access_filter": 0,
+            "chunk_id": "sell_item"
         },
         {
-            "filter": 0,
-            "id": "sell_data_core"
+            "access_filter": 0,
+            "chunk_id": "sell_data_core"
         }
     ],
     "params": [

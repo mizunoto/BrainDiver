@@ -8,28 +8,28 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "combat_turn"
+            "access_filter": 0,
+            "chunk_id": "combat_turn"
         },
         {
-            "filter": 0,
-            "id": "combat_energy"
+            "access_filter": 0,
+            "chunk_id": "combat_energy"
         },
         {
-            "filter": 0,
-            "id": "combat_weapon"
+            "access_filter": 0,
+            "chunk_id": "combat_weapon"
         },
         {
-            "filter": 0,
-            "id": "combat_hit_rate"
+            "access_filter": 0,
+            "chunk_id": "combat_hit_rate"
         },
         {
-            "filter": 0,
-            "id": "combat_avoidance"
+            "access_filter": 0,
+            "chunk_id": "combat_avoidance"
         },
         {
-            "filter": 0,
-            "id": "combat_damage"
+            "access_filter": 0,
+            "chunk_id": "combat_damage"
         }
     ],
     "params": [

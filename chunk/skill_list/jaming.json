@@ -1,0 +1,39 @@
+{
+    "name": "ジャミング",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "HAC",
+        "DEX",
+        "judge"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "周囲の敵の領域探査を妨害し、敵の攻撃をよけやすくすることができる。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "HAC",
+                    "DEX"
+                ],
+                "default_amount": 25
+            },
+            "value": "ジャミング"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "HAC",
+            "skill": "ジャミング",
+            "adjust": "あり",
+            "description": "回避判定"
+        }
+    ]
+}

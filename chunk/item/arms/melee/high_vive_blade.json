@@ -1,0 +1,31 @@
+{
+    "name": "高周波ブレード",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "melee",
+        "standard",
+        "weapon",
+        "item",
+        "equip",
+        "ATK"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "刀身を超高速で振動させることで、あらゆるものを切り裂くストレイヤー御用達の武器。"
+        },
+        {
+            "access_level": 0,
+            "type": "melee",
+            "ATK": 14,
+            "required": {
+                "STR": 15
+            },
+            "worth": 2500,
+            "value": "高周波ブレード"
+        }
+    ]
+}

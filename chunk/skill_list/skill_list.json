@@ -1,0 +1,73 @@
+{
+    "name": "スキル",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "section"
+    ],
+    "include": [
+        {
+            "access_filter": 0,
+            "chunk_id": "melee_combat"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "throwing"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "endurance"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "sniping"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "trap_knowledge"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "percision"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "acrobatics"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "science_knowledge"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "historical_knowledge"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "negotiation"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "data_analyse"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "cracking"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "jaming"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "fire_wall"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "前提ステータスが[基礎コスト+現在のスキルレベル]を満たしていればマーケットでスキルデータを購入しインストースすることで対象のスキルレベルを1上げることができる。購入コストは[500+(購入対象のスキルレベル)²×50]ℂで決定される。"
+        }
+    ]
+}

@@ -8,8 +8,8 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "phase_battle"
+            "access_filter": 0,
+            "chunk_id": "phase_battle"
         }
     ],
     "params": [

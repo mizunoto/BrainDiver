@@ -1,0 +1,38 @@
+{
+    "name": "近接戦闘",
+    "priority": 0,
+    "genre": [
+        "skill",
+        "system",
+        "STR",
+        "judge",
+        "combat"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "近接戦闘は、近接武器を使った戦闘で行われます。"
+        },
+        {
+            "access_level": 0,
+            "type": "skill",
+            "required": {
+                "status": [
+                    "STR"
+                ],
+                "default_amount": 15
+            },
+            "value": "近接戦闘"
+        },
+        {
+            "access_level": 0,
+            "type": "judge",
+            "status": "STR",
+            "skill": "近接戦闘",
+            "adjust": "あり",
+            "value": "近接攻撃判定"
+        }
+    ]
+}

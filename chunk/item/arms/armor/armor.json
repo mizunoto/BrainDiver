@@ -1,0 +1,39 @@
+{
+    "name": "防具",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "armor",
+        "item",
+        "equip",
+        "DR"
+    ],
+    "include": [
+        {
+            "access_filter": 0,
+            "chunk_id": "carbon_armor"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "enhanced_armor"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "e_m_field_armor"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "防具の一覧です。"
+        },
+        {
+            "access_level": 0,
+            "type": "combat",
+            "status": "DR",
+            "value": "ダメージ減衰",
+            "description": "DRの値の分だけ発生するダメージは減衰します。ただし、1未満にはなりません。"
+        }
+    ]
+}

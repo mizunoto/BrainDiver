@@ -1,0 +1,26 @@
+{
+    "name": "小型タンク",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "energy",
+        "item",
+        "equip"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "小型のエネルギータンク。"
+        },
+        {
+            "access_level": 0,
+            "type": "tank",
+            "capacity": 20,
+            "accumulate": 1,
+            "worth": 300,
+            "value": "小型タンク"
+        }
+    ]
+}

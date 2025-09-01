@@ -9,8 +9,8 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "market_price"
+            "access_filter": 0,
+            "chunk_id": "market_price"
         }
     ],
     "params": [

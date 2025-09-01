@@ -7,16 +7,16 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "session_progress"
+            "access_filter": 0,
+            "chunk_id": "session_progress"
         },
         {
-            "filter": 0,
-            "id": "session_climax"
+            "access_filter": 0,
+            "chunk_id": "session_climax"
         },
         {
-            "filter": 0,
-            "id": "session_estimate"
+            "access_filter": 0,
+            "chunk_id": "session_estimate"
         }
     ],
     "params": [

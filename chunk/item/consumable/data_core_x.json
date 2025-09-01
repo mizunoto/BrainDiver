@@ -1,0 +1,27 @@
+{
+    "name": "データ・コア-X",
+    "priority": 0,
+    "genre": [
+        "consumable",
+        "item",
+        "data_core",
+        "sell",
+        "use",
+        "status"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "Xには特定のステータスの略称が入ります(例:データ・コア-HAC)。対象のステータスを恒久的に1上昇させることができます。不要な場合は売却が可能です。"
+        },
+        {
+            "access_level": 0,
+            "type": "item",
+            "use": "Xに当たる場所に書かれた能力値が恒久的に1上昇します。",
+            "worth": 500,
+            "value": "データ・コア-X"
+        }
+    ]
+}

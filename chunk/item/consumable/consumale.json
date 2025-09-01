@@ -1,0 +1,29 @@
+{
+    "name": "消費アイテム",
+    "priority": 0,
+    "genre": [
+        "consumable",
+        "item"
+    ],
+    "include": [
+        {
+            "access_filter": 0,
+            "chunk_id": "data_core"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "hp_healing_item"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "energy_healing_item"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "消費アイテムの一覧です"
+        }
+    ]
+}

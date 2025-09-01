@@ -1,0 +1,28 @@
+{
+    "name": "武器",
+    "priority": 0,
+    "genre": [
+        "item",
+        "arms",
+        "weapon",
+        "description",
+        "secction"
+    ],
+    "include": [
+        {
+            "filter": 0,
+            "id": "melee"
+        },
+        {
+            "filter": 0,
+            "id": "ranged"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "戦闘時などで使用下のな武器の一覧です。"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "カーボンアーマー",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "armor",
+        "item",
+        "equip",
+        "DR"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "軽量なカーボンのアーマー。"
+        },
+        {
+            "access_level": 0,
+            "type": "armor",
+            "DR": 3,
+            "worth": 500,
+            "value": "カーボンアーマー"
+        }
+    ]
+}

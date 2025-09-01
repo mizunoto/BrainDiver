@@ -6,24 +6,24 @@
     ],
     "include": [
         {
-            "filter": 0,
-            "id": "status"
+            "access_filter": 0,
+            "chunk_id": "status"
         },
         {
-            "filter": 0,
-            "id": "judge"
+            "access_filter": 0,
+            "chunk_id": "judge"
         },
         {
-            "filter": 0,
-            "id": "train"
+            "access_filter": 0,
+            "chunk_id": "train"
         },
         {
-            "filter": 0,
-            "id": "hack"
+            "access_filter": 0,
+            "chunk_id": "hack"
         },
         {
-            "filter": 0,
-            "id": "combat"
+            "access_filter": 0,
+            "chunk_id": "combat"
         }
     ],
     "params": [

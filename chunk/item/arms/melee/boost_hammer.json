@@ -1,0 +1,31 @@
+{
+    "name": "ブーストハンマー",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "melee",
+        "heavy",
+        "weapon",
+        "item",
+        "equip",
+        "ATK"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "衝撃による爆裂機構で攻撃力を増大させたハンマー。扱いにはかなりのコツが必要。"
+        },
+        {
+            "access_level": 0,
+            "type": "melee",
+            "ATK": 28,
+            "required": {
+                "STR": 30
+            },
+            "worth": 9000,
+            "value": "ブーストハンマー"
+        }
+    ]
+}

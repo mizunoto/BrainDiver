@@ -1,0 +1,34 @@
+{
+    "name": "データ・コア",
+    "priority": 0,
+    "genre": [
+        "consumable",
+        "item",
+        "data_core",
+        "sell",
+        "use",
+        "status",
+        "description"
+    ],
+    "include": [
+        {
+            "access_filter": 0,
+            "chunk_id": "use_data_core"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "data_core_x"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "data_core_all"
+        }
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "section",
+            "value": "データ・コアに関する項目です。"
+        }
+    ]
+}
