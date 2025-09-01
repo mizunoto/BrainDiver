@@ -9,8 +9,7 @@
     "include": [
         {
             "access_level": 0,
-            "type": "location",
-            "value": "sanctum_1"
+            "chunk_id": "sanctum_1"
         }
     ],
     "params": [

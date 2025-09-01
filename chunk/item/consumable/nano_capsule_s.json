@@ -1,0 +1,30 @@
+{
+    "name": "ナノカプセルS",
+    "priority": 0,
+    "genre": [
+        "item",
+        "consumable",
+        "HP",
+        "buy",
+        "use"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "小さなHP回復アイテム。使用すると瞬時にHPを10回復する。"
+        },
+        {
+            "access_level": 0,
+            "type": "item",
+            "use": {
+                "amount": {
+                    "HP": 10
+                }
+            },
+            "worth": 10,
+            "value": "ナノカプセルS"
+        }
+    ]
+}

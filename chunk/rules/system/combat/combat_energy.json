@@ -8,8 +8,14 @@
         "energy"
     ],
     "include": [
-        "energy_attack",
-        "energy_before_combat"
+        {
+            "access_filter": 0,
+            "chunk_id": "energy_attack"
+        },
+        {
+            "access_filter": 0,
+            "chunk_id": "energy_before_combat"
+        }
     ],
     "params": [
         {

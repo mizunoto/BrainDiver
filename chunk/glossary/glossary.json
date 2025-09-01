@@ -6,15 +6,42 @@
         "section"
     ],
     "include": [
-        "lost_era",
-        "leasal_crack",
-        "sactum",
-        "rotary_city",
-        "strayer",
-        "digitalized_brain",
-        "automata",
-        "synthesis",
-        "electron"
+        {
+            "access_level": 0,
+            "chunk_id": "lost_era"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "leasal_crack"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "sactum"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "rotary_city"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "strayer"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "digitalized_brain"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "automata"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "synthesis"
+        },
+        {
+            "access_level": 0,
+            "chunk_id": "electron"
+        }
     ],
     "params": [
         {
