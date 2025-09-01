@@ -8,7 +8,7 @@
     "url": "https://github.com/brain-diver/brain-diver/issues"
   },
   "homepage": "https://github.com/brain-diver/brain-diver#readme",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "scripts": {
     "postversion": "git push && git push --tags"
   }
