@@ -13,6 +13,11 @@
             "access_level": 0,
             "type": "description",
             "value": "アイテムを購入することができます。アイテムの所持数には上限があります。"
+        },
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "「サイド・リポジトリ -資料集-」に購入可能なアイテムの一例が記載されています。"
         }
     ]
 }

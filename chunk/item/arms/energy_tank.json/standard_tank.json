@@ -12,12 +12,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "バランスの取れた標準的なタンク。"
         },
         {
             "access_level": 0,
-            "type": "tank",
+            "type": "equip",
+            "tier": 3,
+            "class": [
+                "tank"
+            ],
             "capacity": 50,
             "accumulate": 3,
             "worth": 2000,

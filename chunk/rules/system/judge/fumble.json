@@ -12,7 +12,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "出目が96～100だった場合無条件で大失敗となり、予期せぬ悪い結果をもたらします。"
         }
     ]

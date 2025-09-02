@@ -13,12 +13,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "表面に展開した電磁フィールドで攻撃を減衰させる旧時代の防具。非常に高価。"
         },
         {
             "access_level": 0,
-            "type": "armor",
+            "type": "equip",
+            "tier": 5,
+            "class": [
+                "armor"
+            ],
             "DR": 12,
             "required": {
                 "STR": 30

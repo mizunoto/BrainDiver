@@ -17,6 +17,7 @@
     "params": [
         {
             "access_level": 0,
+            "type": "document",
             "value": "ルールブック v1.2.3"
         }
     ]

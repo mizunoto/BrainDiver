@@ -12,7 +12,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "出目が1～5だった場合無条件で大成功となり、通常より大きな結果を得られます。"
         }
     ]

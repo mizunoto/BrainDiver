@@ -15,7 +15,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "キャラクターは以下の方法で成長・強化することができます"
         }
     ]

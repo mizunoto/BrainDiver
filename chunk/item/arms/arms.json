@@ -16,7 +16,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "戦闘時などで使用下のな武器の一覧です。"
         }
     ]

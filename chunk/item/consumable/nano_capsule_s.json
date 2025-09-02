@@ -13,19 +13,27 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
-            "value": "小さなHP回復アイテム。使用すると瞬時にHPを10回復する。"
+            "type": "flavor",
+            "value": "治療用ナノマシンの入った小型のカプセル。"
         },
         {
             "access_level": 0,
             "type": "item",
-            "use": {
-                "amount": {
-                    "HP": 10
+            "action": {
+                "use": {
+                    "type": "dispose",
+                    "effect": [
+                        {
+                            "type": "heal",
+                            "status": "HP",
+                            "value": 10
+                        }
+                    ]
                 }
             },
             "worth": 10,
-            "value": "ナノカプセルS"
+            "value": "ナノカプセルS",
+            "description": "使用すると瞬時にHPを10回復する。"
         }
     ]
 }

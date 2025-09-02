@@ -13,19 +13,27 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "「新人か？保険として持っておけ」、ストレイヤーの先達に訊けば大体この答えが返ってくる。使用すると瞬時にエネルギーを20回復する。"
         },
         {
             "access_level": 0,
             "type": "item",
-            "use": {
-                "effect": {
-                    "energy": 20
+            "action": {
+                "use": {
+                    "type": "dispose",
+                    "effect": [
+                        {
+                            "type": "heal",
+                            "status": "energy",
+                            "value": 20
+                        }
+                    ]
                 }
             },
             "worth": 10,
-            "value": "エネルギーパック(S)"
+            "value": "エネルギーパック(S)",
+            "description": "使用すると瞬時にエネルギーを20回復する。"
         }
     ]
 }

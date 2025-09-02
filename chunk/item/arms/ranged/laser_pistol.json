@@ -15,12 +15,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "取り回しに優れた標準的なレーザーハンドガン。"
         },
         {
             "access_level": 0,
-            "type": "light",
+            "type": "equip",
+            "class": [
+                "ranged",
+                "light"
+            ],
             "ATK": 8,
             "worth": 120,
             "value": "レーザーピストル"

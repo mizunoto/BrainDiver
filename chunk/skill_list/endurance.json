@@ -13,7 +13,7 @@
         {
             "access_level": 0,
             "type": "description",
-            "value": "体力を増やす。"
+            "value": "持久力を増やす。"
         },
         {
             "access_level": 0,
@@ -32,7 +32,7 @@
             "status": "STR",
             "skill": "持久力",
             "adjust": "あり",
-            "value": "持久力"
+            "value": "持久力に関する判定"
         }
     ]
 }

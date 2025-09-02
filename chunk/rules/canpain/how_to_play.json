@@ -12,7 +12,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "ゲームは、次の手順で進めます。"
         }
     ]

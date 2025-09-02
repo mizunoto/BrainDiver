@@ -15,12 +15,17 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "刀身を超高速で振動させることで、あらゆるものを切り裂くストレイヤー御用達の武器。"
         },
         {
             "access_level": 0,
-            "type": "melee",
+            "type": "equip",
+            "tier": 3,
+            "class": [
+                "melee",
+                "standard"
+            ],
             "ATK": 14,
             "required": {
                 "STR": 15

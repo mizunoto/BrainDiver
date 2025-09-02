@@ -24,13 +24,13 @@
     ],
     "params": [
         {
-            "access_level": 7,
+            "access_level": 0,
             "type": "section",
             "value": "作中に出てくる用語の解説です。"
         },
         {
             "access_level": 7,
-            "type": "description",
+            "type": "section",
             "value": "作中に出てくる用語の裏設定を解説しています。"
         }
     ]

@@ -13,7 +13,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "入手できるアイテムの一部です。"
         }
     ]

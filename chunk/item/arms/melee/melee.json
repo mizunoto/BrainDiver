@@ -23,7 +23,7 @@
         },
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "近接攻撃の判定にはSTR、対抗判定にはDEX及びそれぞれ対象のスキルレベルを使用します。"
         },
         {

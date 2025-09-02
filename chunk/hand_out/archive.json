@@ -11,7 +11,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "document",
             "value": "シナリオ一覧"
         }
     ],

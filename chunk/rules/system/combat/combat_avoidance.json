@@ -13,7 +13,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "回避判定は1D100で行い、出目が目標値以下で成功です。目標値は ステータス(DEX/HAC÷2)+関連スキルレベル+補正値 により算出されます。"
         },
         {

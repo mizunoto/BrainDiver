@@ -22,7 +22,7 @@
         },
         {
             "access_level": 0,
-            "type": "combat",
+            "type": "system",
             "status": "DR",
             "value": "ダメージ減衰",
             "description": "DRの値の分だけ発生するダメージは減衰します。ただし、1未満にはなりません。"

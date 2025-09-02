@@ -13,12 +13,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "軽量なカーボンのアーマー。"
         },
         {
             "access_level": 0,
-            "type": "armor",
+            "type": "equip",
+            "tier": 1,
+            "class": [
+                "armor"
+            ],
             "DR": 3,
             "worth": 500,
             "value": "カーボンアーマー"

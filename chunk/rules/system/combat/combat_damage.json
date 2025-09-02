@@ -13,7 +13,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "ダメージは命中判定の成功、あるいは回避判定の失敗時に発生します。"
         },
         {

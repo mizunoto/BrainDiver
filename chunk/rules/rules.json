@@ -8,14 +8,14 @@
     "include": [
         "status",
         "judge",
-        "train",
+        "training",
         "hack",
         "combat"
     ],
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "この項ではルールとシステムを説明します。"
         }
     ]

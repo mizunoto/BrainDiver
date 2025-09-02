@@ -10,7 +10,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "筋力や腕力を表します。近接攻撃の命中やダメージ、重い物を持ち上げる、障害物を破壊するといった行動の成否に影響します。 "
         }
     ]

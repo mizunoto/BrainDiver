@@ -12,12 +12,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "小型のエネルギータンク。"
         },
         {
             "access_level": 0,
-            "type": "tank",
+            "type": "equip",
+            "tier": 1,
+            "class": [
+                "tank"
+            ],
             "capacity": 20,
             "accumulate": 1,
             "worth": 300,

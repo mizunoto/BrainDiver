@@ -15,12 +15,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "標準的なアサルトライフル。"
         },
         {
             "access_level": 0,
-            "type": "standard",
+            "type": "equip",
+            "class": [
+                "ranged",
+                "standard"
+            ],
             "ATK": 16,
             "required": {
                 "DEX": 15

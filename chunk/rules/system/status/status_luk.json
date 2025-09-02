@@ -10,7 +10,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "運や幸運を表します。1/10(端数切捨て)を全ての目標値に加算し、あらゆる判定の成功率を底上げします。"
         }
     ]

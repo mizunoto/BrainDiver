@@ -13,12 +13,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "大容量のエネルギータンク。"
         },
         {
             "access_level": 0,
-            "type": "tank",
+            "type": "equip",
+            "tier": 5,
+            "class": [
+                "tank"
+            ],
             "capacity": 100,
             "accumulate": 7,
             "required": {

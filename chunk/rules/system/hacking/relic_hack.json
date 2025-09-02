@@ -11,7 +11,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "廃墟の施設にある電子機器をハッキングすることで環境を操作したり情報を得たりすることができます。"
         },
         {

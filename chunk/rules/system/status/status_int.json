@@ -10,7 +10,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "知性や知識を表します。失われた文明の技術の解析、専門的な知識の想起、所持品の効率的な運用に使用されます。 "
         }
     ]

@@ -15,12 +15,17 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flaver",
             "value": "刀身に発生させた電磁場で切断力を高めた基本的なナイフ。"
         },
         {
             "access_level": 0,
-            "type": "melee",
+            "type": "equip",
+            "tier": 1,
+            "class": [
+                "melee",
+                "light"
+            ],
             "ATK": 6,
             "worth": 100,
             "value": "電磁ナイフ"

@@ -1,19 +1,23 @@
 {
     "name": "アイテムの応用",
-    "priority": 0,
+    "priority": -1,
     "genre": [
         "system",
         "judge",
         "item"
     ],
-    "access_filter": 7,
+    "access_filter": -1,
     "include": [],
     "params": [
         {
             "access_level": 0,
             "type": "description",
             "value": "プレイヤーがルールにないアイテムの使い道を宣言した場合、GMはそのアイデアが状況に合っており、面白い物であればそれを許可する裁量権を持ちます。"
+        },
+        {
+            "access_level": -1,
+            "type": "ignore",
+            "value": "「面白い」の定義が存在しないため、現状未実装。将来目標。"
         }
-    ],
-    "plan": "そのうち実装する。"
+    ]
 }

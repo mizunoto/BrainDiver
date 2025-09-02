@@ -14,7 +14,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "一つのセッションが終わってから、次のセッションに進む前に次の行動ができます。"
         }
     ]

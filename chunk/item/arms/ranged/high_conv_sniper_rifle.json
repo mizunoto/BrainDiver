@@ -15,12 +15,16 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "一撃の威力に全てを懸けた決戦兵器。エネルギー消費も相応に激しい。"
         },
         {
             "access_level": 0,
-            "type": "heavy",
+            "type": "equip",
+            "class": [
+                "ranged",
+                "heavy"
+            ],
             "ATK": 32,
             "required": {
                 "DEX": 30

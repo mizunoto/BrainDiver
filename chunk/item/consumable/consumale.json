@@ -14,7 +14,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "消費アイテムの一覧です"
         }
     ]

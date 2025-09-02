@@ -15,7 +15,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "戦闘時におけるハッキングは特殊行動として扱い、攻撃に関する判定は適用されません。"
         }
     ]

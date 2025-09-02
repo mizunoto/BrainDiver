@@ -10,7 +10,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "system",
             "value": "魅力やカリスマ性を表します。NPCとの交渉、説得、嘘を見抜く、恐怖に耐えるといった社会的な行動の成否に影響します。"
         }
     ]

@@ -17,7 +17,7 @@
     "params": [
         {
             "access_level": 7,
-            "type": "description",
+            "type": "document",
             "value": "GM向けハンドアウト"
         }
     ]

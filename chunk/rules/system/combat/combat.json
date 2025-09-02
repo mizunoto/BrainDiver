@@ -18,7 +18,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "section",
             "value": "この項目では戦闘の流れを解説します。"
         }
     ]

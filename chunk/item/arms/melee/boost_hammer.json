@@ -15,12 +15,17 @@
     "params": [
         {
             "access_level": 0,
-            "type": "description",
+            "type": "flavor",
             "value": "衝撃による爆裂機構で攻撃力を増大させたハンマー。扱いにはかなりのコツが必要。"
         },
         {
             "access_level": 0,
-            "type": "melee",
+            "type": "equip",
+            "tier": 5,
+            "class": [
+                "melee",
+                "heavy"
+            ],
             "ATK": 28,
             "required": {
                 "STR": 30
