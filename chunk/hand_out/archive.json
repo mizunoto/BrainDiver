@@ -6,6 +6,7 @@
         "archive",
         "scenario"
     ],
+    "access_filter": 0,
     "include": [],
     "params": [
         {

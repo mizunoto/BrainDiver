@@ -6,19 +6,11 @@
         "hacking",
         "description"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "port_hacking"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "process_overload"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "mind_jack"
-        }
+        "port_hacking",
+        "process_overload",
+        "mind_jack"
     ],
     "params": [
         {

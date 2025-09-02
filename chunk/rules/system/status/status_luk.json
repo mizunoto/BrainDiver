@@ -5,6 +5,7 @@
         "status",
         "LUK"
     ],
+    "access_filter": 7,
     "include": [],
     "params": [
         {

@@ -6,31 +6,14 @@
         "combat",
         "section"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "combat_turn"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "combat_energy"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "combat_weapon"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "combat_hit_rate"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "combat_avoidance"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "combat_damage"
-        }
+        "combat_turn",
+        "combat_energy",
+        "combat_weapon",
+        "combat_hit_rate",
+        "combat_avoidance",
+        "combat_damage"
     ],
     "params": [
         {

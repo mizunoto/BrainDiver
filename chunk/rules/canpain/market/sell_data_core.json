@@ -7,11 +7,9 @@
         "data_core",
         "sell"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "market_price"
-        }
+        "market_price"
     ],
     "params": [
         {

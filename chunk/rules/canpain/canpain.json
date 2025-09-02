@@ -6,23 +6,12 @@
         "section",
         "rules"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "on_failure"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "character_create"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "session_start"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "base"
-        }
+        "on_failure",
+        "character_create",
+        "session_start",
+        "base"
     ],
     "params": [
         {

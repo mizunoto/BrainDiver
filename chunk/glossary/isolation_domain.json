@@ -1,0 +1,16 @@
+{
+    "name": "隔絶領域",
+    "priority": 0,
+    "genre": [
+        "glossary"
+    ],
+    "access_filter": 7,
+    "include": [],
+    "params": [
+        {
+            "access_level": 6,
+            "type": "flavor",
+            "value": "「統合」を拒否し、個の存在を主張する者たちが隔離される領域。不統合意識体は、自己の「不統合」という矛盾した側面をこの領域に押し込み、最終的には殲滅しようとしている。"
+        }
+    ]
+}

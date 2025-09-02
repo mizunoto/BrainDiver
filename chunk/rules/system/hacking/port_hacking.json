@@ -6,15 +6,10 @@
         "hacking",
         "judge"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "arm_unit"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "leg_unit"
-        }
+        "arm_unit",
+        "leg_unit"
     ],
     "params": [
         {

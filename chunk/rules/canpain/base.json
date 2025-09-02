@@ -6,15 +6,10 @@
         "session",
         "briefing"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "market"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "use_data_core"
-        }
+        "market",
+        "use_data_core"
     ],
     "params": [
         {

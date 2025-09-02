@@ -7,10 +7,16 @@
         "scenario",
         "secret"
     ],
-    "include": [],
+    "access_filter": 7,
+    "include": [
+        "introduction",
+        "rules",
+        "secret",
+        "glossary"
+    ],
     "params": [
         {
-            "access_level": 0,
+            "access_level": 7,
             "type": "description",
             "value": "GM向けハンドアウト"
         }

@@ -9,23 +9,12 @@
         "npc",
         "skill"
     ],
+    "access_filter": 0,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "glossary"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "npc_list"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "item_list"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "skill_list"
-        }
+        "glossary",
+        "npc_list",
+        "item_list",
+        "skill_list"
     ],
     "params": [
         {

@@ -1,0 +1,16 @@
+{
+    "name": "統一領域",
+    "priority": 0,
+    "genre": [
+        "glossary"
+    ],
+    "access_filter": 7,
+    "include": [],
+    "params": [
+        {
+            "access_level": 6,
+            "type": "flavor",
+            "value": "自身の理想である「統合」を受け入れた人間やAIを、強制的に一つの巨大なネットワークに吸収する領域。結合された存在に自由意思は例外を除いてなく、不統合意識体を第一に行動するようになる。"
+        }
+    ]
+}

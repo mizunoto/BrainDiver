@@ -6,35 +6,15 @@
         "system",
         "rules"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "skill"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "buy_equip"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "buy_item"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "negotiate_discount"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "sell_equip"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "sell_item"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "sell_data_core"
-        }
+        "skill",
+        "buy_equip",
+        "buy_item",
+        "negotiate_discount",
+        "sell_equip",
+        "sell_item",
+        "sell_data_core"
     ],
     "params": [
         {

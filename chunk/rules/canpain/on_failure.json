@@ -5,15 +5,10 @@
         "system",
         "rules"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "return_to_base"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "character_lost"
-        }
+        "return_to_base",
+        "character_lost"
     ],
     "params": [
         {

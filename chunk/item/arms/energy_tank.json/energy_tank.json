@@ -7,19 +7,11 @@
         "item",
         "equip"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "compact_tank"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "standard_tank"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "large_tank"
-        }
+        "compact_tank",
+        "standard_tank",
+        "large_tank"
     ],
     "params": [
         {

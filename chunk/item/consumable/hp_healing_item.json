@@ -9,11 +9,9 @@
         "use",
         "section"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_level": 0,
-            "chunk_id": "nano_capsule_s"
-        }
+        "nano_capsule_s"
     ],
     "params": [
         {

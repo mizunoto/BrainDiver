@@ -5,63 +5,22 @@
         "skill",
         "section"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "melee_combat"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "throwing"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "endurance"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "sniping"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "trap_knowledge"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "percision"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "acrobatics"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "science_knowledge"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "historical_knowledge"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "negotiation"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "data_analyse"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "cracking"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "jaming"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "fire_wall"
-        }
+        "melee_combat",
+        "throwing",
+        "endurance",
+        "sniping",
+        "trap_knowledge",
+        "percision",
+        "acrobatics",
+        "science_knowledge",
+        "historical_knowledge",
+        "negotiation",
+        "data_analyse",
+        "cracking",
+        "jaming",
+        "fire_wall"
     ],
     "params": [
         {

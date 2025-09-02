@@ -5,19 +5,11 @@
         "consumable",
         "item"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "data_core"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "hp_healing_item"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "energy_healing_item"
-        }
+        "data_core",
+        "hp_healing_item",
+        "energy_healing_item"
     ],
     "params": [
         {

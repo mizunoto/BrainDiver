@@ -6,6 +6,7 @@
         "equip",
         "buy"
     ],
+    "access_filter": 7,
     "include": [],
     "params": [
         {

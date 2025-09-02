@@ -1,0 +1,26 @@
+{
+    "name": "デッド・ゾーン",
+    "priority": 0,
+    "genre": [
+        "glossary"
+    ],
+    "access_filter": 7,
+    "include": [],
+    "params": [
+        {
+            "access_level": 1,
+            "type": "flavor",
+            "value": "超強力なハッキングフィールドの通称。侵入したが最後、ハッキングによって意識を失う。"
+        },
+        {
+            "access_level": 3,
+            "type": "flavor",
+            "value": "ハッキングによって精神を乗っ取られた存在はシンセシス化してしまう。"
+        },
+        {
+            "access_level": 4,
+            "type": "flavor",
+            "value": "不統合意識体が生成していると判明する。"
+        }
+    ]
+}

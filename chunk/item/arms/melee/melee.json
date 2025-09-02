@@ -9,19 +9,11 @@
         "equip",
         "ATK"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "electro_knife"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "vibrate_blade"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "boost_hammer"
-        }
+        "electro_knife",
+        "vibrate_blade",
+        "boost_hammer"
     ],
     "params": [
         {

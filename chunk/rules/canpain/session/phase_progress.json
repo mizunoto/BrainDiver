@@ -6,11 +6,9 @@
         "progress",
         "judge"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "phase_battle"
-        }
+        "phase_battle"
     ],
     "params": [
         {

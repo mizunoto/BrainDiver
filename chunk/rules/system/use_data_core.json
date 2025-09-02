@@ -6,6 +6,7 @@
         "data_core",
         "item"
     ],
+    "access_filter": 7,
     "include": [],
     "params": [
         {

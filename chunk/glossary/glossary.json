@@ -5,49 +5,33 @@
         "glossary",
         "section"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_level": 0,
-            "chunk_id": "lost_era"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "leasal_crack"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "sactum"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "rotary_city"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "strayer"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "digitalized_brain"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "automata"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "synthesis"
-        },
-        {
-            "access_level": 0,
-            "chunk_id": "electron"
-        }
+        "lost_era",
+        "leasal_crack",
+        "lost_laboratory",
+        "project_integration",
+        "unintegrated_conscious",
+        "strayer",
+        "digitalized_brain",
+        "dead_zone",
+        "automata",
+        "synthesis",
+        "electron",
+        "sactum",
+        "rotary_city",
+        "imitate"
     ],
     "params": [
         {
-            "access_level": 0,
+            "access_level": 7,
             "type": "section",
             "value": "作中に出てくる用語の解説です。"
+        },
+        {
+            "access_level": 7,
+            "type": "description",
+            "value": "作中に出てくる用語の裏設定を解説しています。"
         }
     ]
 }

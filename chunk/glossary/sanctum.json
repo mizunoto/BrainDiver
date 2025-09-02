@@ -6,11 +6,9 @@
         "location",
         "sanctum"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_level": 0,
-            "chunk_id": "sanctum_1"
-        }
+        "sanctum_1"
     ],
     "params": [
         {

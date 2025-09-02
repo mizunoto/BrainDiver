@@ -5,15 +5,10 @@
         "item",
         "section"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "filter": 0,
-            "id": "arms"
-        },
-        {
-            "filter": 0,
-            "id": "consumable"
-        }
+        null,
+        null
     ],
     "params": [
         {

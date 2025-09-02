@@ -5,6 +5,7 @@
         "glossary",
         "enemy"
     ],
+    "access_filter": 7,
     "include": [],
     "params": [
         {

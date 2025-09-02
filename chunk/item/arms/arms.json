@@ -8,15 +8,10 @@
         "description",
         "secction"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "filter": 0,
-            "id": "melee"
-        },
-        {
-            "filter": 0,
-            "id": "ranged"
-        }
+        null,
+        null
     ],
     "params": [
         {

@@ -5,19 +5,11 @@
         "session",
         "section"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "session_progress"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "session_climax"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "session_estimate"
-        }
+        "session_progress",
+        "session_climax",
+        "session_estimate"
     ],
     "params": [
         {

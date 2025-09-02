@@ -10,19 +10,11 @@
         "ATK",
         "judge"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "laser_pistol"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "G-011Z_assault_rifle"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "high_conv_sniper_rifle"
-        }
+        "laser_pistol",
+        "G-011Z_assault_rifle",
+        "high_conv_sniper_rifle"
     ],
     "params": [
         {

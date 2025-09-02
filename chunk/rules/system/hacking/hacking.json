@@ -6,15 +6,10 @@
         "hack",
         "section"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "relic_hack"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "combat_hack"
-        }
+        "relic_hack",
+        "combat_hack"
     ],
     "params": [
         {

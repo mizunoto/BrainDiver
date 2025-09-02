@@ -7,23 +7,12 @@
         "rules",
         "system"
     ],
+    "access_filter": 0,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "first"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "introduction"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "how_to_play"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "rule_system"
-        }
+        "introduction",
+        "prologue",
+        "how_to_play",
+        "rules"
     ],
     "params": [
         {

@@ -6,15 +6,10 @@
         "item",
         "energy"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "energy_pack_s"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "high_density_gel"
-        }
+        "energy_pack_s",
+        "high_density_gel"
     ],
     "params": [
         {

@@ -10,19 +10,11 @@
         "status",
         "description"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "use_data_core"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "data_core_x"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "data_core_all"
-        }
+        "use_data_core",
+        "data_core_x",
+        "data_core_all"
     ],
     "params": [
         {

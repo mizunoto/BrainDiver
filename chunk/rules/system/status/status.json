@@ -6,35 +6,15 @@
         "status",
         "description"
     ],
+    "access_filter": 7,
     "include": [
-        {
-            "access_filter": 0,
-            "chunk_id": "status_hp"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "status_hac"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "status_str"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "status_dex"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "status_int"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "status_cha"
-        },
-        {
-            "access_filter": 0,
-            "chunk_id": "status_luk"
-        }
+        "status_hp",
+        "status_hac",
+        "status_str",
+        "status_dex",
+        "status_int",
+        "status_cha",
+        "status_luk"
     ],
     "params": [
         {
