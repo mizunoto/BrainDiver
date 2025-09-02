@@ -6,7 +6,6 @@
         "status",
         "description"
     ],
-    "access_filter": 7,
     "include": [
         "status_hp",
         "status_hac",

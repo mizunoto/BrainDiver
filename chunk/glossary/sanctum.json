@@ -6,7 +6,6 @@
         "location",
         "sanctum"
     ],
-    "access_filter": 7,
     "include": [
         "sanctum_1"
     ],

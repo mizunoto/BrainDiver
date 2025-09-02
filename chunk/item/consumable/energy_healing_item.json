@@ -6,7 +6,6 @@
         "item",
         "energy"
     ],
-    "access_filter": 7,
     "include": [
         "energy_pack_s",
         "high_density_gel"

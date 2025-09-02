@@ -10,7 +10,6 @@
         "status",
         "description"
     ],
-    "access_filter": 7,
     "include": [
         "use_data_core",
         "data_core_x",

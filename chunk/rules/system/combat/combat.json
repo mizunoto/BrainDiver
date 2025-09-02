@@ -6,7 +6,6 @@
         "combat",
         "section"
     ],
-    "access_filter": 7,
     "include": [
         "combat_turn",
         "combat_energy",

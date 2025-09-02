@@ -6,7 +6,6 @@
         "hacking",
         "description"
     ],
-    "access_filter": 7,
     "include": [
         "port_hacking",
         "process_overload",

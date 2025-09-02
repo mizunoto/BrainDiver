@@ -9,7 +9,6 @@
         "use",
         "section"
     ],
-    "access_filter": 7,
     "include": [
         "nano_capsule_s"
     ],

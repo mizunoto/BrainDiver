@@ -6,7 +6,6 @@
         "system",
         "rules"
     ],
-    "access_filter": 7,
     "include": [
         "skill_earn",
         "buy_equip",

@@ -5,7 +5,6 @@
         "skill",
         "section"
     ],
-    "access_filter": 7,
     "include": [
         "skill_earn",
         "melee_combat",

@@ -6,7 +6,6 @@
         "hack",
         "section"
     ],
-    "access_filter": 7,
     "include": [
         "relic_hack",
         "combat_hack"

@@ -6,7 +6,6 @@
         "train",
         "description"
     ],
-    "access_filter": 7,
     "include": [
         "use_data_core",
         "change_equip",

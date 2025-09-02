@@ -8,7 +8,6 @@
         "equip",
         "DR"
     ],
-    "access_filter": 7,
     "include": [
         "carbon_armor",
         "enhanced_armor",

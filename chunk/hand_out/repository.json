@@ -9,7 +9,10 @@
         "npc",
         "skill"
     ],
-    "access_filter": 0,
+    "access_filter": [
+        0,
+        0
+    ],
     "include": [
         "glossary",
         "npc_list",

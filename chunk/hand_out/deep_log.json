@@ -7,7 +7,10 @@
         "scenario",
         "secret"
     ],
-    "access_filter": 7,
+    "access_filter": [
+        1,
+        7
+    ],
     "include": [
         "introduction",
         "rules",

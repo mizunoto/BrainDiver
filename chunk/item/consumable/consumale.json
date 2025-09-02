@@ -5,7 +5,6 @@
         "consumable",
         "item"
     ],
-    "access_filter": 7,
     "include": [
         "data_core",
         "hp_healing_item",

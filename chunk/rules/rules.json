@@ -4,7 +4,6 @@
     "genre": [
         "section"
     ],
-    "access_filter": 7,
     "include": [
         "status",
         "judge",

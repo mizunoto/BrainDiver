@@ -6,7 +6,6 @@
         "section",
         "rules"
     ],
-    "access_filter": 7,
     "include": [
         "on_failure",
         "character_create",

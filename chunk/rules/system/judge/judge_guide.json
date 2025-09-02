@@ -5,7 +5,6 @@
         "system",
         "judge"
     ],
-    "access_filter": 7,
     "include": [
         "judge_difficulty",
         "judge_background"

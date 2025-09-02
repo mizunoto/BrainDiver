@@ -6,7 +6,6 @@
         "session",
         "briefing"
     ],
-    "access_filter": 7,
     "include": [
         "market",
         "use_data_core"

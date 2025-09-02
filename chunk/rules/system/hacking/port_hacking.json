@@ -6,7 +6,6 @@
         "hacking",
         "judge"
     ],
-    "access_filter": 7,
     "include": [
         "arm_unit",
         "leg_unit"

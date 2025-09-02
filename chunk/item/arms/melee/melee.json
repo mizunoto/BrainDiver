@@ -9,7 +9,6 @@
         "equip",
         "ATK"
     ],
-    "access_filter": 7,
     "include": [
         "electro_knife",
         "vibrate_blade",
