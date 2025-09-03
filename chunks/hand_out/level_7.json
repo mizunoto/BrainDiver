@@ -1,9 +1,8 @@
 {
-    "name": "隔絶輪廻のブレインダイバー：ディープログ・データ",
+    "name": "隔絶輪廻のブレインダイバー：レベル7・アクセスディナイド",
     "priority": -1,
     "genre": [
         "hand_out",
-        "deep_log",
         "scenario",
         "secret"
     ],
@@ -21,7 +20,7 @@
         {
             "access_level": 7,
             "type": "document",
-            "value": "GM向けハンドアウト"
+            "value": "※閲覧非推奨"
         }
     ]
 }

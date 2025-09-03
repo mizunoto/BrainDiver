@@ -1,0 +1,13 @@
+{
+    "name": "選択の重要性",
+    "priority": 0,
+    "genre": [],
+    "include": [],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "プレイヤーの選択が、物語の展開や結末に意味のある変化をもたらすように設計してください。"
+        }
+    ]
+}

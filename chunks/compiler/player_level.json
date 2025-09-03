@@ -1,0 +1,23 @@
+{
+    "name": "想定プレイヤーレベル",
+    "priority": 0,
+    "genre": [],
+    "include": [],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "★☆☆☆☆～★★☆☆☆：キャラクター作成直後～セッション3回程度。物語の導入部。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "★★★☆☆：セッション4～6回程度。世界の謎に触れ始める、キャンペーンの中核。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "★★★★☆～★★★★★：セッション7回以上。物語のクライマックスに向けて、世界の核心に迫る。"
+        }
+    ]
+}

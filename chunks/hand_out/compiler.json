@@ -9,6 +9,10 @@
         "scenario",
         "tools"
     ],
+    "access_filter": [
+        8,
+        8
+    ],
     "include": [],
     "params": [
         {

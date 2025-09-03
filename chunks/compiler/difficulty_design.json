@@ -1,0 +1,20 @@
+{
+    "name": "難易度と敵の設計指針",
+    "priority": 0,
+    "genre": [
+    ],
+    "include": [
+        "player_level",
+        "additional_arms",
+        "enemy_status",
+        "drop_item",
+        "judge_difficulty"
+    ],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "ゲームバランスを保つため、以下の数値を基準に敵データや判定の目標値を設定してください。"
+        }
+    ]
+}

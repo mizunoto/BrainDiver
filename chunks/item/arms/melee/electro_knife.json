@@ -14,7 +14,7 @@
     "params": [
         {
             "access_level": 0,
-            "type": "flaver",
+            "type": "flavor",
             "value": "刀身に発生させた電磁場で切断力を高めた基本的なナイフ。"
         },
         {

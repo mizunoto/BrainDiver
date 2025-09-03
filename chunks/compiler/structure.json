@@ -1,0 +1,18 @@
+{
+    "name": "シナリオの基本構成",
+    "priority": 0,
+    "genre": [],
+    "include": [
+        "phase_intro",
+        "phase_progress",
+        "phase_climax",
+        "session_estimation"
+    ],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "シナリオは以下のフェーズで構成することを推奨しますが、必ずしもこのガイドラインに沿う必要はありません。"
+        }
+    ]
+}

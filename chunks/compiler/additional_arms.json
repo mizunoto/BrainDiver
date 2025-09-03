@@ -1,0 +1,33 @@
+{
+    "name": "武器に付与される特性の目安",
+    "priority": 0,
+    "genre": [],
+    "include": [],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "★☆☆☆☆：特性なしの標準的な武器が手に入る。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "★★☆☆☆：[オーパーツ]など、燃費を改善する便利な特性を持つ武器が登場し始める。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "★★★☆☆：[オーバーチャージ]など、明確に強力だがリスクも伴う特性を持つ武器が手に入る。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "★★★★☆：[連撃]など、戦闘スタイルを大きく変える強力な特性が登場する。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": " ★★★★★：複数の特性を併せ持ったり、シナリオ固有の特殊な効果を持つユニークウェポンが登場する。"
+        }
+    ]
+}

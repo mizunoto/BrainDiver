@@ -1,0 +1,13 @@
+{
+    "name": "",
+    "priority": 0,
+    "genre": [],
+    "include": [],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": ""
+        }
+    ]
+}

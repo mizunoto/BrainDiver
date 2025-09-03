@@ -1,0 +1,18 @@
+{
+    "name": "キャンペーンの中でのシナリオの位置づけ",
+    "priority": 0,
+    "genre": [
+    ],
+    "include": [
+        "choice_importance",
+        "mystery_presence",
+        "reason_of_combat"
+    ],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "本TRPGは、戦闘のスリルだけでなく、物語の体験と世界の謎を解き明かすことを重視しています。シナリオを作成する際は、以下の点を念頭に置いてください。"
+        }
+    ]
+}

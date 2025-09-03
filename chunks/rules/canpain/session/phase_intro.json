@@ -1,0 +1,26 @@
+{
+    "name": "導入フェーズ",
+    "priority": 0,
+    "genre": [
+        "session",
+        "intro"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "description",
+            "value": "GMがシナリオの導入を読み上げ、プレイヤーに状況を伝えるフェーズです。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "依頼人や状況を提示し、プレイヤーに目的(ミッション)を伝えます。"
+        },
+        {
+            "access_level": 8,
+            "type": "document",
+            "value": "シナリオの舞台、予想される脅威、主な登場人物(NPC)があればこの時点で紹介して構いません。"
+        }
+    ]
+}
