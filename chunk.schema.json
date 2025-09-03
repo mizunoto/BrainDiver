@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "priority": {
+            "type": "number",
+            "minimum": -1,
+            "maximum": 100
+        },
+        "genre": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "include": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "params": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "access_level": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 10
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "document",
+                            "description",
+                            "flavor",
+                            "judge",
+                            "system",
+                            "enemy",
+                            "archetype",
+                            "glossary",
+                            "section",
+                            "item",
+                            "consumable",
+                            "data_core",
+                            "guideline",
+                            "ignore"
+                        ]
+                    }
+                }
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "name",
+        "priority",
+        "genre",
+        "params"
+    ]
+}

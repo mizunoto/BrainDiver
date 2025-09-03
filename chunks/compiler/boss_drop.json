@@ -1,0 +1,41 @@
+{
+    "name": "ボス敵 / 中ボスのドロップ",
+    "priority": 10,
+    "genre": [
+        "guideline",
+        "compiler",
+        "reward",
+        "boss"
+    ],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "guideline",
+            "value": {
+                "purpose": "戦闘の苦労に見合う、明確で価値のある報酬の提供。キャラクターの強化に直接繋がるアイテムや、物語の進行を促すことが中心となります。",
+                "examples": [
+                    {
+                        "category": "通貨 (ℂ)",
+                        "description": "シナリオ全体の報酬の一部として、まとまった額のℂ。",
+                        "probability": "確定"
+                    },
+                    {
+                        "category": "データ・コア",
+                        "description": "シナリオ難易度に応じて「データ・コア-XXX」や「データ・コア-ALL」が手に入る。★3以上で複数入手やALLの確率が上がる。",
+                        "probability": "高 / 確定"
+                    },
+                    {
+                        "category": "物語的な報酬",
+                        "description": "★3以上のシナリオで対応するティア以下の情報の断片が必ず手に入る。「暗号化された座標データ」や「組織の認識キー」など。",
+                        "probability": "確定 (★3以上)"
+                    },
+                    {
+                        "category": "ユニーク装備",
+                        "description": "シナリオに設定された装備品を固定でドロップ。「特性」付き武器、特殊効果を持つ防具、高ティア装備、消耗品など。",
+                        "probability": "確定"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -3,15 +3,13 @@
     "priority": 0,
     "genre": [],
     "include": [
-        ""
+        "enemy_status"
     ],
     "params": [
         {
             "access_level": 8,
             "type": "document",
             "value": "あくまで目安であり、これの通りに設定する必要はありませんが、難易度を大幅に逸脱しないよう気を付けてください。"
-        },
-        {
         }
     ]
 }

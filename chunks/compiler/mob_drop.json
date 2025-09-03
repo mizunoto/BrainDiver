@@ -1,0 +1,32 @@
+{
+    "name": "雑魚的のドロップ",
+    "priority": 0,
+    "genre": [],
+    "include": [],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "guideline",
+            "value":{
+                "purpose":"プレイヤーが戦闘で消耗したリソース（エネルギーや時間）に対する、ささやかな補填と、世界の雰囲気を伝えるフレーバーの提供。",
+                "example":[
+                    {
+                        "category":"ℂ",
+                        "description":"倒した敵1体につき、10～50ℂ程度",
+                        "probability":"確定"
+                    },
+                    {
+                        "category":"換金アイテム",
+                        "description":"「オートマタのジャンクパーツ」や「汚染された生体サンプル」など、一度輪転街に持ち帰る必要があるアイテム。",
+                        "probability":"高"
+                    },
+                    {
+                        "category":"消費アイテム",
+                        "description":"ごく稀にシナリオティア以下のアイテムをドロップする。",
+                        "probability":"低"
+                    }
+                ]
+            }
+        }
+    ]
+}

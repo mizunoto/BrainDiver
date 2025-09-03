@@ -1,0 +1,107 @@
+{
+    "name": "敵の種族特性",
+    "priority": 0,
+    "genre": [],
+    "include": [],
+    "params": [
+        {
+            "access_level": 8,
+            "type": "archetype",
+            "value": [
+                {
+                    "id": "automata",
+                    "name": "オートマタ",
+                    "modifiers": {
+                        "DR": [
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "ability_cost": [
+                            1,
+                            1,
+                            2,
+                            2,
+                            2
+                        ]
+                    },
+                    "abilities": {
+                        "guaranteed": [],
+                        "recomended": [
+                            "《ターゲット・ロック》",
+                            "《自己修復》",
+                            "《高出力射撃》",
+                            "《リペア・ドローン射出》"
+                        ]
+                    }
+                },
+                {
+                    "id": "synthesis",
+                    "name": "シンセシス",
+                    "modifiers": {
+                        "AVD": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5
+                        ],
+                        "ability_cost": [
+                            2,
+                            2,
+                            3,
+                            3,
+                            4
+                        ]
+                    },
+                    "abilities": {
+                        "guaranteed": [
+                            "《サイコ・マーキング》"
+                        ],
+                        "recomended": [
+                            "《サイコ・ノイズ》",
+                            "《ユニティ・コール》",
+                            "《マインド・クラック》"
+                        ]
+                    }
+                },
+                {
+                    "id": "electron",
+                    "name": "エレクトロン",
+                    "modifiers": {
+                        "ATK": [
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "DR": [
+                            -1,
+                            -1,
+                            -1,
+                            -2,
+                            -3
+                        ],
+                        "ability_cost": [
+                            1,
+                            2,
+                            2,
+                            3,
+                            3
+                        ]
+                    },
+                    "abilities": {
+                        "guaranteed": [],
+                        "recomended": [
+                            "《捨て身の突撃》",
+                            "《オーバーロード》"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
