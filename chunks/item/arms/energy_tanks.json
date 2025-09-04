@@ -1,0 +1,58 @@
+{
+    "name": "エネルギータンク",
+    "priority": 0,
+    "genre": [
+        "arms",
+        "energy",
+        "item",
+        "equip"
+    ],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "item",
+            "value": [
+                {
+                    "id": "energy_tank",
+                    "name": "エネルギータンク",
+                    "flavor": "小型のエネルギータンク。",
+                    "tier": 1,
+                    "class": [
+                        "tank"
+                    ],
+                    "capacity": 20,
+                    "accumulate": 1,
+                    "worth": 300
+                },
+                {
+                    "id": "standard_tank",
+                    "name": "標準タンク",
+                    "flavor": "バランスの取れた標準的なタンク。",
+                    "tier": 3,
+                    "class": [
+                        "tank"
+                    ],
+                    "capacity": 50,
+                    "accumulate": 3,
+                    "worth": 2000
+                },
+                {
+                    "id": "large_tank",
+                    "name": "大容量タンク",
+                    "flavor": "大容量のエネルギータンク。",
+                    "tier": 5,
+                    "class": [
+                        "tank"
+                    ],
+                    "capacity": 100,
+                    "accumulate": 7,
+                    "required": {
+                        "STR": 25
+                    },
+                    "worth": 8000
+                }
+            ]
+        }
+    ]
+}

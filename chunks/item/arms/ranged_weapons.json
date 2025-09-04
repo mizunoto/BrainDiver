@@ -1,0 +1,55 @@
+{
+    "name": "遠距離武器",
+    "priority": 0,
+    "genre": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "item",
+            "value": [
+                {
+                    "id": "laser_pistol",
+                    "name": "レーザーピストル",
+                    "flavor": "取り回しに優れた標準的なレーザーハンドガン。",
+                    "tier": 1,
+                    "class": [
+                        "ranged",
+                        "light"
+                    ],
+                    "ATK": 8,
+                    "worth": 120
+                },
+                {
+                    "id": "g_011z",
+                    "name": "G-011Zアサルトライフル",
+                    "flavor": "標準的なアサルトライフル。",
+                    "tier": 3,
+                    "class": [
+                        "ranged",
+                        "standard"
+                    ],
+                    "ATK": 16,
+                    "required": {
+                        "DEX": 15
+                    },
+                    "worth": 3000
+                },
+                {
+                    "id": "high_conv_sniper_rifle",
+                    "name": "高収束スナイパーライフル",
+                    "flavor": "一撃の威力に全てを懸けた決戦兵器。エネルギー消費も相応に激しい。",
+                    "tier": 5,
+                    "class": [
+                        "ranged",
+                        "heavy"
+                    ],
+                    "ATK": 32,
+                    "required": {
+                        "DEX": 30
+                    },
+                    "worth": 10000
+                }
+            ]
+        }
+    ]
+}

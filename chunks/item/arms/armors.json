@@ -1,0 +1,50 @@
+{
+    "name": "防具",
+    "priority": 0,
+    "genre": [],
+    "include": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "item",
+            "value": [
+                {
+                    "id": "carbon_armor",
+                    "name": "カーボンアーマー",
+                    "flavor": "軽量なカーボンのアーマー。",
+                    "tier": 1,
+                    "class": [
+                        "armor"
+                    ],
+                    "DR": 3,
+                    "worth": 500
+                },
+                {
+                    "id": "enhanced_armor",
+                    "name": "強化プレートアーマー",
+                    "flavor": "セラミックプレートで重要箇所を補強した防具。重量は増したが、防御力は飛躍的に向上している。",
+                    "tier": 3,
+                    "class": [
+                        "armor"
+                    ],
+                    "DR": 2,
+                    "worth": 1000
+                },
+                {
+                    "id": "e_m_field_armor",
+                    "name": "E.M.フィールドアーマー",
+                    "flavor": "表面に展開した電磁フィールドで攻撃を減衰させる旧時代の防具。非常に高価。",
+                    "tier": 5,
+                    "class": [
+                        "armor"
+                    ],
+                    "DR": 12,
+                    "required": {
+                        "STR": 30
+                    },
+                    "worth": 12000
+                }
+            ]
+        }
+    ]
+}
