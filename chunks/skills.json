@@ -1,0 +1,266 @@
+{
+    "name": "スキル",
+    "priority": 10,
+    "genre": [
+        "system",
+        "rule",
+        "skill",
+        "list"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "document",
+            "value": "キャラクターは、ステータスが要求値を満たしていれば、マーケットでスキルデータを購入しインストールすることで、対象のスキルレベルを1上げることができます。"
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": [
+                {
+                    "id": "melee_combat",
+                    "name": "近接戦闘",
+                    "description": "近接武器を使った戦闘がうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "STR"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "STR",
+                        "skill": "近接戦闘",
+                        "adjust": "あり",
+                        "description": "近接攻撃判定"
+                    }
+                },
+                {
+                    "id": "throwing",
+                    "name": "投擲",
+                    "description": "物を投げることがうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "STR",
+                            "DEX"
+                        ],
+                        "value": 25
+                    },
+                    "judge": {
+                        "status": "STR",
+                        "skill": "投擲",
+                        "adjust": "あり",
+                        "description": "投擲判定"
+                    }
+                },
+                {
+                    "id": "endurance",
+                    "name": "持久力",
+                    "description": "長時間の行動や、肉体的な負荷に耐えやすくなる。",
+                    "required": {
+                        "statuses": [
+                            "STR"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "STR",
+                        "skill": "持久力",
+                        "adjust": "あり",
+                        "description": "持久力に関する判定"
+                    }
+                },
+                {
+                    "id": "sniping",
+                    "name": "狙撃",
+                    "description": "射撃が正確になる。",
+                    "required": {
+                        "statuses": [
+                            "DEX"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "DEX",
+                        "skill": "狙撃",
+                        "adjust": "あり",
+                        "description": "遠距離攻撃判定"
+                    }
+                },
+                {
+                    "id": "trap_knowledge",
+                    "name": "罠知識",
+                    "description": "罠の発見や解除がうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "DEX",
+                            "INT"
+                        ],
+                        "value": 25
+                    },
+                    "judge": {
+                        "status": "DEX",
+                        "skill": "罠知識",
+                        "adjust": "あり",
+                        "description": "罠解除判定"
+                    }
+                },
+                {
+                    "id": "percision",
+                    "name": "精密操作",
+                    "description": "細かい作業が得意になる。",
+                    "required": {
+                        "statuses": [
+                            "DEX"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "DEX",
+                        "skill": "精密操作",
+                        "adjust": "あり",
+                        "description": "精密操作判定"
+                    }
+                },
+                {
+                    "id": "acrobatics",
+                    "name": "軽業",
+                    "description": "高所からの落下や狭い足場での行動がうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "DEX"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "DEX",
+                        "skill": "軽業",
+                        "adjust": "あり",
+                        "description": "落下やバランスに関する判定"
+                    }
+                },
+                {
+                    "id": "science_knowledge",
+                    "name": "科学知識",
+                    "description": "科学技術に関する知識が豊富になる。",
+                    "required": {
+                        "statuses": [
+                            "INT"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "INT",
+                        "skill": "科学知識",
+                        "adjust": "あり",
+                        "description": "科学知識に関する判定"
+                    }
+                },
+                {
+                    "id": "historical_knowledge",
+                    "name": "歴史知識",
+                    "description": "旧時代や世界の歴史に関する知識が豊富になる。",
+                    "required": {
+                        "statuses": [
+                            "INT"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "INT",
+                        "skill": "歴史知識",
+                        "adjust": "あり",
+                        "description": "歴史知識に関する判定"
+                    }
+                },
+                {
+                    "id": "negotiation",
+                    "name": "交渉術",
+                    "description": "説得や情報収集がうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "CHA",
+                            "LUK"
+                        ],
+                        "value": 25
+                    },
+                    "judge": {
+                        "status": "CHA",
+                        "skill": "交渉術|自己申告",
+                        "adjust": "なし",
+                        "description": "交渉判定"
+                    }
+                },
+                {
+                    "id": "data_analyse",
+                    "name": "データ解析",
+                    "description": "破損したデータや暗号化されたデータの復元・解除ができる。",
+                    "required": {
+                        "statuses": [
+                            "HAC",
+                            "INT"
+                        ],
+                        "value": 25
+                    },
+                    "judge": {
+                        "status": "HAC",
+                        "skill": "データ解析",
+                        "adjust": "あり",
+                        "description": "レリック・ハック他"
+                    }
+                },
+                {
+                    "id": "cracking",
+                    "name": "クラッキング",
+                    "description": "攻撃的なハッキングがうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "HAC"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "HAC",
+                        "skill": "クラッキング",
+                        "adjust": "あり",
+                        "description": "ハッキング判定"
+                    }
+                },
+                {
+                    "id": "jaming",
+                    "name": "ジャミング",
+                    "description": "周囲の敵の領域探査を妨害し、敵の攻撃をよけやすくすることができる。",
+                    "required": {
+                        "statuses": [
+                            "HAC",
+                            "DEX"
+                        ],
+                        "value": 25
+                    },
+                    "judge": {
+                        "status": "HAC",
+                        "skill": "ジャミング",
+                        "adjust": "あり",
+                        "description": "回避判定"
+                    }
+                },
+                {
+                    "id": "fire_wall",
+                    "name": "ファイアウォール",
+                    "description": "敵からのハッキングを防ぎやすくなる。",
+                    "required": {
+                        "statuses": [
+                            "HAC"
+                        ],
+                        "value": 15
+                    },
+                    "judge": {
+                        "status": "HAC",
+                        "skill": "ファイアウォール",
+                        "adjust": "あり",
+                        "description": "ハッキング対抗判定"
+                    }
+                }
+            ]
+        }
+    ]
+}
