@@ -9,8 +9,8 @@
             "type": "archetype",
             "value": [
                 {
-                    "id": "automata",
-                    "name": "オートマタ",
+                    "id": "machinus",
+                    "name": "マキナス",
                     "modifiers": {
                         "DR": [
                             2,

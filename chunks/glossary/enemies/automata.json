@@ -1,10 +1,10 @@
 {
-    "name": "オートマタ",
+    "name": "マキナス",
     "priority": 0,
     "genre": [
         "glossary",
         "enemy",
-        "automata"
+        "machinus"
     ],
     "include": [],
     "params": [
