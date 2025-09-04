@@ -1,17 +1,14 @@
 {
     "name": "アイテムリスト",
-    "priority": 0,
+    "priority": -1,
     "genre": [
         "item",
         "section"
     ],
-    "include": [
-        null,
-        null
-    ],
+    "include": [],
     "params": [
         {
-            "access_level": 0,
+            "access_level": -1,
             "type": "section",
             "value": "入手できるアイテムの一部です。"
         }
