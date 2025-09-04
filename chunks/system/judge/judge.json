@@ -1,53 +1,53 @@
 {
-    "name": "戦闘ルール",
+    "name": "判定ルール",
     "priority": 10,
     "genre": [
         "system",
         "rule",
-        "combat"
+        "judge"
     ],
     "params": [
         {
             "access_level": 0,
-            "type": "document",
-            "value": "この項目では戦闘の流れと、戦闘に関する基本的なルールを解説します。"
+            "name": "判定の基本",
+            "type": "system",
+            "value": [
+                {
+                    "id": "judge_method",
+                    "name": "判定方法",
+                    "description": "プレイヤーの判定、対抗判定は1D100で行います。ダイスの出目が目標値以下で成功判定です。"
+                },
+                {
+                    "id": "target_number_formula",
+                    "name": "目標値の計算式",
+                    "description": "目標値は「基礎ステータス1種 + 関連スキルレベル1種 + アイテムなどによる補正値」により算出されます。"
+                },
+                {
+                    "id": "critical",
+                    "name": "クリティカル",
+                    "description": "出目が1～5だった場合、無条件で大成功となり、通常より大きな結果を得られます。"
+                },
+                {
+                    "id": "fumble",
+                    "name": "ファンブル",
+                    "description": "出目が96～100だった場合、無条件で大失敗となり、予これまでの悪い結果をもたらします。"
+                }
+            ]
         },
         {
             "access_level": 0,
-            "type": "system_list",
+            "name": "マーケットでの特殊判定",
+            "type": "system",
             "value": [
                 {
-                    "id": "combat_turn",
-                    "name": "行動順（ターン制）",
-                    "description": "戦闘はターン制で行われ、各キャラクターはHACの高い順に行動します..."
+                    "id": "negotiate_discount",
+                    "name": "値引き・値上げ交渉",
+                    "description": "アイテムの売買時に、価格交渉を行うことができます。判定にはCHAと《交渉術》スキルを使用します。成功した場合の変動額はアイテムのティアや状況に応じてGMが裁定します。"
                 },
                 {
-                    "id": "combat_weapon",
-                    "name": "武器の使用",
-                    "description": "攻撃は装備中の武器種で行い、武器の変更には1行動を消費します。"
-                },
-                {
-                    "id": "combat_hit_rate",
-                    "name": "命中判定",
-                    "description": "攻撃の成否は命中判定によって決定されます。",
-                    "judge_ids": [
-                        "melee_attack_check",
-                        "ranged_attack_check"
-                    ]
-                },
-                {
-                    "id": "combat_avoidance",
-                    "name": "回避判定",
-                    "description": "攻撃に対する回避の成否は回避判定によって決定されます。",
-                    "judge_ids": [
-                        "melee_avoidance_check",
-                        "ranged_avoidance_check"
-                    ]
-                },
-                {
-                    "id": "combat_damage",
-                    "name": "ダメージ計算",
-                    "description": "ダメージは「ATK - DR」で計算され、最低1ダメージが保証されます。"
+                    "id": "market_price_check",
+                    "name": "データ・コアの相場判定",
+                    "description": "セッション間に一度だけ、データ・コアの売却価格を変動させる「相場判定」を行えます。判定にはLUKを使用し、出目(%)の分だけ基本価格に上乗せされます。この相場は次のセッションが開始されるまで維持されます。"
                 }
             ]
         }

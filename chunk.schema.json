@@ -48,7 +48,8 @@
                             "consumable",
                             "data_core",
                             "guideline",
-                            "ignore"
+                            "ignore",
+                            "scenario"
                         ]
                     }
                 }

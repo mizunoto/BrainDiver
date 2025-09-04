@@ -100,6 +100,23 @@
                             "《オーバーロード》"
                         ]
                     }
+                },
+                {
+                    "id": "strayer",
+                    "name": "ストレイヤー",
+                    "modifiers": {
+                        "ability_cost": [
+                            1,
+                            2,
+                            2,
+                            3,
+                            3
+                        ]
+                    },
+                    "abilities": {
+                        "guaranteed": [],
+                        "recomended": []
+                    }
                 }
             ]
         }

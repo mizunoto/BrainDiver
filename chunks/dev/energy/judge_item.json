@@ -9,7 +9,7 @@
     "include": [],
     "params": [
         {
-            "access_level": 0,
+            "access_level": -1,
             "type": "description",
             "value": "プレイヤーがルールにないアイテムの使い道を宣言した場合、GMはそのアイデアが状況に合っており、面白い物であればそれを許可する裁量権を持ちます。"
         },
