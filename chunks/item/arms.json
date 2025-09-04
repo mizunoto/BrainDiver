@@ -9,8 +9,8 @@
         "secction"
     ],
     "include": [
-        null,
-        null
+        "melee_weapons",
+        "ranged_weapons"
     ],
     "params": [
         {

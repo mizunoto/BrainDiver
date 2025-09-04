@@ -1,0 +1,55 @@
+{
+    "name": "近接武器",
+    "priority": 0,
+    "genre": [],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "item",
+            "value": [
+                {
+                    "access_level": 0,
+                    "name": "電磁ナイフ",
+                    "flavor": "刀身に発生させた電磁場で切断力を高めた基本的なナイフ。",
+                    "tier": 1,
+                    "class": [
+                        "melee",
+                        "light"
+                    ],
+                    "ATK": 6,
+                    "worth": 100
+                },
+                {
+                    "id": "high_vive_blade",
+                    "name": "高周波ブレード",
+                    "flavor": "刀身を超高速で振動させることで、あらゆるものを切り裂くストレイヤー御用達の武器。",
+                    "tier": 3,
+                    "class": [
+                        "melee",
+                        "standard"
+                    ],
+                    "ATK": 14,
+                    "required": {
+                        "STR": 15
+                    },
+                    "worth": 2500
+                },
+                {
+                    "id": "boost_hammer",
+                    "name": "ブーストハンマー",
+                    "flavor": "衝撃による爆裂機構で攻撃力を増大させたハンマー。扱いにはかなりのコツが必要。",
+                    "tier": 5,
+                    "class": [
+                        "melee",
+                        "heavy"
+                    ],
+                    "ATK": 28,
+                    "required": {
+                        "STR": 30
+                    },
+                    "worth": 9000
+                }
+            ]
+        }
+    ]
+}
