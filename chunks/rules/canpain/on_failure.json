@@ -1,19 +1,33 @@
 {
     "name": "HPが0になった時の扱い",
-    "priority": 0,
+    "priority": 10,
     "genre": [
         "system",
-        "rules"
-    ],
-    "include": [
-        "return_to_base",
-        "character_lost"
+        "rule",
+        "character",
+        "defeat"
     ],
     "params": [
         {
             "access_level": 0,
-            "type": "description",
-            "value": "キャンペーン中にプレイヤーのHPが0になった場合の扱いを取り決めます。"
+            "type": "document",
+            "value": "戦闘などでHPが0になった場合、そのキャンペーンで採用しているルールに応じて、以下のいずれかの処理が行われます。"
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": [
+                {
+                    "id": "return_to_base",
+                    "name": "輪転街への帰還（標準ルール）",
+                    "description": "キャラクターは一時的に意識を失い、戦闘から離脱します。もしプレイヤー全員が行動不能になった場合、そのセッションは失敗となり、拠点の輪転街へ帰還します。"
+                },
+                {
+                    "id": "character_lost",
+                    "name": "キャラクターロスト（高難易度ルール）",
+                    "description": "キャラクターは完全に死亡し、そのキャンペーンから退場します。再度参加する場合は、新しいキャラクターを作成する必要があります。（注意：生成AIをGMにする場合、ロストしたキャラクターの情報を記憶している可能性があるため、新しいセッション用のチャットを立て直すことを推奨します）"
+                }
+            ]
         }
     ]
 }

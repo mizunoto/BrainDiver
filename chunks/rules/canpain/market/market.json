@@ -1,25 +1,54 @@
 {
-    "name": "マーケットの利用",
-    "priority": 0,
+    "name": "マーケットで出来ること",
+    "priority": 10,
     "genre": [
-        "market",
         "system",
-        "rules"
-    ],
-    "include": [
-        "skill_earn",
-        "buy_equip",
-        "buy_item",
-        "negotiate_discount",
-        "sell_equip",
-        "sell_item",
-        "sell_data_core"
+        "rule",
+        "market",
+        "action"
     ],
     "params": [
         {
             "access_level": 0,
-            "type": "description",
-            "value": "共通通貨ℂを消費して利用できるマーケットです。セッション間の準備期間に利用することができます。"
+            "type": "document",
+            "value": "セッション間の準備期間に、輪転街のマーケットを利用してキャラクターを強化したり、アイテムを補充したりできます。マーケットでは共通通貨ℂを消費します。"
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": [
+                {
+                    "id": "skill_earn",
+                    "name": "スキルの習得",
+                    "description": "スキルデータを購入し、電子脳にインストールすることでスキルレベルを1上げることができます。習得には要求ステータスを満たしている必要があります。",
+                    "cost_formula": "500 + (現在のスキルレベル^2 * 50) ℂ"
+                },
+                {
+                    "id": "buy_equip",
+                    "name": "装備の購入",
+                    "description": "新しい装備を購入します。購入した装備は拠点のストレージに保管されます。購入可能な装備の一例は資料集を参照してください。"
+                },
+                {
+                    "id": "buy_item",
+                    "name": "アイテムの購入",
+                    "description": "消費アイテムなどを購入します。アイテムの所持数には上限があります。購入可能なアイテムの一例は資料集を参照してください。"
+                },
+                {
+                    "id": "sell_equip",
+                    "name": "装備の売却",
+                    "description": "不要になった装備を売却します。特性付きの装備は高値で売れる可能性があります。"
+                },
+                {
+                    "id": "sell_item",
+                    "name": "アイテムの売却",
+                    "description": "不要になったアイテムを売却します。シナリオで入手したアイテムも売却可能です。"
+                },
+                {
+                    "id": "sell_data_core",
+                    "name": "データ・コアの売却",
+                    "description": "データ・コアを使用せず、売却してℂに換えることもできます。"
+                }
+            ]
         }
     ]
 }

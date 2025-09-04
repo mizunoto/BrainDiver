@@ -1,35 +1,38 @@
 {
     "name": "キャラクター作成",
-    "priority": 0,
+    "priority": 10,
     "genre": [
-        "character",
-        "canpain",
-        "rules",
-        "status",
         "system",
-        "equip"
+        "rule",
+        "character",
+        "creation"
     ],
-    "include": [],
     "params": [
         {
             "access_level": 0,
-            "type": "description",
-            "value": "プレイヤーは新しいキャラクターを作成し、そのステータスをバックグラウンドを設定します。"
-        },
-        {
-            "access_level": 0,
-            "type": "description",
-            "value": "ステータスはHP以外の6つのステータス、HAC、STR、DEX、INT、CHA、LUKにそれぞれ下限5、上限20として合計50ポイントを割り振ります。"
-        },
-        {
-            "access_level": 0,
-            "type": "description",
-            "value": "初期装備として電磁ナイフ、レーザーピストル、カーボンアーマー、小型タンクが与えられます。"
+            "type": "system",
+            "value": [
+                {
+                    "id": "set_background",
+                    "name": "バックグラウンド設定",
+                    "description": "プレイヤーは新しいキャラクターのバックグラウンド（背景設定）を自由に設定します。"
+                },
+                {
+                    "id": "assign_status_points",
+                    "name": "ステータスポイントの割り振り",
+                    "description": "HP以外の6つのステータス（HAC, STR, DEX, INT, CHA, LUK）に、下限5・上限20の範囲で、合計50ポイントを自由に割り振ります。HPの初期値は20で固定です。"
+                },
+                {
+                    "id": "initial_equipment",
+                    "name": "初期装備",
+                    "description": "作成したキャラクターには、初期装備として「電磁ナイフ」「レーザーピストル」「カーボンアーマー」「小型タンク」が与えられます。"
+                }
+            ]
         },
         {
             "access_level": -1,
             "type": "ignore",
-            "value": "初期装備は軽量、重量などの選択式にするか、配るのはℂにしてそれを基に装備を整える形にしたい=自由度を上げたい"
+            "value": "初期装備は選択式にするか、初期資金を渡して自由に購入させる形式にしたい（自由度の向上）。"
         }
     ]
 }

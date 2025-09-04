@@ -14,7 +14,7 @@
         },
         {
             "access_level": 0,
-            "type": "system",
+            "type": "system_list",
             "value": [
                 {
                     "id": "combat_turn",

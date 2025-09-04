@@ -1,22 +1,38 @@
 {
-    "name": "キャンペーンの開始",
-    "priority": 0,
+    "name": "ゲームの進行フロー",
+    "priority": 10,
     "genre": [
-        "canpain",
-        "section",
-        "rules"
-    ],
-    "include": [
-        "on_failure",
-        "character_create",
-        "session_start",
-        "base"
+        "system",
+        "rule",
+        "flow",
+        "campaign"
     ],
     "params": [
         {
             "access_level": 0,
-            "type": "description",
-            "value": "複数のシナリオで構成された一連のキャンペーンを開始します。"
+            "type": "system",
+            "value": [
+                {
+                    "id": "campaign_start",
+                    "name": "1. キャンペーンの開始",
+                    "description": "プレイヤーはまず、ルールに従って自身のキャラクターを作成します。その後、GMは最初のシナリオを開始します。"
+                },
+                {
+                    "id": "session_loop",
+                    "name": "2. セッションの実行",
+                    "description": "プレイヤーとGMは、「セッションの進行」ルールに従って、単一のシナリオをプレイします。"
+                },
+                {
+                    "id": "post_session_phase",
+                    "name": "3. セッション間準備フェーズ",
+                    "description": "一つのセッションが終了すると、次のセッションを開始するまでの準備期間に入ります。この期間中、プレイヤーは輪転街の拠点で以下の行動ができます：\n・マーケットの利用（装備やアイテムの売買、スキルの習得）\n・データ・コアの使用\n・装備の変更"
+                },
+                {
+                    "id": "campaign_continue",
+                    "name": "4. キャンペーンの継続",
+                    "description": "準備が整ったら、「2. セッションの実行」に戻り、GMは次のシナリオを開始します。これを繰り返すことで、壮大なキャンペーンの物語が紡がれていきます。"
+                }
+            ]
         }
     ]
 }
