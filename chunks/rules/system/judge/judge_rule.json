@@ -1,0 +1,43 @@
+{
+    "name": "判定の基本ルール",
+    "priority": 10,
+    "genre": [
+        "system",
+        "rule",
+        "judge"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "name": "判定方法",
+                "description": "プレイヤーの判定、対抗判定は1D100で行います。ダイスの出目が目標値以下で成功判定です。"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "name": "目標値の計算式",
+                "description": "目標値は「基礎ステータス1種 + 関連スキルレベル1種 + アイテムなどによる補正値」により算出されます。"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "name": "クリティカル",
+                "description": "出目が1～5だった場合、無条件で大成功となり、通常より大きな結果を得られます。"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "name": "ファンブル",
+                "description": "出目が96～100だった場合、無条件で大失敗となり、予期せぬ悪い結果をもたらします。"
+            }
+        }
+    ]
+}

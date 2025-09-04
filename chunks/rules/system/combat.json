@@ -1,0 +1,61 @@
+{
+    "name": "戦闘ルール",
+    "priority": 10,
+    "genre": [
+        "system",
+        "rule",
+        "combat"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "document",
+            "value": "この項目では戦闘の流れと、戦闘に関する基本的なルールを解説します。"
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "id": "combat_turn",
+                "name": "行動順（ターン制）",
+                "description": "戦闘はターン制で行われます。全てのキャラクターは原則として1ターンに1回行動できます。行動順は、まず「行動妨害状態」でないキャラクター全員のHACを比較し、高い順に行動します。その後、「行動妨害状態」のキャラクター全員で同様にHACを比較し、高い順に行動します。全員が行動を終えたら次のターンに移行します。"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "id": "combat_weapon",
+                "name": "武器の使用",
+                "description": "攻撃は、その時点で装備している武器種によって行われます。武器の変更は戦闘行動として可能ですが、変更に1行動を消費します。"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "id": "combat_hit_rate",
+                "name": "命中判定",
+                "description": "命中判定は1D100で行い、出目が目標値以下で成功です。目標値は「ステータス(STR or DEX) + 関連スキルレベル + 補正値」により算出されます。"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "id": "combat_avoidance",
+                "name": "回避判定",
+                "description": "回避判定は1D100で行い、出目が目標値以下で成功です。目標値は「ステータス(DEX or HAC/2) + 関連スキルレベル + 補正値」により算出されます。"
+            }
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": {
+                "id": "combat_damage",
+                "name": "ダメージ計算",
+                "description": "ダメージは、命中判定に成功（または回避判定に失敗）した時に発生します。ダメージ量は「ATK - DR」の値となり、最低でも1ダメージは保証されます。"
+            }
+        }
+    ]
+}
