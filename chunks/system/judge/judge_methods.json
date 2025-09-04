@@ -65,7 +65,7 @@
                     "id": "negotiate_check",
                     "status": "CHA",
                     "skill": "交渉術|自己申告",
-                    "adjust": "アイテムのティア",
+                    "adjust": "あり",
                     "description": "交渉判定"
                 },
                 {
@@ -74,6 +74,62 @@
                     "skill": "使用不可",
                     "adjust": "なし",
                     "description": "相場判定"
+                },
+                {
+                    "id": "throwing_check",
+                    "status": "STR",
+                    "skill": "投擲",
+                    "adjust": "あり",
+                    "description": "投擲判定"
+                },
+                {
+                    "id": "endurance_check",
+                    "status": "STR",
+                    "skill": "持久力",
+                    "adjust": "あり",
+                    "description": "持久力に関する判定"
+                },
+                {
+                    "id": "trap_knowledge_check",
+                    "status": "DEX",
+                    "skill": "罠知識",
+                    "adjust": "あり",
+                    "description": "罠の発見・解除判定"
+                },
+                {
+                    "id": "percision_check",
+                    "status": "DEX",
+                    "skill": "精密操作",
+                    "adjust": "あり",
+                    "description": "精密操作判定"
+                },
+                {
+                    "id": "acrobatics_check",
+                    "status": "DEX",
+                    "skill": "軽業",
+                    "adjust": "あり",
+                    "description": "落下やバランスに関する判定"
+                },
+                {
+                    "id": "science_knowledge_check",
+                    "status": "INT",
+                    "skill": "科学知識",
+                    "adjust": "あり",
+                    "description": "科学知識に関する判定"
+                },
+                {
+                    "id": "historical_knowledge_check",
+                    "status": "INT",
+                    "skill": "歴史知識",
+                    "adjust": "あり",
+                    "description": "歴史知識に関する判定"
+                },
+                {
+                    "id": "gather_information_check",
+                    "status": "CHA",
+                    "skill": "交渉術",
+                    "adjust": "あり",
+                    "description": "情報収集判定"
                 }
             ]
         }

@@ -1,0 +1,173 @@
+{
+    "name": "スキル",
+    "priority": 10,
+    "genre": [
+        "system",
+        "rule",
+        "skill",
+        "list"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "document",
+            "value": "キャラクターは、ステータスが要求値を満たしていれば、マーケットでスキルデータを購入しインストールすることで、対象のスキルレベルを1上げることができます。"
+        },
+        {
+            "access_level": 0,
+            "type": "system",
+            "value": [
+                {
+                    "id": "melee_combat",
+                    "name": "近接戦闘",
+                    "description": "近接武器を使った戦闘がうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "STR"
+                        ],
+                        "value": 15
+                    },
+                    "judge_example": {
+                        "description": "近接武器での攻撃時に使用します。",
+                        "judge_id": "melee_attack_check"
+                    },
+                    "judge_method_ids": [
+                        "melee_attack_check"
+                    ]
+                },
+                {
+                    "id": "sniping",
+                    "name": "狙撃",
+                    "description": "射撃が正確になる。",
+                    "required": {
+                        "statuses": [
+                            "DEX"
+                        ],
+                        "value": 15
+                    },
+                    "judge_example": {
+                        "description": "遠距離武器での攻撃時に使用します。",
+                        "judge_id": "ranged_attack_check"
+                    },
+                    "judge_method_ids": [
+                        "ranged_attack_check"
+                    ]
+                },
+                {
+                    "id": "jaming",
+                    "name": "ジャミング",
+                    "description": "敵の攻撃を回避しやすくなる。",
+                    "required": {
+                        "statuses": [
+                            "HAC",
+                            "DEX"
+                        ],
+                        "value": 25
+                    },
+                    "judge_example": {
+                        "description": "敵からの攻撃に対する回避判定で使用します。",
+                        "judge_id": "ranged_avoidance_check"
+                    },
+                    "judge_method_ids": [
+                        "melee_avoidance_check",
+                        "ranged_avoidance_check"
+                    ]
+                },
+                {
+                    "id": "cracking",
+                    "name": "クラッキング",
+                    "description": "攻撃的なハッキングがうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "HAC"
+                        ],
+                        "value": 15
+                    },
+                    "judge_example": {
+                        "description": "敵のポートへのハッキング時に使用します。",
+                        "judge_id": "port_hacking_check"
+                    },
+                    "judge_method_ids": [
+                        "port_hacking_check"
+                    ]
+                },
+                {
+                    "id": "fire_wall",
+                    "name": "ファイアウォール",
+                    "description": "敵からのハッキングを防ぎやすくなる。",
+                    "required": {
+                        "statuses": [
+                            "HAC"
+                        ],
+                        "value": 15
+                    },
+                    "judge_example": {
+                        "description": "敵からのハッキングへの対抗判定で使用します。",
+                        "judge_id": "hacking_defense_check"
+                    },
+                    "judge_method_ids": [
+                        "hacking_defense_check"
+                    ]
+                },
+                {
+                    "id": "data_analyse",
+                    "name": "データ解析",
+                    "description": "暗号化されたデータなどを復元・解除できる。",
+                    "required": {
+                        "statuses": [
+                            "HAC",
+                            "INT"
+                        ],
+                        "value": 25
+                    },
+                    "judge_example": {
+                        "description": "遺跡の端末（レリック）をハッキングする際に使用します。",
+                        "judge_id": "relic_hack_check"
+                    },
+                    "judge_method_ids": [
+                        "relic_hack_check"
+                    ]
+                },
+                {
+                    "id": "negotiation",
+                    "name": "交渉術",
+                    "description": "説得や情報収集がうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "CHA",
+                            "LUK"
+                        ],
+                        "value": 25
+                    },
+                    "judge_example": {
+                        "description": "NPCとの会話や交渉に使用します。",
+                        "judge_id": "negotiate_check"
+                    },
+                    "judge_method_ids": [
+                        "negotiate_check",
+                        "gather_information_check"
+                    ]
+                },
+                {
+                    "id": "throwing",
+                    "name": "投擲",
+                    "description": "物を投げることがうまくなる。",
+                    "required": {
+                        "statuses": [
+                            "STR",
+                            "DEX"
+                        ],
+                        "value": 25
+                    },
+                    "judge_example": {
+                        "description": "手榴弾やナイフなどを投擲する際に使用します。",
+                        "judge_id": "throwing_check"
+                    },
+                    "judge_method_ids": [
+                        "throwing_check"
+                    ]
+                }
+            ]
+        }
+    ]
+}
