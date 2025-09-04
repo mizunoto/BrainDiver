@@ -1,0 +1,68 @@
+{
+    "name": "消費アイテム（回復系）",
+    "priority": 5,
+    "genre": [
+        "item",
+        "consumable",
+        "healing",
+        "list"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "item_list",
+            "value": [
+                {
+                    "id": "nano_capsule_s",
+                    "name": "ナノカプセルS",
+                    "flavor": "治療用ナノマシンの入った小型のカプセル。",
+                    "description": "使用すると瞬時にHPを10回復する。",
+                    "category": "HP回復",
+                    "worth": 10,
+                    "effects": [
+                        {
+                            "type": "heal",
+                            "target": "HP",
+                            "value": 10
+                        }
+                    ]
+                },
+                {
+                    "id": "energy_pack_s",
+                    "name": "エネルギーパック(S)",
+                    "flavor": "「新人か？保険として持っておけ」、ストレイヤーの先達に訊けば大体この答えが返ってくる。",
+                    "description": "使用すると瞬時にエネルギーを20回復する。",
+                    "category": "エネルギー回復",
+                    "worth": 10,
+                    "effects": [
+                        {
+                            "type": "heal",
+                            "target": "energy",
+                            "value": 20
+                        }
+                    ]
+                },
+                {
+                    "id": "high_density_gel",
+                    "name": "高密度エネルギーゲル",
+                    "flavor": "戦闘用に開発された高効率のエネルギーを纏めたゲル。効果は高いが一時的に行動を阻害するのが難点。",
+                    "description": "使用すると瞬時にエネルギーを100回復するが、次のターンに行動妨害状態になる。",
+                    "category": "エネルギー回復",
+                    "worth": 80,
+                    "effects": [
+                        {
+                            "type": "heal",
+                            "target": "energy",
+                            "value": 100
+                        },
+                        {
+                            "type": "debuff",
+                            "status": "action_delay",
+                            "duration": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

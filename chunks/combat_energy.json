@@ -1,0 +1,31 @@
+{
+    "name": "戦闘中のエネルギーについて",
+    "priority": -1,
+    "genre": [
+        "system",
+        "combat",
+        "description",
+        "energy"
+    ],
+    "include": [
+        "energy_attack",
+        "energy_before_combat"
+    ],
+    "params": [
+        {
+            "access_level": -1,
+            "type": "description",
+            "value": "戦闘状態に突入すると、電子脳の戦闘プログラムがオンになり、自動的に遠距離攻撃の弾道を予測する領域探査モードが起動します。戦闘中はオフにすることができません。"
+        },
+        {
+            "access_level": -1,
+            "type": "description",
+            "value": "このモード起動中はHACによる遠距離攻撃の回避判定が可能になりますが、HAC値に比例して毎ターンエネルギーを消費します。この消費量はINT値により相殺可能ですが、0未満にはなりません。"
+        },
+        {
+            "access_level": -1,
+            "type": "description",
+            "value": "全ての攻撃、及びハッキング行動はエネルギーを消費します。エネルギーの最大値は装備しているエネルギータンクに準じます。"
+        }
+    ]
+}

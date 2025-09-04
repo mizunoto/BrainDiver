@@ -1,0 +1,70 @@
+{
+    "name": "ハッキングルール",
+    "priority": 10,
+    "genre": [
+        "system",
+        "rule",
+        "hacking"
+    ],
+    "params": [
+        {
+            "access_level": 0,
+            "type": "document",
+            "value": "キャラクターはHACを使用して、様々なハッキングを行うことができます..."
+        },
+        {
+            "access_level": 0,
+            "name": "戦闘ハッキング",
+            "type": "system",
+            "value": [
+                {
+                    "id": "combat_hack_base",
+                    "name": "基本ルール",
+                    "description": "戦闘時におけるハッキングは、攻撃とは別の特殊行動として扱います。"
+                },
+                {
+                    "id": "process_overload",
+                    "name": "処理負荷",
+                    "description": "対象が5ダメージ受ける毎に1ポイント蓄積する（最大5）。対象へのハッキング判定にボーナスとして加算され、ハッキング成功時に0にリセットされる。"
+                },
+                {
+                    "id": "port_hacking",
+                    "name": "ポート・ハッキング",
+                    "description": "敵の特定部位（ポート）に対して行うハッキングです。成否はポート・ハッキング判定で決定されます。",
+                    "ports": [
+                        {
+                            "name": "アーム・ユニット",
+                            "effect": "成功時、対象は次のターン攻撃行動ができなくなる。"
+                        },
+                        {
+                            "name": "レッグ・ユニット",
+                            "effect": "成功時、対象は「行動妨害状態」となり、次のターンの行動順が遅れる。"
+                        }
+                    ],
+                    "judge_ids": [
+                        "port_hacking_check",
+                        "hacking_defense_check"
+                    ]
+                },
+                {
+                    "id": "mind_jack",
+                    "name": "マインド・ジャック",
+                    "description": "ハッキング成功時に、対象の「処理負荷」が最大だった場合に発生する状態異常。対象は2ターン行動不能になる。"
+                }
+            ]
+        },
+        {
+            "access_level": 0,
+            "name": "探索ハッキング",
+            "type": "system",
+            "value": [
+                {
+                    "id": "relic_hack",
+                    "name": "レリック・ハック",
+                    "description": "廃墟の施設にある電子機器をハッキングします。成否はレリック・ハック判定で決定されます。",
+                    "judge_id": "relic_hack_check"
+                }
+            ]
+        }
+    ]
+}
