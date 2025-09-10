@@ -139,7 +139,7 @@ vite.config.ts.timestamp-*
 
 .vscode
 backup
-dist/releases
+dist/*
 old_version
 tmp
 test
