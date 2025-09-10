@@ -53,6 +53,7 @@
                     "enum": [
                         "flavor",
                         "system",
+                        "rule",
                         "description",
                         "glossary",
                         "melee",
@@ -196,6 +197,22 @@
                     "if": {
                         "properties": {
                             "type": {
+                                "const": "rule"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/ruleValue"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
                                 "const": "description"
                             }
                         }
@@ -307,6 +324,48 @@
                         }
                     }
                 }
+            ]
+        },
+        "ruleValue": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/id"
+                },
+                "name": {
+                    "$ref": "#/definitions/name"
+                },
+                "explanation": {
+                    "type": "string"
+                },
+                "sub_rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/subRuleValue"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "explanation"
+            ]
+        },
+        "subRuleValue": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/id"
+                },
+                "name": {
+                    "$ref": "#/definitions/name"
+                },
+                "explanation": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "explanation"
             ]
         },
         "meleeValue": {
