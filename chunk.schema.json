@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "隔絶輪廻のブレインダイバーのチャンクスキーマ",
+    "version": "3.0.0",
+    "description": "隔絶輪廻のブレインダイバーのチャンクのデータ構造を定義します。",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "見出しに使われる名称"
+        },
+        "type": {
+            "type": "string",
+            "description": "データ構造の種類",
+            "enum": [
+                "document"
+            ],
+            "$comment": "必要次第で追加する"
+        },
+        "priority": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "データベース化の際の優先度"
+        },
+        "genre": {
+            "type": "array",
+            "description": "ジャンル",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "system"
+                ],
+                "$comment": "必要次第で追加する"
+            }
+        },
+        "includes": {
+            "type": "array",
+            "description": "文書化の際に下階層に含めるチャンクのキー\n配列の順番に、下階層に含める順番になります。",
+            "items": {
+                "type": "string",
+                "description": "対象チャンクのキー",
+                "pattern": "^[a-z0-9_]+$"
+            },
+            "uniqueItems": true,
+            "default": []
+        },
+        "params": {
+            "type": "object",
+            "$comment": "typeによって変わる"
+        }
+    },
+    "required": [
+        "name",
+        "type",
+        "priority",
+        "genre"
+    ],
+    "additionalProperties": false,
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "document"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "params": {
+                        "$ref": "#/definitions/DocumentParams"
+                    }
+                }
+            }
+        }
+    ],
+    "definitions": {
+        "DocumentParams": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "access_level",
+                    "value"
+                ],
+                "properties": {
+                    "access_level": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 8,
+                        "description": "アクセスレベル"
+                    },
+                    "value": {
+                        "type": "string",
+                        "description": "文章"
+                    }
+                }
+            },
+            "minItems": 1
+        }
+    }
+}
