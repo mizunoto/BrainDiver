@@ -20,7 +20,12 @@
                         "hand_out",
                         "document",
                         "judge",
-                        "table"
+                        "table",
+                        "weapon",
+                        "armor",
+                        "energy_tank",
+                        "consumable",
+                        "skill"
                     ],
                     "$comment": "必要次第で追加する"
                 },
@@ -56,7 +61,10 @@
                             "weapon",
                             "campain",
                             "session",
-                            "market"
+                            "market",
+                            "glossary",
+                            "consumable",
+                            "skill"
                         ],
                         "uniqueItems": true,
                         "additionalItems": false,
@@ -155,6 +163,86 @@
                             }
                         }
                     }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "weapon"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/WeaponParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "armor"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/ArmorParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "energy_tank"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/EnergyTankParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "consumable"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/ConsumableParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "skill"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/SkillParams"
+                            }
+                        }
+                    }
                 }
             ]
         }
@@ -163,13 +251,21 @@
         "HandOutParams": {
             "type": "object",
             "required": [
-                "access_level",
+                "access_filter",
                 "value"
             ],
             "additionalProperties": false,
             "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
+                "access_filter": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 9
+                    },
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "description": "アクセス可能なアクセスレベル"
                 },
                 "value": {
                     "type": "string",
@@ -246,15 +342,10 @@
             }
         },
         "AccessLevel": {
-            "type": "array",
-            "description": "アクセスレベル\n-1: 開発用\n0: 公開\n1-7: GM用\n8: シナリオ制作者用\n9: AI用",
-            "items": {
-                "type": "number",
-                "minimum": -1,
-                "maximum": 9
-            },
-            "minItems": 2,
-            "maxItems": 2
+            "type": "number",
+            "minimum": -1,
+            "maximum": 9,
+            "description": "アクセスするのに必要なレベル\n-1: 開発用, 0: 全員, 1-5: ゲーム内レベル1-5, 6: ゲーム内特殊レベル, 1-7: GM向け, 8: シナリオ作成者向け, 9: AI用"
         },
         "TableParams": {
             "type": "object",
@@ -286,6 +377,245 @@
                     "type": "boolean",
                     "default": false,
                     "description": "表に見出し行を含めるか"
+                }
+            }
+        },
+        "ItemInterface": {
+            "type": "object",
+            "properties": {
+                "worth": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "価値"
+                },
+                "flavor": {
+                    "type": "string",
+                    "description": "アイテムの説明"
+                }
+            },
+            "required": [
+                "worth",
+                "flavor"
+            ]
+        },
+        "WeaponParams": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/ItemInterface"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "class": {
+                                    "type": "string",
+                                    "description": "武器の種類\n軽量・標準・重量と近接・遠距離の組み合わせの文字列\n例：軽量近接武器",
+                                    "pattern": "^(軽量|標準|重量)(近接|遠距離)武器$"
+                                },
+                                "atk": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "攻撃力"
+                                },
+                                "requires": {
+                                    "type": "object",
+                                    "patternProperties": {
+                                        "(HAC|STR|DEX|INT|CHA)": {
+                                            "type": "number",
+                                            "minimum": 1,
+                                            "description": "必要量"
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "uniqueItems": true
+                                }
+                            },
+                            "required": [
+                                "class",
+                                "atk"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "ArmorParams": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/ItemInterface"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "dr": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "ダメージ減衰能力"
+                                },
+                                "requires": {
+                                    "type": "object",
+                                    "patternProperties": {
+                                        "(HAC|STR|DEX|INT|CHA)": {
+                                            "type": "number",
+                                            "minimum": 1,
+                                            "description": "必要量"
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "uniqueItems": true
+                                }
+                            },
+                            "required": [
+                                "dr"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "EnergyTankParams": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/ItemInterface"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "capacity": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "容量"
+                                },
+                                "accumulate": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "回復量"
+                                },
+                                "requires": {
+                                    "type": "object",
+                                    "patternProperties": {
+                                        "(HAC|STR|DEX|INT|CHA)": {
+                                            "type": "number",
+                                            "minimum": 1,
+                                            "description": "必要量"
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "uniqueItems": true
+                                }
+                            },
+                            "required": [
+                                "capacity",
+                                "accumulate"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "ConsumableParams": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/ItemInterface"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "effects": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "description": "効果"
+                                    },
+                                    "minItems": 1
+                                }
+                            },
+                            "required": [
+                                "effects"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "SkillParams": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "type": "object",
+                    "properties": {
+                        "explanation": {
+                            "type": "string",
+                            "description": "説明"
+                        },
+                        "requires": {
+                            "type": "object",
+                            "properties": {
+                                "statuses": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "description": "ステータス",
+                                        "enum": [
+                                            "HAC",
+                                            "STR",
+                                            "DEX",
+                                            "INT",
+                                            "CHA",
+                                            "LUK"
+                                        ]
+                                    },
+                                    "minItems": 1
+                                },
+                                "total_value": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "基礎必要量"
+                                }
+                            },
+                            "required": [
+                                "statuses",
+                                "total_value"
+                            ],
+                            "additionalProperties": false,
+                            "uniqueItems": true
+                        }
+                    },
+                    "required": [
+                        "explanation",
+                        "requires"
+                    ]
                 }
             }
         }
