@@ -16,10 +16,7 @@
         ],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "プレイヤーの行動の成否は1D100で判定します。"
             }
         ]
@@ -39,10 +36,7 @@
         ],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "判定は 基礎ステータス+関連スキルレベル+補正値(アイテムなど) で算出されます。"
             }
         ]
@@ -60,10 +54,7 @@
         "includes": [],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "基礎ステータス + 関連スキルレベル + 補正値(アイテムなど) で算出されます。"
             }
         ]
@@ -81,10 +72,7 @@
         ],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "出目が1～5だった場合無条件で大成功となり、通常より大きな結果を得られます。"
             }
         ]
@@ -102,10 +90,7 @@
         ],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "出目が96～100だった場合無条件で大失敗となり、予期せぬ悪い結果をもたらします。"
             }
         ]
@@ -122,10 +107,7 @@
             "session"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "提案",
                 "skill": "提案",
@@ -151,10 +133,7 @@
         ],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "命中判定は1D100で判定し、出目が目標値以下であれば成功です。"
             }
         ]
@@ -172,10 +151,7 @@
             "melee"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "STR",
                 "skill": "近接戦闘",
@@ -198,10 +174,7 @@
             "range"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "DEX",
                 "skill": "狙撃",
@@ -227,10 +200,7 @@
         ],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "回避判定は1D100で判定し、出目が目標値以下であれば成功です。"
             }
         ]
@@ -248,10 +218,7 @@
             "melee"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "DEX",
                 "skill": "近接戦闘",
@@ -274,10 +241,7 @@
             "range"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "HAC",
                 "skill": "ジャミング",
@@ -300,10 +264,7 @@
         ],
         "params": [
             {
-                "access_level": [
-                    0,
-                    0
-                ],
+                "access_level": 0,
                 "value": "補正値は、判定に加える補正を表します。"
             }
         ]
@@ -320,10 +281,7 @@
             "judge"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "HAC",
                 "skill": "提案",
@@ -345,10 +303,7 @@
             "market"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "CHA",
                 "skill": "交渉術",
@@ -370,10 +325,7 @@
             "market"
         ],
         "params": {
-            "access_level": [
-                0,
-                0
-            ],
+            "access_level": 0,
             "value": {
                 "status": "LUK",
                 "skill": "なし",
