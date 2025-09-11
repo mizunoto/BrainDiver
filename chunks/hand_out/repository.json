@@ -40,6 +40,27 @@
                 "access_level": 0,
                 "value": "作中に登場するアイテムの一覧です。"
             }
+        ],
+        "_comment": [
+            "ハブ構想について",
+            "chunks/",
+            "├─ hand_out/",
+            "│  ├─ protocol.json",
+            "│  └─ repository.json  # ← ここには'repository'チャンクだけが残る",
+            "│",
+            "├─ items/  # ← 新しく'items'ディレクトリを作成",
+            "│  ├─ core.json        # ← ここに'items'チャンクを移動",
+            "│  ├─ armors.json",
+            "│  ├─ consumables.json",
+            "│  ├─ energy_tanks.json",
+            "│  ├─ melee_weapons.json",
+            "│  └─ range_weapons.json",
+            "│",
+            "├─ glossary/",
+            "│  └─ core.json",
+            "│",
+            "└─ skills/",
+            "   └─ core.json"
         ]
     }
 }
