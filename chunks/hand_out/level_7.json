@@ -1,0 +1,20 @@
+{
+    "level_7": {
+        "name": "レベル7・アクセスディナイド",
+        "type": "hand_out",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "hand_out",
+            "document",
+            "level_7"
+        ],
+        "params": {
+            "access_filter": [
+                1,
+                7
+            ],
+            "value": "レベル7"
+        }
+    }
+}
