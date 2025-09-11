@@ -1,0 +1,140 @@
+{
+    "combat": {
+        "name": "戦闘",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "turn",
+            "judge_combat_hit",
+            "judge_combat_dodge",
+            "combat_damage",
+            "combat_switch_weapon"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "combat"
+        ],
+        "params": [
+            {
+                "access_level": [
+                    0,
+                    0
+                ],
+                "value": "戦闘は次の手順に従って進行します。"
+            }
+        ]
+    },
+    "turn": {
+        "name": "ターン制について",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "combat"
+        ],
+        "params": [
+            {
+                "access_level": [
+                    0,
+                    0
+                ],
+                "value": "キャラクターは1ターンに1回行動できます。行動は、まず行動を妨害されていないキャラクターがアイテムなどによる補正を含めたHACの高い順に行い、次にレッグ・ユニットのハッキングなどで行動を妨害されているキャラクターが補正をHACの高い順に行い、次のターンに移行します。"
+            }
+        ]
+    },
+    "combat_damage": {
+        "name": "ダメージと威力減衰",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "combat_damage_dealt",
+            "combat_damage_taken"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "combat"
+        ],
+        "params": [
+            {
+                "access_level": [
+                    0,
+                    0
+                ],
+                "value": "ダメージは、命中判定の成功、あるいは回避判定の失敗時に発生します。"
+            }
+        ]
+    },
+    "combat_damage_dealt": {
+        "name": "与えるダメージ",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "combat"
+        ],
+        "params": [
+            {
+                "access_level": [
+                    0,
+                    0
+                ],
+                "value": "武器の攻撃力が適用されます。攻撃対象のDRの値を差し引いて最終的なダメージを算出します。"
+            }
+        ]
+    },
+    "combat_damage_taken": {
+        "name": "受けるダメージ",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "combat"
+        ],
+        "params": [
+            {
+                "access_level": [
+                    0,
+                    0
+                ],
+                "value": "敵の攻撃のダメージから防具のDRを差し引いて最終的なダメージを算出します。"
+            }
+        ]
+    },
+    "combat_switch_weapon": {
+        "name": "武器切り替え",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "combat",
+            "weapon",
+            "range",
+            "melee"
+        ],
+        "params": [
+            {
+                "access_level": [
+                    0,
+                    0
+                ],
+                "value": "攻撃は現在取り出している武器種によって行われます。武器種は戦闘中でも変更可能ですが、入れ替えに1ターンかかります。"
+            }
+        ]
+    }
+}
