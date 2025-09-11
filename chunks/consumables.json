@@ -1,0 +1,87 @@
+{
+    "consumables": {
+        "name": "消費アイテム",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "nano_capsule_s",
+            "energy_pack_s",
+            "high_density_gel"
+        ],
+        "genre": [
+            "document",
+            "glossary",
+            "consumable"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "消費アイテムの一覧です。"
+            }
+        ]
+    },
+    "nano_capsule_s": {
+        "name": "ナノカプセルS",
+        "type": "consumable",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "consumable"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 300,
+                "flavor": "治療用ナノマシンの入った小型のカプセル。",
+                "effects": [
+                    "使用すると瞬時にHPを10回復する。"
+                ]
+            }
+        }
+    },
+    "energy_pack_s": {
+        "name": "エネルギーパックS",
+        "type": "consumable",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "consumable"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 300,
+                "flavor": "「新人か？保険として持っておけ」、ストレイヤーの先達に訊けば大体この答えが返ってくる。",
+                "effects": [
+                    "使用すると瞬時にEPを20回復する。"
+                ]
+            }
+        }
+    },
+    "high_density_gel": {
+        "name": "高密度エネルギーゲル",
+        "type": "consumable",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "consumable"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 300,
+                "flavor": "戦闘用に開発された高効率のエネルギーを纏めたゲル。効果は高いが一時的に行動を阻害するのが難点。",
+                "effects": [
+                    "使用すると瞬時にEPを100回復する。",
+                    "次のターンに行動妨害状態になる。"
+                ]
+            }
+        }
+    }
+}

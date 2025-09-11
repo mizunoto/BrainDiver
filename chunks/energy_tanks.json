@@ -1,0 +1,86 @@
+{
+    "energy_tank": {
+        "name": "エネルギータンク",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "energy_tank_s",
+            "standard_tank",
+            "large_tank"
+        ],
+        "genre": [
+            "document",
+            "glossary",
+            "energy_tank"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "エネルギータンクの一覧です。"
+            }
+        ]
+    },
+    "energy_tank_s": {
+        "name": "エネルギータンクS",
+        "type": "energy_tank",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "energy_tank"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 300,
+                "flavor": "小型のエネルギータンク。",
+                "capacity": 20,
+                "accumulate": 1
+            }
+        }
+    },
+    "standard_tank": {
+        "name": "標準タンク",
+        "type": "energy_tank",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "energy_tank"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 2000,
+                "flavor": "バランスの取れた標準的なタンク。",
+                "capacity": 50,
+                "accumulate": 3
+            }
+        }
+    },
+    "large_tank": {
+        "name": "大容量タンク",
+        "type": "energy_tank",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "energy_tank"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 8000,
+                "flavor": "大容量のエネルギータンク。",
+                "capacity": 100,
+                "accumulate": 7,
+                "requires": {
+                    "STR": 25
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+{
+    "glossary": {
+        "name": "glossary",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "用語集"
+            }
+        ]
+    },
+    "lost_era": {
+        "name": "旧時代",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "リーサル・クラックによって文明が破壊される前の時代のことを指す。今より技術が発達しており、人類はシンギュラリティに到達間近とまで噂されていたらしい。"
+            }
+        ]
+    },
+    "leasal_crack": {
+        "name": "リーサル・クラック",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "かつて起きたとデータに残っている、大規模なクラッキング事件。この事件により電子的インフラは壊滅的な被害を受け、ネットワークに接続していた人類にも存続の危機を与えた。"
+            }
+        ]
+    },
+    "sanctum": {
+        "name": "サンクタム",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "リーサル・クラック後、わずかに生き残った人類が作り上げた街。建造された、あるいはサンクタムと認定された順に番号が振られている。"
+            },
+            {
+                "access_level": 0,
+                "value": "リーサル・クラックの教訓から各サンクタムは独立したネットワークを保っており、それぞれ独自の発展性を遂げている。その性質故、「隔絶都市」と呼ばれることもある。"
+            },
+            {
+                "access_level": 0,
+                "value": "サンクタム以外にも人々が細々と暮らす集落は存在しており、それが発展すればサンクタムに認められることもある。"
+            }
+        ]
+    },
+    "sanctum_1": {
+        "name": "サンクタム・Ⅰ-オリジン・シティ",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "生き残った人類が当時の大規模な避難シェルターを起点に建造した最初のサンクタム。純粋な生存が初期目的であり、それは現在も種の存続を優先するという思想に反映されている。"
+            },
+            {
+                "access_level": 0,
+                "value": "起点となった避難シェルターは当然旧時代の高度な技術で作られているため、旧時代の技術に造士が深く、文化的にも最も旧時代の体制に近い物がある。"
+            },
+            {
+                "access_level": 0,
+                "value": "文明を再興させたのは自分たちのおかげであるという強い自負から、数世代経った今でもその事実に対して強いプライドがある。それは無意識のうちに他のサンクタムや輪転街の住人に対して、見下すような態度として表れ、傲慢と評されてしまうこともある。"
+            },
+            {
+                "access_level": 0,
+                "value": "街の中核、つまりかつてのシェルターは強固なセキュリティシステムで守られている。"
+            },
+            {
+                "access_level": 0,
+                "value": "買い取りを行ってるパーツや販売されているデータから、中には旧時代から続く膨大なデータアーカイブが存在していると推測され、非正規の侵入を試みる者が後を絶たないが、過去に成功したものはいない。"
+            }
+        ]
+    },
+    "rotary_city": {
+        "name": "輪転街",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "サンクタム間を移動し、物資や情報の交換を担う移動都市の総称。複数存在しているが、サンクタム間を移動し続けるという性質上、輪転街同士が遭遇することは滅多になく、サンクタムのように自らの街に独自の呼称を付けている輪転街は少ない。"
+            },
+            {
+                "access_level": 0,
+                "value": "物資や情報の運び屋としての役割の他、遺跡の探索やマキナス駆除をはじめとする治安の維持を担う側面もあり、プレイヤーたちストレイヤーが主にこういった危険のある依頼を遂行している。"
+            }
+        ]
+    },
+    "strayer": {
+        "name": "ストレイヤー",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "報酬次第でどんな依頼でも受ける何でも屋。"
+            },
+            {
+                "access_level": 0,
+                "value": "輪転街が通る跡をサンクタム間の道に例え、その道を外れて行動をするため、「寄り道する者」という言葉が由来として定着した。"
+            },
+            {
+                "access_level": 0,
+                "value": "輪転街に所属する義務などはなく、単に輪転街の方が割のいい仕事が集まるからという理由で輪転街と行動を共にしているものが多い。"
+            },
+            {
+                "access_level": 0,
+                "value": "依頼の内容次第では同じストレイヤーでも利害の対立関係に陥り、最悪の場合敵対することもある。"
+            }
+        ]
+    },
+    "didgitalized_brain": {
+        "name": "電子脳",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "脳に電子的な処理を施し、電波を利用し対応する機器を操作したり、電子脳同士で通信したりすることができる。"
+            },
+            {
+                "access_level": 0,
+                "value": "ただし、リーサル・クラックによって衛星通信は意味をなさなくなり、各サンクタムは独立したネットワークを保っているため、遠隔操作や通信は同じ街内でしか成立しない。"
+            }
+        ]
+    },
+    "machinus": {
+        "name": "マキナス",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "リーサル・クラックを境に散見されるようになった自律行動機械。安易に対峙するのは危険だが、そのパーツには遺失技術が使われている痕跡があり、無力化すればいい値段で売れる可能性がある。獣型や人型など用途によって様々な形状の物が存在する。"
+            }
+        ]
+    },
+    "synthesis": {
+        "name": "シンセシス",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "人類によく似た姿の存在。一体一体の強さは大したことはないが、その能力は集団で真価を発揮し、まるで全員が一つの生物かのように緻密な連携で翻弄してくる。"
+            }
+        ]
+    },
+    "electron": {
+        "name": "エレクトロン",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "電子ドラッグ「エレクトロ」中毒者。常習的な使用により体のリミッターが外れ、人間離れした力を発揮する一方、その代償として電子脳が焼けており接続ポートが開きっぱなしになってしまっている。理性を失っている者も多く、その肉体には「エレクトロ」による変質が見られる場合がある。"
+            }
+        ]
+    },
+    "npc": {
+        "name": "NPC",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "作中に登場する重要人物の一覧です。"
+            }
+        ],
+        "_comment": "未実装"
+    }
+}

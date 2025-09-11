@@ -1,0 +1,93 @@
+{
+    "melee": {
+        "name": "近接武器",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "electro_knife",
+            "high_vive_blade",
+            "boost_hammer"
+        ],
+        "genre": [
+            "document",
+            "glossary",
+            "weapon",
+            "melee"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "近接武器の一覧です。"
+            }
+        ]
+    },
+    "electro_knife": {
+        "name": "電磁ナイフ",
+        "type": "weapon",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "weapon",
+            "melee"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 100,
+                "flavor": "刀身に発生させた電磁場で切断力を高めた基本的なナイフ。",
+                "class": "軽量近接武器",
+                "atk": 6
+            }
+        }
+    },
+    "high_vive_blade": {
+        "name": "ハイベイブレード",
+        "type": "weapon",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "weapon",
+            "melee"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 2500,
+                "flavor": "刀身を超高速で振動させることで、あらゆるものを切り裂くストレイヤー御用達の武器。",
+                "class": "標準近接武器",
+                "atk": 14,
+                "requires": {
+                    "STR": 15
+                }
+            }
+        }
+    },
+    "boost_hammer": {
+        "name": "ブーストハンマー",
+        "type": "weapon",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "weapon",
+            "melee"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": {
+                "worth": 9000,
+                "flavor": "衝撃による爆裂機構で攻撃力を増大させたハンマー。扱いにはかなりのコツが必要。",
+                "class": "重量近接武器",
+                "atk": 28,
+                "requires": {
+                    "STR": 30
+                }
+            }
+        }
+    }
+}
