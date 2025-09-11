@@ -4,78 +4,179 @@
     "version": "3.0.0",
     "description": "隔絶輪廻のブレインダイバーのチャンクのデータ構造を定義します。",
     "type": "object",
-    "properties": {
-        "name": {
-            "type": "string",
-            "description": "見出しに使われる名称"
-        },
-        "type": {
-            "type": "string",
-            "description": "データ構造の種類",
-            "enum": [
-                "document"
-            ],
-            "$comment": "必要次第で追加する"
-        },
-        "priority": {
-            "type": "number",
-            "minimum": 0,
-            "maximum": 100,
-            "description": "データベース化の際の優先度"
-        },
-        "genre": {
-            "type": "array",
-            "description": "ジャンル",
-            "items": {
-                "type": "string",
-                "enum": [
-                    "system"
-                ],
-                "$comment": "必要次第で追加する"
-            }
-        },
-        "includes": {
-            "type": "array",
-            "description": "文書化の際に下階層に含めるチャンクのキー\n配列の順番に、下階層に含める順番になります。",
-            "items": {
-                "type": "string",
-                "description": "対象チャンクのキー",
-                "pattern": "^[a-z0-9_]+$"
-            },
-            "uniqueItems": true,
-            "default": []
-        },
-        "params": {
+    "patternProperties": {
+        "^[a-z0-9_]+$": {
             "type": "object",
-            "$comment": "typeによって変わる"
+            "description": "チャンクの定義",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "見出しに使われる名称"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "データ構造の種類",
+                    "enum": [
+                        "hand_out",
+                        "document",
+                        "judge",
+                        "table"
+                    ],
+                    "$comment": "必要次第で追加する"
+                },
+                "priority": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "description": "データベース化の際の優先度"
+                },
+                "genre": {
+                    "type": "array",
+                    "description": "ジャンル",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "system",
+                            "rule",
+                            "hand_out",
+                            "protocol",
+                            "document",
+                            "judge",
+                            "table",
+                            "energy",
+                            "combat",
+                            "hacking",
+                            "status",
+                            "enhancement",
+                            "character",
+                            "melee",
+                            "range",
+                            "armor",
+                            "energy_tank",
+                            "weapon",
+                            "campain",
+                            "session",
+                            "market"
+                        ],
+                        "uniqueItems": true,
+                        "additionalItems": false,
+                        "$comment": "必要次第で追加する"
+                    }
+                },
+                "includes": {
+                    "type": "array",
+                    "description": "文書化の際に下階層に含めるチャンクのキー\n配列の順番に、下階層に含める順番になります。",
+                    "items": {
+                        "type": "string",
+                        "description": "対象チャンクのキー",
+                        "pattern": "^[a-z0-9_]+$"
+                    },
+                    "uniqueItems": true,
+                    "default": []
+                },
+                "params": {
+                    "$comment": "typeによって変わる"
+                },
+                "_comment": {
+                    "description": "開発用コメント",
+                    "default": ""
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "priority",
+                "genre",
+                "includes",
+                "params"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "hand_out"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/HandOutParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "document"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/DocumentParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "judge"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/JudgeParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "table"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/TableParams"
+                            }
+                        }
+                    }
+                }
+            ]
         }
     },
-    "required": [
-        "name",
-        "type",
-        "priority",
-        "genre"
-    ],
-    "additionalProperties": false,
-    "allOf": [
-        {
-            "if": {
-                "properties": {
-                    "type": {
-                        "const": "document"
-                    }
-                }
-            },
-            "then": {
-                "properties": {
-                    "params": {
-                        "$ref": "#/definitions/DocumentParams"
-                    }
+    "definitions": {
+        "HandOutParams": {
+            "type": "object",
+            "required": [
+                "access_level",
+                "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "文書の概要"
                 }
             }
-        }
-    ],
-    "definitions": {
+        },
         "DocumentParams": {
             "type": "array",
             "items": {
@@ -84,12 +185,10 @@
                     "access_level",
                     "value"
                 ],
+                "additionalProperties": false,
                 "properties": {
                     "access_level": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 8,
-                        "description": "アクセスレベル"
+                        "$ref": "#/definitions/AccessLevel"
                     },
                     "value": {
                         "type": "string",
@@ -98,6 +197,97 @@
                 }
             },
             "minItems": 1
+        },
+        "JudgeParams": {
+            "type": "object",
+            "required": [
+                "access_level",
+                "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "type": "object",
+                    "description": "判定の詳細",
+                    "additionalProperties": false,
+                    "properties": {
+                        "status": {
+                            "type": "string",
+                            "pattern": "[(HAC|STR|DEX|INT|CHA|LUK|提案)]",
+                            "description": "参照されるステータス"
+                        },
+                        "skill": {
+                            "type": "string",
+                            "description": "参照されるスキル"
+                        },
+                        "adjustment": {
+                            "type": "string",
+                            "description": "修正値"
+                        },
+                        "formula": {
+                            "type": "string",
+                            "description": "計算式"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "説明"
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "skill",
+                        "adjustment",
+                        "formula"
+                    ]
+                }
+            }
+        },
+        "AccessLevel": {
+            "type": "array",
+            "description": "アクセスレベル\n-1: 開発用\n0: 公開\n1-7: GM用\n8: シナリオ制作者用\n9: AI用",
+            "items": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 9
+            },
+            "minItems": 2,
+            "maxItems": 2
+        },
+        "TableParams": {
+            "type": "object",
+            "required": [
+                "access_level",
+                "value",
+                "has_header"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "description": "行",
+                        "items": {
+                            "type": "string",
+                            "description": "セル"
+                        },
+                        "minItems": 1
+                    },
+                    "minItems": 1,
+                    "description": "表の概要"
+                },
+                "has_header": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "表に見出し行を含めるか"
+                }
+            }
         }
     }
 }
