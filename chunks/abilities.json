@@ -1,0 +1,322 @@
+{
+    "abilities": {
+        "name": "敵の持つ特殊能力",
+        "type": "document",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": [
+            "敵の持つ特殊能力の一覧です。"
+        ]
+    },
+    "self_repair": {
+        "name": "《自己修復》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "自分自身を回復する能力。",
+            "effects": [
+                "毎ターンHPが3回復する。"
+            ],
+            "user": "machinus",
+            "cost": 1
+        }
+    },
+    "target_lock": {
+        "name": "《ターゲット・ロック》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "敵に照準を合わせる機能。",
+            "effects": [
+                "1ターン行動を消費して、次の自身の攻撃の命中判定に+20のボーナスを得る。"
+            ],
+            "user": "machinus",
+            "cost": 1
+        }
+    },
+    "desperation": {
+        "name": "《捨て身の突撃》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "防御を考えずに行う攻撃。",
+            "effects": [
+                "自身のDRを次のターン終了まで0にする代わりに、今回の近接攻撃のダメージを+5する。"
+            ],
+            "user": "electron",
+            "cost": 1
+        }
+    },
+    "boost_shot": {
+        "name": "《高出力射撃》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 1,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "エネルギーを消費して、射撃攻撃を行う能力。",
+            "effects": [
+                "効果：エネルギーを5消費し、そのターンの射撃攻撃のダメージを+3する。"
+            ],
+            "user": "machinus",
+            "cost": 1
+        }
+    },
+    "psycho_marking": {
+        "name": "《サイコ・マーキング》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 1,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "攻撃対象をシンセシス間で共有する。",
+            "effects": [
+                "攻撃の代わりに、対象プレイヤー1人にマーキングを行う。マークされたプレイヤーは、次のターンまで他のシンセシスからの攻撃の回避判定に-10のペナルティを受ける。"
+            ],
+            "user": "synthesis",
+            "cost": 1
+        }
+    },
+    "jamming_field": {
+        "name": "《ジャミングフィールド》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 2,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "周囲をジャミングする。",
+            "effects": [
+                "この敵がいる限り、戦闘エリア全体のHACを使用する判定に-10のペナルティを与える。"
+            ],
+            "user": "machinus",
+            "cost": 1
+        }
+    },
+    "double_attack": {
+        "name": "《連続攻撃》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 2,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "素早い動きで敵を翻弄する。",
+            "effects": [
+                "効果：1ターンに2回攻撃を行う。ただし、2回目の攻撃は命中判定に-10のペナルティを受ける。"
+            ],
+            "user": "machinus,veteran_strayer",
+            "cost": 1
+        }
+    },
+    "emp_grenade": {
+        "name": "《EMPグレネード》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 2,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "妨害に特化した決戦兵器。その特徴から多くは携帯されていない。",
+            "effects": [
+                "効果：1セッションに1度だけ使用可能。範囲内のプレイヤー全員のエネルギーを1D100でロールし、出目分減少させる（最低保証10）。"
+            ],
+            "user": "electron,strayer,synthesis,tactical_machinus",
+            "cost": 1
+        }
+    },
+    "repair_drone": {
+        "name": "《リペア・ドローン射出》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 2,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "応急修理可能なドローンを射出する。ドローンが攻撃はできない。",
+            "effects": [
+                "効果：HP10の「リペア・ドローン」を1体召喚する。ドローンは毎ターン、HPが最も減っている同陣営のHPを5回復させる。"
+            ],
+            "user": "boss_machinus",
+            "cost": 1
+        }
+    },
+    "mind_crack": {
+        "name": "《マインド・クラック》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 3,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "脳の処理能力を奪う能力。",
+            "effects": [
+                "プレイヤー1人を対象とし、HACで対抗判定を行う。失敗したプレイヤーは「処理負荷」が強制的に2蓄積する。"
+            ],
+            "user": "superior_synthesis",
+            "cost": 1
+        }
+    },
+    "over_load": {
+        "name": "《オーバーロード》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 3,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "自分の身を顧みず全力を攻撃に賭ける技。",
+            "effects": [
+                "自身のHPを10消費し、次の攻撃のダメージを倍にする。",
+                "この能力によってクリティカルは発生しない。"
+            ],
+            "user": "frenzy_machinus,boss_electron",
+            "cost": 1
+        }
+    },
+    "adaptive_armor": {
+        "name": "《アダプティブ・アーマー》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 4,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "攻撃に反応して防御力が上がる特殊な装甲。",
+            "effects": [
+                "効果：攻撃を受けるたび、その攻撃のダメージ属性（物理/エネルギーなど、GMが設定）に対してDRが+2されていく（上限あり）。"
+            ],
+            "user": "unique",
+            "cost": 1
+        }
+    },
+    "psycho_noise": {
+        "name": "《サイコ・ノイズ》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 4,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "ハッキングを介して精神を揺さぶる能力。",
+            "effects": [
+                "プレイヤー1人を対象とし、HACで対抗判定を行う。失敗したプレイヤーは、次のターンまで全ての行動の目標値が-15される。"
+            ],
+            "user": "synthesis",
+            "cost": 1
+        }
+    },
+    "unity_call": {
+        "name": "《ユニティ・コール》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 4,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "増える前に倒さなければ持久戦になる。",
+            "effects": [
+                "HPが50%以下になった時、初級レベルのシンセシスを3体召喚する。"
+            ],
+            "user": "commander_synthesis",
+            "cost": 1
+        }
+    },
+    "unintegrated": {
+        "name": "《不統合意識体》",
+        "type": "ability",
+        "priority": 0,
+        "access_level": 6,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": {
+            "explanation": "――情/ータを取得デきませﾝでした。",
+            "effects": [
+                "行動をしない。",
+                "攻撃を全て無効化する。",
+                "アーム・ユニット、レッグ・ユニットが存在しない。",
+                "被ハッキングの目標値は6固定。",
+                "戦闘開始から10ターン目まで、ターンの開始時に★5レベルのモブマキナス、あるいはモブシンセシスを召喚する。"
+            ],
+            "user": "unintegrated_conscious",
+            "cost": 1
+        }
+    }
+}

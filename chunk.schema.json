@@ -23,11 +23,13 @@
                         "document",
                         "judge",
                         "weapon",
+                        "additional",
                         "armor",
                         "energy_tank",
                         "consumable",
                         "skill",
-                        "enemy"
+                        "enemy",
+                        "ability"
                     ],
                     "$comment": "必要次第で追加する"
                 },
@@ -60,6 +62,7 @@
                             "hand_out",
                             "protocol",
                             "level_7",
+                            "compiler",
                             "table",
                             "system",
                             "rule",
@@ -73,6 +76,7 @@
                             "skill",
                             "enhancement",
                             "weapon",
+                            "additional",
                             "melee",
                             "range",
                             "armor",
@@ -83,7 +87,8 @@
                             "market",
                             "glossary",
                             "secret",
-                            "enemy"
+                            "enemy",
+                            "ability"
                         ],
                         "uniqueItems": true,
                         "additionalItems": false,
@@ -249,6 +254,31 @@
                     "if": {
                         "properties": {
                             "type": {
+                                "const": "additional"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/AdditionalValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
                                 "const": "armor"
                             }
                         }
@@ -357,6 +387,31 @@
                         "properties": {
                             "value": {
                                 "$ref": "#/definitions/EnemyValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "ability"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/AbilityValue"
                             }
                         },
                         "required": [
@@ -542,6 +597,36 @@
                         "atk"
                     ]
                 }
+            ]
+        },
+        "AdditionalValue": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "explanation": {
+                            "type": "string",
+                            "description": "説明文"
+                        },
+                        "effects": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "description": "効果"
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "explanation",
+                        "effects"
+                    ]
+                }
+            },
+            "required": [
+                "value"
             ]
         },
         "ArmorValue": {
@@ -778,6 +863,37 @@
                 "avd"
             ],
             "additionalProperties": false
+        },
+        "AbilityValue": {
+            "type": "object",
+            "properties": {
+                "explanation": {
+                    "type": "string",
+                    "description": "説明文"
+                },
+                "effects": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "効果"
+                    },
+                    "minItems": 1
+                },
+                "user": {
+                    "type": "string",
+                    "pattern": "(^((|boss_|veteran_|tactical_|superior_|frenzy_|berserk_|commander_)(machinus|synthesis|electron|strayer|unique)(,|$))*$|unintegrated_conscious)",
+                    "description": "使用者"
+                },
+                "cost": {
+                    "type": "number",
+                    "minimum": 1
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "explanation",
+                "effects"
+            ]
         }
     }
 }

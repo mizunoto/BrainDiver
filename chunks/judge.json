@@ -101,7 +101,7 @@
         "name": "補正値の目安",
         "type": "table",
         "priority": 0,
-        "access_level": 0,
+        "access_level": 7,
         "includes": [],
         "genre": [
             "document",

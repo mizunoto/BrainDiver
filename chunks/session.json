@@ -1,5 +1,31 @@
 {
+    "structure": {
+        "name": "シナリオの基本構成",
+        "type": "document",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [
+            "session"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "session"
+        ],
+        "value": [
+            "シナリオは以下のフェーズで構成することを推奨しますが、必ずしもこのガイドラインに沿う必要はありません。"
+        ]
+    },
     "session": {
+        "type": "hub",
+        "access_level": 0,
+        "value": [
+            0,
+            8
+        ]
+    },
+    "_session_0": {
         "name": "セッションプレイ",
         "type": "document",
         "priority": 0,
@@ -21,7 +47,37 @@
             "外部シナリオはシステムとの矛盾により、使用できない可能性があります。"
         ]
     },
+    "_session_8": {
+        "name": "各フェーズのシナリオ設計ガイドライン",
+        "type": "document",
+        "priority": 0,
+        "access_level": 8,
+        "includes": [
+            "session_introduction",
+            "session_progress",
+            "session_climax",
+            "session_estimate"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "session"
+        ],
+        "value": [
+            ""
+        ]
+    },
     "session_introduction": {
+        "type": "hub",
+        "priority": 0,
+        "access_level": 0,
+        "value": [
+            0,
+            8
+        ]
+    },
+    "_session_introduction_0": {
         "name": "導入フェーズ",
         "type": "document",
         "priority": 0,
@@ -37,7 +93,32 @@
             "GMがシナリオの導入を読み上げ、プレイヤーに状況を伝えるフェーズです。"
         ]
     },
+    "_session_introduction_8": {
+        "name": "導入フェーズの設計",
+        "type": "document",
+        "priority": 0,
+        "access_level": 8,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "session"
+        ],
+        "value": [
+            "依頼人や状況を提示し、プレイヤーに目的(ミッション)を伝えます。シナリオの舞台、予想される脅威、主な登場人物(NPC)がいればこの時点で紹介して構いません。"
+        ]
+    },
     "session_progress": {
+        "type": "hub",
+        "priority": 0,
+        "access_level": 0,
+        "value": [
+            0,
+            8
+        ]
+    },
+    "_session_progress_0": {
         "name": "進行フェーズ",
         "type": "document",
         "priority": 0,
@@ -54,6 +135,25 @@
         ],
         "value": [
             "プレイヤーが情報を集めたり、探索したりしながら目的を遂行するフェーズです。任意の判定を行う場合、プレイヤーは目的、使用ステータス、関連スキル、関連アイテムの使用不使用を宣言し、GMが妥当と判断すれば判定を行います。"
+        ]
+    },
+    "_session_progress_8": {
+        "name": "進行フェーズの設計",
+        "type": "document",
+        "priority": 0,
+        "access_level": 8,
+        "includes": [
+            "judge_general",
+            "session_combat"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "session"
+        ],
+        "value": [
+            "プレイヤーが情報を集め、探索し、時に戦闘をこなしながら障害を乗り越えていくフェーズです。複数の解決ルートを用意することで、プレイヤーのキャラクター性を活かすことができます。また、このフェーズで世界観の謎に関するヒントを提示するのが効果的です。"
         ]
     },
     "session_combat": {
@@ -73,6 +173,15 @@
         ]
     },
     "session_climax": {
+        "type": "hub",
+        "priority": 0,
+        "access_level": 0,
+        "value": [
+            0,
+            8
+        ]
+    },
+    "_session_climax_0": {
         "name": "クライマックス",
         "type": "document",
         "priority": 0,
@@ -88,7 +197,32 @@
             "シナリオの目標を達成するための最終局面です"
         ]
     },
+    "_session_climax_8": {
+        "name": "クライマックスの設計",
+        "type": "document",
+        "priority": 0,
+        "access_level": 8,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "session"
+        ],
+        "value": [
+            "シナリオの最終目的に対峙する場面です。多くの場合、ボスとの戦闘や、重要な判定、物語の核心に触れるイベントが発生します。ボスの背景設定もシナリオの★レベルを反映させ、プレイヤーがそれまでに下した決断が展開に影響すると、より満足度の高い体験になります。"
+        ]
+    },
     "session_estimate": {
+        "type": "hub",
+        "priority": 0,
+        "access_level": 0,
+        "value": [
+            0,
+            8
+        ]
+    },
+    "_session_estimate_0": {
         "name": "セッション評価",
         "type": "document",
         "priority": 0,
@@ -102,6 +236,24 @@
         ],
         "value": [
             "シナリオが完了し、GMがシナリオの評価基準に基づき報酬を付与するフェーズです。"
+        ]
+    },
+    "_session_estimate_8": {
+        "name": "セッション評価の設計",
+        "type": "document",
+        "priority": 0,
+        "access_level": 8,
+        "includes": [
+            "scenario_reward"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "session"
+        ],
+        "value": [
+            "ミッションの結果を評価し、報酬を付与します。成功度合いに応じて報酬を変動させたり、次のシナリオに繋がる伏線や、新たな謎を提示するのも良いでしょう。"
         ]
     }
 }
