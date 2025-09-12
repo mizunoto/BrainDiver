@@ -438,6 +438,10 @@
             "description": "表",
             "additionalProperties": false,
             "properties": {
+                "explanation": {
+                    "type": "string",
+                    "description": "説明文"
+                },
                 "table": {
                     "type": "array",
                     "description": "行",
