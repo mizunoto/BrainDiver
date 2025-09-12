@@ -407,10 +407,10 @@
                         "type": "number",
                         "minimum": -1,
                         "maximum": 9,
-                        "minItems": 1,
-                        "maxItems": 2,
-                        "description": "アクセスするのに必要なレベル"
-                    }
+                        "description": "アクセスできる範囲"
+                    },
+                    "minItems": 1,
+                    "maxItems": 2
                 },
                 "document": {
                     "type": "string",
@@ -475,7 +475,7 @@
             "properties": {
                 "status": {
                     "type": "string",
-                    "pattern": "[(HAC|STR|DEX|INT|CHA|LUK|提案)]",
+                    "pattern": "(HAC|STR|DEX|INT|CHA|LUK|提案)",
                     "description": "参照されるステータス"
                 },
                 "skill": {
