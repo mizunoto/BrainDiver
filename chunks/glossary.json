@@ -3,7 +3,22 @@
         "name": "glossary",
         "type": "document",
         "priority": 0,
-        "includes": [],
+        "includes": [
+            "lost_era",
+            "leasal_crack",
+            "lost_laboratory",
+            "project_integration",
+            "unintegrated_conscious",
+            "digitalized_brain",
+            "dead_zone",
+            "sanctum",
+            "rotary_city",
+            "strayer",
+            "machinus",
+            "synthesis",
+            "electron"
+        ],
+        "_comment": "npc実装予定",
         "genre": [
             "document",
             "glossary"
@@ -16,6 +31,16 @@
         ]
     },
     "lost_era": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                4
+            ]
+        }
+    },
+    "_lost_era_0": {
         "name": "旧時代",
         "type": "document",
         "priority": 0,
@@ -31,7 +56,34 @@
             }
         ]
     },
+    "_lost_era_4": {
+        "name": "新時代",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 4,
+                "value": "高度に発達した科学社会はやがて人類が平和的に分かり合えるようになるという夢を元に「統合意識体」の創生プロジェクトが始まる。しかしその最終段階でその思想を受け入れない者達による、のちに「リーサル・クラック」と呼ばれることになる大規模なクラッキングがなされ、接続していた人間やインフラに壊滅的な被害を出した。統合意識体は不完全なまま暴走し「不統合意識体」として今なお人類を強制的に一つにすべく活動を続けている。その活動をするうえで資源を集めるのに制作されたのが「マキナス」、強制ハッキングを受けて廃人と化しつつも意識共有によって不統合意識体のために動き続けてるのが「シンセシス」である。不統合意識体の本体が存在する場所は、情報通の間では「ロスト・ラボラトリー」と呼ばれているが、その周囲は常時超強力なハッキングがなされており一度侵入したら帰ってこれない「デッドゾーン」とされている。"
+            }
+        ]
+    },
     "leasal_crack": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                3,
+                4
+            ]
+        }
+    },
+    "_leasal_crack_0": {
         "name": "リーサル・クラック",
         "type": "document",
         "priority": 0,
@@ -44,6 +96,285 @@
             {
                 "access_level": 0,
                 "value": "かつて起きたとデータに残っている、大規模なクラッキング事件。この事件により電子的インフラは壊滅的な被害を受け、ネットワークに接続していた人類にも存続の危機を与えた。"
+            }
+        ]
+    },
+    "_leasal_crack_3": {
+        "name": "リーサル・クラック",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 3,
+                "value": "単なる愉快犯や思想犯等ではないが、行動が遅れてしまったため悲劇を招いてしまい、現代では悪と数えられてしまっている。"
+            }
+        ]
+    },
+    "_leasal_crack_4": {
+        "name": "リーサル・クラック",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 4,
+                "value": "統合意識体創生プロジェクトによる自由意思の統合から人類を守ろうとする思想に則った行動であった。"
+            }
+        ]
+    },
+    "lost_laboratory": {
+        "name": "ロスト・ラボラトリー",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 4,
+                "value": "統合意識体の創成を試みていた研究所。その設備は遺跡の中でも類を見ないほど高度な技術の粋を集めた物ばかりだが、当然セキュリティも相応に高く生半可なHAC値ではハッキングすることは困難極まりない。"
+            }
+        ]
+    },
+    "project_integration": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                2,
+                3
+            ]
+        }
+    },
+    "_project_integration_2": {
+        "name": "統合意識体創生プロジェクト",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 2,
+                "value": "人類が平和的に理解しあえることを目指す統合意識体の創生プロジェクト。"
+            }
+        ]
+    },
+    "_project_integration_3": {
+        "name": "統合意識体創生プロジェクト",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 3,
+                "value": "人類の相互理解というのは表の目的で、その理想の裏に隠された一部のプロジェクトの中核人物による人類の支配が目的。"
+            }
+        ]
+    },
+    "unintegrated_conscious": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                5,
+                7
+            ]
+        }
+    },
+    "_unintegrated_conscious_5": {
+        "name": "不統合意識体",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 5,
+                "value": "ただ暴走したAIというわけではなく、その裏には統合意識体の目的であった人類の支配があるが、それに反発する集団が仕掛けたリーサル・クラックの思想を取り込んだ「反発・分離」の意思という矛盾を孕んだ新たな意識体。"
+            }
+        ]
+    },
+    "_unintegrated_conscious_7": {
+        "name": "不統合意識体",
+        "type": "enemy",
+        "priority": 0,
+        "includes": [
+            "unity_domain",
+            "isolation_domain"
+        ],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": {
+            "access_level": 7,
+            "value": {
+                "hp": "Infinity",
+                "atk": 0,
+                "dr": 0,
+                "hit": 0,
+                "avd": 0,
+                "ports": [
+                    {
+                        "name": "コア・ユニット",
+                        "effect": [
+                            "成功しても失敗しても断片的に不明な意思が感じ取れる。",
+                            "クリティカルを出した場合アクセスレベル6の秘匿情報が開示される。"
+                        ]
+                    },
+                    {
+                        "name": "アーム・ユニット",
+                        "effect": [
+                            "存在しないのでハッキング対象にできない"
+                        ]
+                    },
+                    {
+                        "name": "レッグ・ユニット",
+                        "effect": [
+                            "存在しないのでハッキング対象にできない"
+                        ]
+                    }
+                ],
+                "abilities": [
+                    {
+                        "name": "《不統合意識体》",
+                        "effect": [
+                            "行動をしない。攻撃を全て無効化する。アーム・ユニット、レッグ・ユニットが存在しない。被ハッキングの目標値は6固定。戦闘開始から10ターン目まで、ターンの開始時に★5レベルのモブマキナス、あるいはモブシンセシスを召喚する。"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "unity_domain": {
+        "name": "統一領域",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 6,
+                "value": "自身の理想である「統合」を受け入れた人間やAIを、強制的に一つの巨大なネットワークに吸収する領域。結合された存在に自由意思は例外を除いてなく、不統合意識体を第一に行動するようになる。"
+            }
+        ]
+    },
+    "isolation_domain": {
+        "name": "隔絶領域",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 6,
+                "value": "「統合」を拒否し、個の存在を主張する者たちが隔離される領域。不統合意識体は、自己の「不統合」という矛盾した側面をこの領域に押し込み、最終的には殲滅しようとしている。"
+            }
+        ]
+    },
+    "digitalized_brain": {
+        "name": "電子脳",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": "脳に電子的な処理を施し、電波を利用し対応する機器を操作したり、電子脳同士で通信したりすることができる。"
+            },
+            {
+                "access_level": 0,
+                "value": "ただし、リーサル・クラックによって衛星通信は意味をなさなくなり、各サンクタムは独立したネットワークを保っているため、遠隔操作や通信は同じ街内でしか成立しない。"
+            }
+        ]
+    },
+    "dead_zone": {
+        "type": "hub",
+        "params": {
+            "access_level": 1,
+            "value": [
+                1,
+                3,
+                4
+            ]
+        }
+    },
+    "_dead_zone_1": {
+        "name": "デッド・ゾーン",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 1,
+                "value": "超強力なハッキングフィールドの通称。侵入したが最後、ハッキングによって意識を失う。"
+            }
+        ]
+    },
+    "_dead_zone_3": {
+        "name": "デッド・ゾーン",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 3,
+                "value": "ハッキングによって精神を乗っ取られた存在はシンセシス化してしまう。"
+            }
+        ]
+    },
+    "_dead_zone_4": {
+        "name": "デッド・ゾーン",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 4,
+                "value": "不統合意識体が生成していると判明する。"
             }
         ]
     },
@@ -104,6 +435,16 @@
         ]
     },
     "rotary_city": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                6
+            ]
+        }
+    },
+    "_rotary_city_0": {
         "name": "輪転街",
         "type": "document",
         "priority": 0,
@@ -123,7 +464,33 @@
             }
         ]
     },
+    "_rotary_city_6": {
+        "name": "輪転街",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 6,
+                "value": "不統合意識体によって各サンクタムを支配下に置くための擬態マキナスと化している。"
+            }
+        ]
+    },
     "strayer": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                6
+            ]
+        }
+    },
+    "_strayer_0": {
         "name": "ストレイヤー",
         "type": "document",
         "priority": 0,
@@ -151,8 +518,8 @@
             }
         ]
     },
-    "didgitalized_brain": {
-        "name": "電子脳",
+    "_strayer_6": {
+        "name": "ストレイヤー",
         "type": "document",
         "priority": 0,
         "includes": [],
@@ -162,16 +529,22 @@
         ],
         "params": [
             {
-                "access_level": 0,
-                "value": "脳に電子的な処理を施し、電波を利用し対応する機器を操作したり、電子脳同士で通信したりすることができる。"
-            },
-            {
-                "access_level": 0,
-                "value": "ただし、リーサル・クラックによって衛星通信は意味をなさなくなり、各サンクタムは独立したネットワークを保っているため、遠隔操作や通信は同じ街内でしか成立しない。"
+                "access_level": 6,
+                "value": "既に不統合意識体の影響を受けており、プレイヤー含めシンセシスでない輪転街の住人は自由意思をシミュレートされた「イミテート」である。"
             }
         ]
     },
     "machinus": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                3
+            ]
+        }
+    },
+    "_machinus_0": {
         "name": "マキナス",
         "type": "document",
         "priority": 0,
@@ -187,7 +560,33 @@
             }
         ]
     },
+    "_machinus_3": {
+        "name": "マキナス",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 3,
+                "value": "不統合意識体が自己保存のために資源を集めさせるべく創り出した存在。同じく資源を求めて探索することもあるストレイヤーであるプレイヤーと衝突することがある。"
+            }
+        ]
+    },
     "synthesis": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                3
+            ]
+        }
+    },
+    "_synthesis_0": {
         "name": "シンセシス",
         "type": "document",
         "priority": 0,
@@ -200,6 +599,22 @@
             {
                 "access_level": 0,
                 "value": "人類によく似た姿の存在。一体一体の強さは大したことはないが、その能力は集団で真価を発揮し、まるで全員が一つの生物かのように緻密な連携で翻弄してくる。"
+            }
+        ]
+    },
+    "_synthesis_3": {
+        "name": "シンセシス",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "glossary"
+        ],
+        "params": [
+            {
+                "access_level": 3,
+                "value": "デッドゾーンに侵入してしまい、強制ハッキングにより精神を乗っ取られた廃人。"
             }
         ]
     },

@@ -7,7 +7,7 @@
     "patternProperties": {
         "^[a-z0-9_]+$": {
             "type": "object",
-            "description": "チャンクの定義",
+            "description": "チャンクの名前\nhubタイプ下に置かれてるものは\"_[hub名]_[アクセスレベル]\"という命名規則とする",
             "properties": {
                 "name": {
                     "type": "string",
@@ -25,15 +25,17 @@
                         "armor",
                         "energy_tank",
                         "consumable",
-                        "skill"
+                        "skill",
+                        "hub",
+                        "enemy"
                     ],
                     "$comment": "必要次第で追加する"
                 },
                 "priority": {
                     "type": "number",
-                    "minimum": 0,
+                    "minimum": -1,
                     "maximum": 100,
-                    "description": "データベース化の際の優先度"
+                    "description": "データベース化の際の優先度\n-1: AIは無視するドキュメント専用のチャンク。\n0-100: 優先度高い順にソートされデータベースとして活用される。値が大きいほど優先度高い。"
                 },
                 "genre": {
                     "type": "array",
@@ -64,7 +66,10 @@
                             "market",
                             "glossary",
                             "consumable",
-                            "skill"
+                            "skill",
+                            "level_7",
+                            "secret",
+                            "enemy"
                         ],
                         "uniqueItems": true,
                         "additionalItems": false,
@@ -91,11 +96,7 @@
                 }
             },
             "required": [
-                "name",
                 "type",
-                "priority",
-                "genre",
-                "includes",
                 "params"
             ],
             "additionalProperties": false,
@@ -113,7 +114,13 @@
                             "params": {
                                 "$ref": "#/definitions/HandOutParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -129,7 +136,13 @@
                             "params": {
                                 "$ref": "#/definitions/DocumentParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -145,7 +158,13 @@
                             "params": {
                                 "$ref": "#/definitions/JudgeParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -161,7 +180,13 @@
                             "params": {
                                 "$ref": "#/definitions/TableParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -177,7 +202,13 @@
                             "params": {
                                 "$ref": "#/definitions/WeaponParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -193,7 +224,13 @@
                             "params": {
                                 "$ref": "#/definitions/ArmorParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -209,7 +246,13 @@
                             "params": {
                                 "$ref": "#/definitions/EnergyTankParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -225,7 +268,13 @@
                             "params": {
                                 "$ref": "#/definitions/ConsumableParams"
                             }
-                        }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 },
                 {
@@ -241,7 +290,51 @@
                             "params": {
                                 "$ref": "#/definitions/SkillParams"
                             }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "hub"
+                            }
                         }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/HubParams"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "enemy"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "params": {
+                                "$ref": "#/definitions/EnemyParams"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "priority",
+                            "includes",
+                            "genre"
+                        ]
                     }
                 }
             ]
@@ -618,6 +711,140 @@
                     ]
                 }
             }
+        },
+        "HubParams": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "description": "アクセスレベル",
+                        "minimum": -1,
+                        "maximum": 10
+                    },
+                    "minItems": 2,
+                    "maxItems": 10
+                }
+            },
+            "required": [
+                "access_level",
+                "value"
+            ]
+        },
+        "EnemyParams": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
+                },
+                "value": {
+                    "type": "object",
+                    "properties": {
+                        "hp": {
+                            "oneOf": [
+                                {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "HP"
+                                },
+                                {
+                                    "type": "string",
+                                    "const": "Infinity",
+                                    "description": "HP"
+                                }
+                            ]
+                        },
+                        "atk": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "攻撃力"
+                        },
+                        "dr": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "防御力"
+                        },
+                        "hit": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "命中率"
+                        },
+                        "avd": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "回避率"
+                        },
+                        "ports": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "description": "能力",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "名前"
+                                    },
+                                    "effect": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "description": "効果"
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "effect"
+                                ]
+                            }
+                        },
+                        "abilities": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "description": "能力",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "名前"
+                                    },
+                                    "effect": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "description": "効果"
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "effect"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "hp",
+                        "atk",
+                        "dr",
+                        "hit",
+                        "avd"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "access_level",
+                "value"
+            ]
         }
     }
 }

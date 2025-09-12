@@ -1,18 +1,28 @@
 {
     "judge": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                7
+            ]
+        }
+    },
+    "_judge_0": {
         "name": "判定",
         "type": "document",
         "priority": 0,
+        "includes": [
+            "judge_method",
+            "judge_critical",
+            "judge_fumble"
+        ],
         "genre": [
             "document",
             "system",
             "rule",
             "judge"
-        ],
-        "includes": [
-            "judge_method",
-            "judge_critical",
-            "judge_fumble"
         ],
         "params": [
             {
@@ -21,18 +31,38 @@
             }
         ]
     },
-    "judge_method": {
-        "name": "判定方法",
+    "_judge_7": {
+        "name": "判定",
         "type": "document",
         "priority": 0,
+        "includes": [
+            "judge_adjust"
+        ],
         "genre": [
             "document",
             "system",
             "rule",
             "judge"
         ],
+        "params": [
+            {
+                "access_level": 7,
+                "value": "シナリオ作成ガイドラインにはハッキングの目標値が記載されていますが、プレイヤーが予期せぬ行動（例：「壁をよじ登る」「NPCを威圧して情報を聞き出す」）を取った際に、GMがその場で難易度を設定するための一般的な指針です。"
+            }
+        ]
+    },
+    "judge_method": {
+        "name": "判定方法",
+        "type": "document",
+        "priority": 0,
         "includes": [
             "judge_target"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "judge"
         ],
         "params": [
             {
@@ -45,13 +75,13 @@
         "name": "目標値",
         "type": "document",
         "priority": 0,
+        "includes": [],
         "genre": [
             "document",
             "system",
             "rule",
             "judge"
         ],
-        "includes": [],
         "params": [
             {
                 "access_level": 0,
@@ -59,7 +89,117 @@
             }
         ]
     },
+    "judge_adjust": {
+        "name": "補正値",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "judge_table"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "judge"
+        ],
+        "params": [
+            {
+                "access_level": 7,
+                "value": "プレイヤーがシナリオにない行動を宣言した場合、GMはその行動の難易度を以下の基準で設定します。"
+            }
+        ]
+    },
+    "judge_table": {
+        "name": "補正値の目安",
+        "type": "table",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "judge"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": [
+                [
+                    "容易",
+                    "20-30",
+                    "専門家や熟練者でなくとも達成可能な単純な行動。"
+                ],
+                [
+                    "簡単",
+                    "10-20",
+                    "ある程度の能力や技術が必要となる、日常的な行動。"
+                ],
+                [
+                    "普通",
+                    "0-10",
+                    "失敗の可能性が十分に考えられる、一般的な行動。"
+                ],
+                [
+                    "困難",
+                    "(-10)-0",
+                    "専門家や熟練者でも失敗する可能性がある、緊迫した状況。"
+                ],
+                [
+                    "非常に困難",
+                    "(-20)-(-10)",
+                    "その道の達人でもなければ、ほぼ不可能な離れ業。"
+                ],
+                [
+                    "ほぼ不可能",
+                    "(-30)-(-20)",
+                    "奇跡でも起きない限り成功しない英雄的な行動。"
+                ],
+                [
+                    "無理",
+                    "(-1000)-(-1000)",
+                    "クリティカルを出すしかない。"
+                ],
+                [
+                    "ファンブル待ち",
+                    "1000-1000",
+                    "ファンブルを出さずして何がエンタメか。"
+                ]
+            ],
+            "has_header": false
+        }
+    },
+    "judge_temporary": {
+        "name": "プレイヤーの宣言に対する裁定",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "judge"
+        ],
+        "params": [
+            {
+                "access_level": 7,
+                "value": "プレイヤーがルールブックにない行動を宣言した場合、GMはまず「それは可能か？」そして「可能だとして、どのステータスとスキルで判定するのが最も妥当か？」を判断します。このゲームはプレイヤーの物語を作ることを重視するため、「できない」と即答するのではなく、可能な限り判定の機会を与えてください。"
+            },
+            {
+                "access_level": 7,
+                "value": "（例） プレイヤーが「敵の注意を引くために、近くの配電盤に石を投げてショートさせ、大きな音を立てたい」と宣言した場合。→ GMは「面白いアイデアだ」と受け入れ、【投擲】スキルを持つなら【STR/DEX】の内高い方で、持っていないなら【DEX】単体で、失敗の可能性が考えられるので難易度【普通】による目標値を算出し、判定を許可する、といった裁定を下します。"
+            }
+        ]
+    },
     "judge_critical": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                7
+            ]
+        }
+    },
+    "_judge_critical_0": {
         "name": "クリティカル",
         "type": "document",
         "priority": 0,
@@ -77,7 +217,39 @@
             }
         ]
     },
+    "_judge_critical_7": {
+        "name": "クリティカル",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "judge"
+        ],
+        "params": [
+            {
+                "access_level": 7,
+                "value": "目的の情報に加えて、キャンペーンの核心に繋がる追加のヒント(★レベルに応じたもの)を僅かに開示します。"
+            },
+            {
+                "access_level": 7,
+                "value": "(例)ハッキングでクリティカル→企業の顧客リストだけでなく、一瞬だけ「……統合意……プロジェ……」という単語が混じった破損データが見える。"
+            }
+        ]
+    },
     "judge_fumble": {
+        "type": "hub",
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                7
+            ]
+        }
+    },
+    "_judge_fumble_0": {
         "name": "ファンブル",
         "type": "document",
         "priority": 0,
@@ -92,6 +264,28 @@
             {
                 "access_level": 0,
                 "value": "出目が96～100だった場合無条件で大失敗となり、予期せぬ悪い結果をもたらします。"
+            }
+        ]
+    },
+    "_judge_fumble_7": {
+        "name": "ファンブル",
+        "type": "document",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "judge"
+        ],
+        "params": [
+            {
+                "access_level": 7,
+                "value": "情報を得られないだけでなく、状況を悪化させる出来事が発生します。"
+            },
+            {
+                "access_level": 7,
+                "value": "(例)ハッキングでファンブル→システムに侵入の痕跡を残してしまい、次の戦闘で敵の増援が1体追加される。"
             }
         ]
     },
@@ -250,24 +444,6 @@
                 "description": "遠距離武器による回避判定にはHACとジャミングスキルを使用します。目標値は以下のように算出されます。"
             }
         }
-    },
-    "judge_adjust": {
-        "name": "補正値",
-        "type": "document",
-        "priority": 0,
-        "includes": [],
-        "genre": [
-            "document",
-            "system",
-            "rule",
-            "judge"
-        ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "補正値は、判定に加える補正を表します。"
-            }
-        ]
     },
     "judge_hacking": {
         "name": "ハッキング判定",

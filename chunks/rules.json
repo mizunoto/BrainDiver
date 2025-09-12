@@ -1,0 +1,60 @@
+{
+    "rules": {
+        "type": "hub",
+        "priority": 0,
+        "includes": [],
+        "genre": [
+            "document"
+        ],
+        "params": {
+            "access_level": 0,
+            "value": [
+                0,
+                7
+            ]
+        }
+    },
+    "_rules_0": {
+        "name": "ルールとシステム",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "status",
+            "judge",
+            "character_enhancement",
+            "combat",
+            "energy",
+            "hacking"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": ""
+            }
+        ]
+    },
+    "_rules_7": {
+        "name": "ルールの詳細",
+        "type": "document",
+        "priority": 0,
+        "includes": [
+            "judge"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule"
+        ],
+        "params": [
+            {
+                "access_level": 0,
+                "value": ""
+            }
+        ]
+    }
+}

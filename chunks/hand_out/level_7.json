@@ -3,7 +3,13 @@
         "name": "レベル7・アクセスディナイド",
         "type": "hand_out",
         "priority": 0,
-        "includes": [],
+        "includes": [
+            "introduction",
+            "warning",
+            "rules",
+            "secret",
+            "glossary"
+        ],
         "genre": [
             "hand_out",
             "document",
@@ -14,7 +20,7 @@
                 1,
                 7
             ],
-            "value": "レベル7"
+            "value": "※閲覧非推奨※"
         }
     }
 }
