@@ -3,6 +3,7 @@
         "name": "遠距離武器",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "lasor_pistol",
             "g_011z_asault_rifle",
@@ -14,17 +15,15 @@
             "weapon",
             "range"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "遠距離武器の一覧です。"
-            }
+        "value": [
+            "遠距離武器の一覧です。"
         ]
     },
     "lasor_pistol": {
         "name": "レーザーピストル",
         "type": "weapon",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -32,20 +31,18 @@
             "weapon",
             "range"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "worth": 120,
-                "flavor": "取り回しに優れた標準的なレーザーハンドガン。",
-                "class": "軽量遠距離武器",
-                "atk": 8
-            }
+        "value": {
+            "worth": 120,
+            "flavor": "取り回しに優れた標準的なレーザーハンドガン。",
+            "class": "軽量遠距離武器",
+            "atk": 8
         }
     },
     "g_011z_asault_rifle": {
         "name": "G-011Zアサルトライフル",
         "type": "weapon",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -53,16 +50,13 @@
             "weapon",
             "range"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "worth": 3000,
-                "flavor": "標準的なアサルトライフル。",
-                "class": "標準遠距離武器",
-                "atk": 16,
-                "requires": {
-                    "DEX": 15
-                }
+        "value": {
+            "worth": 3000,
+            "flavor": "標準的なアサルトライフル。",
+            "class": "標準遠距離武器",
+            "atk": 16,
+            "requires": {
+                "DEX": 15
             }
         }
     },
@@ -70,6 +64,7 @@
         "name": "高収束スナイパーライフル",
         "type": "weapon",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -77,16 +72,13 @@
             "weapon",
             "range"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "worth": 10000,
-                "flavor": "一撃の威力に全てを懸けた決戦兵器。エネルギー消費も相応に激しい。",
-                "class": "重量遠距離武器",
-                "atk": 32,
-                "requires": {
-                    "DEX": 30
-                }
+        "value": {
+            "worth": 10000,
+            "flavor": "一撃の威力に全てを懸けた決戦兵器。エネルギー消費も相応に激しい。",
+            "class": "重量遠距離武器",
+            "atk": 32,
+            "requires": {
+                "DEX": 30
             }
         }
     }

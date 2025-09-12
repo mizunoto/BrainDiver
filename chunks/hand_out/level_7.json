@@ -3,6 +3,7 @@
         "name": "レベル7・アクセスディナイド",
         "type": "hand_out",
         "priority": 0,
+        "access_level": 7,
         "includes": [
             "introduction",
             "warning",
@@ -15,12 +16,12 @@
             "document",
             "level_7"
         ],
-        "params": {
+        "value": {
             "access_filter": [
                 1,
                 7
             ],
-            "value": "※閲覧非推奨※"
+            "document": "※閲覧非推奨※"
         }
     }
 }

@@ -3,6 +3,7 @@
         "name": "キャラクター強化",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "data_core_use",
             "equipment_change",
@@ -16,17 +17,16 @@
             "character",
             "enhancement"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "キャラクターは以下の方法で成長・強化することができます。"
-            }
+        "value": [
+            "キャラクターは以下の方法で成長・強化することができます。"
         ]
     },
     "data_core_use": {
         "name": "データ・コアの使用",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
+        "includes": [],
         "genre": [
             "document",
             "system",
@@ -35,18 +35,16 @@
             "character",
             "enhancement"
         ],
-        "includes": [],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "報酬や探索で入手する可能性のあるデータ・コアを使用することにより任意、または設定された特定のステータスを1つ恒久的に1上げることができます。ただし各ステータスの上限は70です。"
-            }
+        "value": [
+            "報酬や探索で入手する可能性のあるデータ・コアを使用することにより任意、または設定された特定のステータスを1つ恒久的に1上げることができます。ただし各ステータスの上限は70です。"
         ]
     },
     "equipment_change": {
         "name": "装備変更",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
+        "includes": [],
         "genre": [
             "document",
             "system",
@@ -55,18 +53,16 @@
             "character",
             "enhancement"
         ],
-        "includes": [],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "ℂを使用して装備の購入ができます。武器は近接、遠距離の2種、防具・エネルギータンクはそれぞれ1種、合計で4つの部位に装備することが可能です。"
-            }
+        "value": [
+            "ℂを使用して装備の購入ができます。武器は近接、遠距離の2種、防具・エネルギータンクはそれぞれ1種、合計で4つの部位に装備することが可能です。"
         ]
     },
     "skill_level_up": {
         "name": "スキルレベルアップ",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
+        "includes": [],
         "genre": [
             "document",
             "system",
@@ -75,12 +71,8 @@
             "character",
             "enhancement"
         ],
-        "includes": [],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "ℂを使用してキャラクターの電子脳にスキルをインストールすることができます。スキルの習得には前提条件として最低限の基礎ステータスが設定されています。各種スキルの習得コストの詳細は「サイド・リポジトリ」に記載されています。"
-            }
+        "value": [
+            "ℂを使用してキャラクターの電子脳にスキルをインストールすることができます。スキルの習得には前提条件として最低限の基礎ステータスが設定されています。各種スキルの習得コストの詳細は「サイド・リポジトリ」に記載されています。"
         ]
     }
 }

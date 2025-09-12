@@ -3,6 +3,7 @@
         "name": "repository",
         "type": "hand_out",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "glossary",
             "item",
@@ -12,18 +13,19 @@
             "hand_out",
             "document"
         ],
-        "params": {
+        "value": {
             "access_filter": [
                 0,
                 0
             ],
-            "value": "資料集"
+            "document": "資料集"
         }
     },
     "item": {
         "name": "アイテム",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "melee",
             "range",
@@ -35,11 +37,8 @@
             "document",
             "glossary"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "作中に登場するアイテムの一覧です。"
-            }
+        "value": [
+            "作中に登場するアイテムの一覧です。"
         ],
         "_comment": [
             "ハブ構想について",

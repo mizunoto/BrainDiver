@@ -2,22 +2,21 @@
     "rules": {
         "type": "hub",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document"
         ],
-        "params": {
-            "access_level": 0,
-            "value": [
-                0,
-                7
-            ]
-        }
+        "value": [
+            0,
+            7
+        ]
     },
     "_rules_0": {
         "name": "ルールとシステム",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "status",
             "judge",
@@ -31,17 +30,15 @@
             "system",
             "rule"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": ""
-            }
+        "value": [
+            ""
         ]
     },
     "_rules_7": {
         "name": "ルールの詳細",
         "type": "document",
         "priority": 0,
+        "access_level": 7,
         "includes": [
             "judge"
         ],
@@ -50,11 +47,8 @@
             "system",
             "rule"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": ""
-            }
+        "value": [
+            ""
         ]
     }
 }

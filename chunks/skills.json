@@ -3,6 +3,7 @@
         "name": "スキル",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "melee_combat",
             "sniping",
@@ -23,44 +24,30 @@
             "glossary",
             "skill"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "ステータスが要求値を満たしていれば、マーケットでスキルデータを購入しインストールすることで、対象のスキルレベルを1上げることができます。"
-            },
-            {
-                "access_level": 0,
-                "value": "スキルデータの値段は習得してるレベルに依存し、以下の計算式で決まります。"
-            },
-            {
-                "access_level": 0,
-                "value": "500 + (現在のスキルレベル^2 * 50) ℂ"
-            },
-            {
-                "access_level": 0,
-                "value": "例えば、現在のスキルレベルが3の場合、950ℂになります。"
-            }
+        "value": [
+            "ステータスが要求値を満たしていれば、マーケットでスキルデータを購入しインストールすることで、対象のスキルレベルを1上げることができます。",
+            "スキルデータの値段は習得してるレベルに依存し、以下の計算式で決まります。",
+            "500 + (現在のスキルレベル^2 * 50) ℂ",
+            "例えば、現在のスキルレベルが3の場合、950ℂになります。"
         ]
     },
     "melee_combat": {
         "name": "近接戦闘",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "近接武器を使った戦闘がうまくなる。",
-                "requires": {
-                    "statuses": [
-                        "STR"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "近接武器を使った戦闘がうまくなる。",
+            "requires": {
+                "statuses": [
+                    "STR"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -68,21 +55,19 @@
         "name": "狙撃",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "射撃が正確になる。",
-                "requires": {
-                    "statuses": [
-                        "DEX"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "射撃が正確になる。",
+            "requires": {
+                "statuses": [
+                    "DEX"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -90,22 +75,20 @@
         "name": "ジャミング",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "周囲のセンサーをジャミングし敵の攻撃を回避しやすくなる。",
-                "requires": {
-                    "statuses": [
-                        "HAC",
-                        "DEX"
-                    ],
-                    "total_value": 25
-                }
+        "value": {
+            "explanation": "周囲のセンサーをジャミングし敵の攻撃を回避しやすくなる。",
+            "requires": {
+                "statuses": [
+                    "HAC",
+                    "DEX"
+                ],
+                "total_value": 25
             }
         }
     },
@@ -113,21 +96,19 @@
         "name": "クラッキング",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "攻撃的なハッキングがうまくなる。",
-                "requires": {
-                    "statuses": [
-                        "HAC"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "攻撃的なハッキングがうまくなる。",
+            "requires": {
+                "statuses": [
+                    "HAC"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -135,21 +116,19 @@
         "name": "ファイアウォール",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "敵からのハッキングを防ぎやすくなる。",
-                "requires": {
-                    "statuses": [
-                        "HAC"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "敵からのハッキングを防ぎやすくなる。",
+            "requires": {
+                "statuses": [
+                    "HAC"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -157,22 +136,20 @@
         "name": "データ分析",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "暗号化されたデータなどを復元・解除できる。",
-                "requires": {
-                    "statuses": [
-                        "HAC",
-                        "INT"
-                    ],
-                    "total_value": 25
-                }
+        "value": {
+            "explanation": "暗号化されたデータなどを復元・解除できる。",
+            "requires": {
+                "statuses": [
+                    "HAC",
+                    "INT"
+                ],
+                "total_value": 25
             }
         }
     },
@@ -180,22 +157,20 @@
         "name": "交渉術",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "説得や情報収集がうまくなる。",
-                "requires": {
-                    "statuses": [
-                        "CHA",
-                        "LUK"
-                    ],
-                    "total_value": 25
-                }
+        "value": {
+            "explanation": "説得や情報収集がうまくなる。",
+            "requires": {
+                "statuses": [
+                    "CHA",
+                    "LUK"
+                ],
+                "total_value": 25
             }
         }
     },
@@ -203,21 +178,19 @@
         "name": "持久力",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "長く行動し続けることができる。",
-                "requires": {
-                    "statuses": [
-                        "STR"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "長く行動し続けることができる。",
+            "requires": {
+                "statuses": [
+                    "STR"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -225,22 +198,20 @@
         "name": "罠知識",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "罠に詳しくなる。",
-                "requires": {
-                    "statuses": [
-                        "DEX",
-                        "INT"
-                    ],
-                    "total_value": 25
-                }
+        "value": {
+            "explanation": "罠に詳しくなる。",
+            "requires": {
+                "statuses": [
+                    "DEX",
+                    "INT"
+                ],
+                "total_value": 25
             }
         }
     },
@@ -248,21 +219,19 @@
         "name": "精密操作",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "細かい作業が得意になる。",
-                "requires": {
-                    "statuses": [
-                        "DEX"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "細かい作業が得意になる。",
+            "requires": {
+                "statuses": [
+                    "DEX"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -270,21 +239,19 @@
         "name": "軽業",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "狭い足場や高所からの落下に強くなる。",
-                "requires": {
-                    "statuses": [
-                        "DEX"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "狭い足場や高所からの落下に強くなる。",
+            "requires": {
+                "statuses": [
+                    "DEX"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -292,21 +259,19 @@
         "name": "科学知識",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "科学的な知識を得ることができる。",
-                "requires": {
-                    "statuses": [
-                        "INT"
-                    ],
-                    "total_value": 15
-                }
+        "value": {
+            "explanation": "科学的な知識を得ることができる。",
+            "requires": {
+                "statuses": [
+                    "INT"
+                ],
+                "total_value": 15
             }
         }
     },
@@ -314,22 +279,20 @@
         "name": "歴史知識",
         "type": "skill",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "glossary",
             "skill"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "explanation": "歴史的な知識を得ることができる。",
-                "requires": {
-                    "statuses": [
-                        "INT",
-                        "HAC"
-                    ],
-                    "total_value": 25
-                }
+        "value": {
+            "explanation": "歴史的な知識を得ることができる。",
+            "requires": {
+                "statuses": [
+                    "INT",
+                    "HAC"
+                ],
+                "total_value": 25
             }
         }
     }

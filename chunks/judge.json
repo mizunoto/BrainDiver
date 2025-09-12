@@ -1,18 +1,17 @@
 {
     "judge": {
         "type": "hub",
-        "params": {
-            "access_level": 0,
-            "value": [
-                0,
-                7
-            ]
-        }
+        "access_level": 0,
+        "value": [
+            0,
+            7
+        ]
     },
     "_judge_0": {
         "name": "判定",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "judge_method",
             "judge_critical",
@@ -24,17 +23,15 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "プレイヤーの行動の成否は1D100で判定します。"
-            }
+        "value": [
+            "プレイヤーの行動の成否は1D100で判定します。"
         ]
     },
     "_judge_7": {
         "name": "判定",
         "type": "document",
         "priority": 0,
+        "access_level": 7,
         "includes": [
             "judge_adjust"
         ],
@@ -44,17 +41,15 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 7,
-                "value": "シナリオ作成ガイドラインにはハッキングの目標値が記載されていますが、プレイヤーが予期せぬ行動（例：「壁をよじ登る」「NPCを威圧して情報を聞き出す」）を取った際に、GMがその場で難易度を設定するための一般的な指針です。"
-            }
+        "value": [
+            "シナリオ作成ガイドラインにはハッキングの目標値が記載されていますが、プレイヤーが予期せぬ行動（例：「壁をよじ登る」「NPCを威圧して情報を聞き出す」）を取った際に、GMがその場で難易度を設定するための一般的な指針です。"
         ]
     },
     "judge_method": {
         "name": "判定方法",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "judge_target"
         ],
@@ -64,17 +59,15 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "判定は 基礎ステータス+関連スキルレベル+補正値(アイテムなど) で算出されます。"
-            }
+        "value": [
+            "判定は 基礎ステータス+関連スキルレベル+補正値(アイテムなど) で算出されます。"
         ]
     },
     "judge_target": {
         "name": "目標値",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -82,17 +75,15 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "基礎ステータス + 関連スキルレベル + 補正値(アイテムなど) で算出されます。"
-            }
+        "value": [
+            "基礎ステータス + 関連スキルレベル + 補正値(アイテムなど) で算出されます。"
         ]
     },
     "judge_adjust": {
         "name": "補正値",
         "type": "document",
         "priority": 0,
+        "access_level": 7,
         "includes": [
             "judge_table"
         ],
@@ -102,17 +93,15 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 7,
-                "value": "プレイヤーがシナリオにない行動を宣言した場合、GMはその行動の難易度を以下の基準で設定します。"
-            }
+        "value": [
+            "プレイヤーがシナリオにない行動を宣言した場合、GMはその行動の難易度を以下の基準で設定します。"
         ]
     },
     "judge_table": {
         "name": "補正値の目安",
         "type": "table",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -120,9 +109,8 @@
             "rule",
             "judge"
         ],
-        "params": {
-            "access_level": 0,
-            "value": [
+        "value": {
+            "table": [
                 [
                     "容易",
                     "20-30",
@@ -164,13 +152,14 @@
                     "ファンブルを出さずして何がエンタメか。"
                 ]
             ],
-            "has_header": false
+            "header": false
         }
     },
     "judge_temporary": {
         "name": "プレイヤーの宣言に対する裁定",
         "type": "document",
         "priority": 0,
+        "access_level": 7,
         "includes": [],
         "genre": [
             "document",
@@ -178,31 +167,24 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 7,
-                "value": "プレイヤーがルールブックにない行動を宣言した場合、GMはまず「それは可能か？」そして「可能だとして、どのステータスとスキルで判定するのが最も妥当か？」を判断します。このゲームはプレイヤーの物語を作ることを重視するため、「できない」と即答するのではなく、可能な限り判定の機会を与えてください。"
-            },
-            {
-                "access_level": 7,
-                "value": "（例） プレイヤーが「敵の注意を引くために、近くの配電盤に石を投げてショートさせ、大きな音を立てたい」と宣言した場合。→ GMは「面白いアイデアだ」と受け入れ、【投擲】スキルを持つなら【STR/DEX】の内高い方で、持っていないなら【DEX】単体で、失敗の可能性が考えられるので難易度【普通】による目標値を算出し、判定を許可する、といった裁定を下します。"
-            }
+        "value": [
+            "プレイヤーがルールブックにない行動を宣言した場合、GMはまず「それは可能か？」そして「可能だとして、どのステータスとスキルで判定するのが最も妥当か？」を判断します。このゲームはプレイヤーの物語を作ることを重視するため、「できない」と即答するのではなく、可能な限り判定の機会を与えてください。",
+            "（例） プレイヤーが「敵の注意を引くために、近くの配電盤に石を投げてショートさせ、大きな音を立てたい」と宣言した場合。→ GMは「面白いアイデアだ」と受け入れ、【投擲】スキルを持つなら【STR/DEX】の内高い方で、持っていないなら【DEX】単体で、失敗の可能性が考えられるので難易度【普通】による目標値を算出し、判定を許可する、といった裁定を下します。"
         ]
     },
     "judge_critical": {
         "type": "hub",
-        "params": {
-            "access_level": 0,
-            "value": [
-                0,
-                7
-            ]
-        }
+        "access_level": 0,
+        "value": [
+            0,
+            7
+        ]
     },
     "_judge_critical_0": {
         "name": "クリティカル",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -210,17 +192,15 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "出目が1～5だった場合無条件で大成功となり、通常より大きな結果を得られます。"
-            }
+        "value": [
+            "出目が1～5だった場合無条件で大成功となり、通常より大きな結果を得られます。"
         ]
     },
     "_judge_critical_7": {
         "name": "クリティカル",
         "type": "document",
         "priority": 0,
+        "access_level": 7,
         "includes": [],
         "genre": [
             "document",
@@ -228,31 +208,24 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 7,
-                "value": "目的の情報に加えて、キャンペーンの核心に繋がる追加のヒント(★レベルに応じたもの)を僅かに開示します。"
-            },
-            {
-                "access_level": 7,
-                "value": "(例)ハッキングでクリティカル→企業の顧客リストだけでなく、一瞬だけ「……統合意……プロジェ……」という単語が混じった破損データが見える。"
-            }
+        "value": [
+            "目的の情報に加えて、キャンペーンの核心に繋がる追加のヒント(★レベルに応じたもの)を僅かに開示します。",
+            "(例)ハッキングでクリティカル→企業の顧客リストだけでなく、一瞬だけ「……統合意……プロジェ……」という単語が混じった破損データが見える。"
         ]
     },
     "judge_fumble": {
         "type": "hub",
-        "params": {
-            "access_level": 0,
-            "value": [
-                0,
-                7
-            ]
-        }
+        "access_level": 0,
+        "value": [
+            0,
+            7
+        ]
     },
     "_judge_fumble_0": {
         "name": "ファンブル",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -260,17 +233,15 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "出目が96～100だった場合無条件で大失敗となり、予期せぬ悪い結果をもたらします。"
-            }
+        "value": [
+            "出目が96～100だった場合無条件で大失敗となり、予期せぬ悪い結果をもたらします。"
         ]
     },
     "_judge_fumble_7": {
         "name": "ファンブル",
         "type": "document",
         "priority": 0,
+        "access_level": 7,
         "includes": [],
         "genre": [
             "document",
@@ -278,21 +249,16 @@
             "rule",
             "judge"
         ],
-        "params": [
-            {
-                "access_level": 7,
-                "value": "情報を得られないだけでなく、状況を悪化させる出来事が発生します。"
-            },
-            {
-                "access_level": 7,
-                "value": "(例)ハッキングでファンブル→システムに侵入の痕跡を残してしまい、次の戦闘で敵の増援が1体追加される。"
-            }
+        "value": [
+            "情報を得られないだけでなく、状況を悪化させる出来事が発生します。",
+            "(例)ハッキングでファンブル→システムに侵入の痕跡を残してしまい、次の戦闘で敵の増援が1体追加される。"
         ]
     },
     "judge_general": {
         "name": "判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -300,21 +266,19 @@
             "rule",
             "session"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "提案",
-                "skill": "提案",
-                "adjustment": "あり",
-                "formula": "1D100 <= status + skill_level + adjustment + Floor(LUK / 10)",
-                "description": "一般的な判定例です。"
-            }
+        "value": {
+            "status": "提案",
+            "skill": "提案",
+            "adjustment": "あり",
+            "formula": "1D100 <= status + skill_level + adjustment + Floor(LUK / 10)",
+            "description": "一般的な判定例です。"
         }
     },
     "judge_combat_hit": {
         "name": "攻撃判定",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "judge_melee_hit",
             "judge_range_hit"
@@ -325,17 +289,15 @@
             "rule",
             "combat"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "命中判定は1D100で判定し、出目が目標値以下であれば成功です。"
-            }
+        "value": [
+            "命中判定は1D100で判定し、出目が目標値以下であれば成功です。"
         ]
     },
     "judge_melee_hit": {
         "name": "近接攻撃判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "judge",
@@ -344,21 +306,19 @@
             "combat",
             "melee"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "STR",
-                "skill": "近接戦闘",
-                "adjustment": "あり",
-                "formula": "1D100 <= STR + skill_level + adjustment + Floor(LUK / 10)",
-                "description": "近接武器による命中判定にはSTRと近接戦闘スキルを使用します。目標値は以下のように算出されます。"
-            }
+        "value": {
+            "status": "STR",
+            "skill": "近接戦闘",
+            "adjustment": "あり",
+            "formula": "1D100 <= STR + skill_level + adjustment + Floor(LUK / 10)",
+            "description": "近接武器による命中判定にはSTRと近接戦闘スキルを使用します。目標値は以下のように算出されます。"
         }
     },
     "judge_range_hit": {
         "name": "遠距離攻撃判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "judge",
@@ -367,21 +327,19 @@
             "combat",
             "range"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "DEX",
-                "skill": "狙撃",
-                "adjustment": "あり",
-                "formula": "1D100 <= DEX + skill_level + adjustment + Floor(LUK / 10)",
-                "description": "遠距離武器による命中判定にはDEXと狙撃スキルを使用します。目標値は以下のように算出されます。"
-            }
+        "value": {
+            "status": "DEX",
+            "skill": "狙撃",
+            "adjustment": "あり",
+            "formula": "1D100 <= DEX + skill_level + adjustment + Floor(LUK / 10)",
+            "description": "遠距離武器による命中判定にはDEXと狙撃スキルを使用します。目標値は以下のように算出されます。"
         }
     },
     "judge_combat_dodge": {
         "name": "回避判定",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "judge_melee_dodge",
             "judge_range_dodge"
@@ -392,17 +350,15 @@
             "rule",
             "combat"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "回避判定は1D100で判定し、出目が目標値以下であれば成功です。"
-            }
+        "value": [
+            "回避判定は1D100で判定し、出目が目標値以下であれば成功です。"
         ]
     },
     "judge_melee_dodge": {
         "name": "近接回避判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "judge",
@@ -411,21 +367,19 @@
             "combat",
             "melee"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "DEX",
-                "skill": "近接戦闘",
-                "adjustment": "あり",
-                "formula": "1D100 <= DEX + skill_level + adjustment + Floor(LUK / 10)",
-                "description": "近接武器による回避判定にはDEXと近接戦闘スキルを使用します。目標値は以下のように算出されます。"
-            }
+        "value": {
+            "status": "DEX",
+            "skill": "近接戦闘",
+            "adjustment": "あり",
+            "formula": "1D100 <= DEX + skill_level + adjustment + Floor(LUK / 10)",
+            "description": "近接武器による回避判定にはDEXと近接戦闘スキルを使用します。目標値は以下のように算出されます。"
         }
     },
     "judge_range_dodge": {
         "name": "遠距離回避判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "judge",
@@ -434,21 +388,19 @@
             "combat",
             "range"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "HAC",
-                "skill": "ジャミング",
-                "adjustment": "あり",
-                "formula": "1D100 <= Floor(HAC / 2) + skill_level + adjustment + Floor(LUK / 10)",
-                "description": "遠距離武器による回避判定にはHACとジャミングスキルを使用します。目標値は以下のように算出されます。"
-            }
+        "value": {
+            "status": "HAC",
+            "skill": "ジャミング",
+            "adjustment": "あり",
+            "formula": "1D100 <= Floor(HAC / 2) + skill_level + adjustment + Floor(LUK / 10)",
+            "description": "遠距離武器による回避判定にはHACとジャミングスキルを使用します。目標値は以下のように算出されます。"
         }
     },
     "judge_hacking": {
         "name": "ハッキング判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "system",
@@ -456,21 +408,19 @@
             "hacking",
             "judge"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "HAC",
-                "skill": "提案",
-                "adjustment": "あり",
-                "formula": "1D100 <= HAC + skill_level + adjustment + Floor(LUK / 10)",
-                "description": "スキルレベル：関連すると思われるスキルレベルを宣言します。(例：レリック・ハックを監視カメラに対して行う際に精密操作か歴史知識か選ぶ。)\n補正値：一部装備の効果やアイテム、罠と言った環境による補正が合算されます。"
-            }
+        "value": {
+            "status": "HAC",
+            "skill": "提案",
+            "adjustment": "あり",
+            "formula": "1D100 <= HAC + skill_level + adjustment + Floor(LUK / 10)",
+            "description": "スキルレベル：関連すると思われるスキルレベルを宣言します。(例：レリック・ハックを監視カメラに対して行う際に精密操作か歴史知識か選ぶ。)\n補正値：一部装備の効果やアイテム、罠と言った環境による補正が合算されます。"
         }
     },
     "judge_negotiate": {
         "name": "交渉判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "judge",
@@ -478,21 +428,19 @@
             "rule",
             "market"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "CHA",
-                "skill": "交渉術",
-                "adjustment": "なし",
-                "formula": "1D100 <= CHA + skill_level + Floor(LUK / 10)",
-                "description": "交渉判定にはCHAと交渉術スキルを使用します。目標値は以下のように算出されます。"
-            }
+        "value": {
+            "status": "CHA",
+            "skill": "交渉術",
+            "adjustment": "なし",
+            "formula": "1D100 <= CHA + skill_level + Floor(LUK / 10)",
+            "description": "交渉判定にはCHAと交渉術スキルを使用します。目標値は以下のように算出されます。"
         }
     },
     "judge_sell_price": {
         "name": "相場判定",
         "type": "judge",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "judge",
@@ -500,15 +448,12 @@
             "rule",
             "market"
         ],
-        "params": {
-            "access_level": 0,
-            "value": {
-                "status": "LUK",
-                "skill": "なし",
-                "adjustment": "なし",
-                "formula": "1D100 + LUK + Floor(LUK / 10)",
-                "description": "LUKを利用して相場判定を行います。目標値はなく、各種売却額が設定されている基礎値の [1D100 + Floor(LUK * 1.1)]% になります。"
-            }
+        "value": {
+            "status": "LUK",
+            "skill": "なし",
+            "adjustment": "なし",
+            "formula": "1D100 + LUK + Floor(LUK / 10)",
+            "description": "LUKを利用して相場判定を行います。目標値はなく、各種売却額が設定されている基礎値の [1D100 + Floor(LUK * 1.1)]% になります。"
         }
     }
 }

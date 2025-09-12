@@ -18,15 +18,15 @@
                     "description": "データ構造の種類",
                     "enum": [
                         "hand_out",
+                        "hub",
+                        "table",
                         "document",
                         "judge",
-                        "table",
                         "weapon",
                         "armor",
                         "energy_tank",
                         "consumable",
                         "skill",
-                        "hub",
                         "enemy"
                     ],
                     "$comment": "必要次第で追加する"
@@ -37,44 +37,8 @@
                     "maximum": 100,
                     "description": "データベース化の際の優先度\n-1: AIは無視するドキュメント専用のチャンク。\n0-100: 優先度高い順にソートされデータベースとして活用される。値が大きいほど優先度高い。"
                 },
-                "genre": {
-                    "type": "array",
-                    "description": "ジャンル",
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "system",
-                            "rule",
-                            "hand_out",
-                            "protocol",
-                            "document",
-                            "judge",
-                            "table",
-                            "energy",
-                            "combat",
-                            "hacking",
-                            "status",
-                            "enhancement",
-                            "character",
-                            "melee",
-                            "range",
-                            "armor",
-                            "energy_tank",
-                            "weapon",
-                            "campain",
-                            "session",
-                            "market",
-                            "glossary",
-                            "consumable",
-                            "skill",
-                            "level_7",
-                            "secret",
-                            "enemy"
-                        ],
-                        "uniqueItems": true,
-                        "additionalItems": false,
-                        "$comment": "必要次第で追加する"
-                    }
+                "access_level": {
+                    "$ref": "#/definitions/AccessLevel"
                 },
                 "includes": {
                     "type": "array",
@@ -87,18 +51,53 @@
                     "uniqueItems": true,
                     "default": []
                 },
-                "params": {
-                    "$comment": "typeによって変わる"
+                "genre": {
+                    "type": "array",
+                    "description": "ジャンル",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "hand_out",
+                            "protocol",
+                            "level_7",
+                            "table",
+                            "system",
+                            "rule",
+                            "document",
+                            "judge",
+                            "hacking",
+                            "energy",
+                            "combat",
+                            "character",
+                            "status",
+                            "skill",
+                            "enhancement",
+                            "weapon",
+                            "melee",
+                            "range",
+                            "armor",
+                            "energy_tank",
+                            "consumable",
+                            "campain",
+                            "session",
+                            "market",
+                            "glossary",
+                            "secret",
+                            "enemy"
+                        ],
+                        "uniqueItems": true,
+                        "additionalItems": false,
+                        "$comment": "必要次第で追加する"
+                    }
+                },
+                "value": {
+                    "description": "内容\ntypeに応じて型が変化します。"
                 },
                 "_comment": {
                     "description": "開発用コメント",
                     "default": ""
                 }
             },
-            "required": [
-                "type",
-                "params"
-            ],
             "additionalProperties": false,
             "allOf": [
                 {
@@ -111,191 +110,18 @@
                     },
                     "then": {
                         "properties": {
-                            "params": {
-                                "$ref": "#/definitions/HandOutParams"
+                            "value": {
+                                "$ref": "#/definitions/HandOutValue"
                             }
                         },
                         "required": [
                             "name",
+                            "type",
                             "priority",
+                            "access_level",
                             "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "document"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/DocumentParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "judge"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/JudgeParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "table"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/TableParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "weapon"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/WeaponParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "armor"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/ArmorParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "energy_tank"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/EnergyTankParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "consumable"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/ConsumableParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
-                        ]
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "type": {
-                                "const": "skill"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "params": {
-                                "$ref": "#/definitions/SkillParams"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "priority",
-                            "includes",
-                            "genre"
+                            "genre",
+                            "value"
                         ]
                     }
                 },
@@ -309,10 +135,214 @@
                     },
                     "then": {
                         "properties": {
-                            "params": {
-                                "$ref": "#/definitions/HubParams"
+                            "value": {
+                                "$ref": "#/definitions/HubValue"
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "table"
                             }
                         }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/TableValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "document"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/DocumentValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "judge"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/JudgeValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "weapon"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/WeaponValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "armor"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/ArmorValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "energy_tank"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/EnergyTankValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "consumable"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/ConsumableValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "skill"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "value": {
+                                "$ref": "#/definitions/SkillValue"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type",
+                            "priority",
+                            "access_level",
+                            "includes",
+                            "genre",
+                            "value"
+                        ]
                     }
                 },
                 {
@@ -325,15 +355,18 @@
                     },
                     "then": {
                         "properties": {
-                            "params": {
-                                "$ref": "#/definitions/EnemyParams"
+                            "value": {
+                                "$ref": "#/definitions/EnemyValue"
                             }
                         },
                         "required": [
                             "name",
+                            "type",
                             "priority",
+                            "access_level",
                             "includes",
-                            "genre"
+                            "genre",
+                            "value"
                         ]
                     }
                 }
@@ -341,137 +374,11 @@
         }
     },
     "definitions": {
-        "HandOutParams": {
-            "type": "object",
-            "required": [
-                "access_filter",
-                "value"
-            ],
-            "additionalProperties": false,
-            "properties": {
-                "access_filter": {
-                    "type": "array",
-                    "items": {
-                        "type": "number",
-                        "minimum": -1,
-                        "maximum": 9
-                    },
-                    "minItems": 2,
-                    "maxItems": 2,
-                    "description": "アクセス可能なアクセスレベル"
-                },
-                "value": {
-                    "type": "string",
-                    "description": "文書の概要"
-                }
-            }
-        },
-        "DocumentParams": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "required": [
-                    "access_level",
-                    "value"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                    "access_level": {
-                        "$ref": "#/definitions/AccessLevel"
-                    },
-                    "value": {
-                        "type": "string",
-                        "description": "文章"
-                    }
-                }
-            },
-            "minItems": 1
-        },
-        "JudgeParams": {
-            "type": "object",
-            "required": [
-                "access_level",
-                "value"
-            ],
-            "additionalProperties": false,
-            "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
-                },
-                "value": {
-                    "type": "object",
-                    "description": "判定の詳細",
-                    "additionalProperties": false,
-                    "properties": {
-                        "status": {
-                            "type": "string",
-                            "pattern": "[(HAC|STR|DEX|INT|CHA|LUK|提案)]",
-                            "description": "参照されるステータス"
-                        },
-                        "skill": {
-                            "type": "string",
-                            "description": "参照されるスキル"
-                        },
-                        "adjustment": {
-                            "type": "string",
-                            "description": "修正値"
-                        },
-                        "formula": {
-                            "type": "string",
-                            "description": "計算式"
-                        },
-                        "description": {
-                            "type": "string",
-                            "description": "説明"
-                        }
-                    },
-                    "required": [
-                        "status",
-                        "skill",
-                        "adjustment",
-                        "formula"
-                    ]
-                }
-            }
-        },
         "AccessLevel": {
             "type": "number",
             "minimum": -1,
             "maximum": 9,
             "description": "アクセスするのに必要なレベル\n-1: 開発用, 0: 全員, 1-5: ゲーム内レベル1-5, 6: ゲーム内特殊レベル, 1-7: GM向け, 8: シナリオ作成者向け, 9: AI用"
-        },
-        "TableParams": {
-            "type": "object",
-            "required": [
-                "access_level",
-                "value",
-                "has_header"
-            ],
-            "additionalProperties": false,
-            "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
-                },
-                "value": {
-                    "type": "array",
-                    "items": {
-                        "type": "array",
-                        "description": "行",
-                        "items": {
-                            "type": "string",
-                            "description": "セル"
-                        },
-                        "minItems": 1
-                    },
-                    "minItems": 1,
-                    "description": "表の概要"
-                },
-                "has_header": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "表に見出し行を含めるか"
-                }
-            }
         },
         "ItemInterface": {
             "type": "object",
@@ -491,360 +398,382 @@
                 "flavor"
             ]
         },
-        "WeaponParams": {
+        "HandOutValue": {
             "type": "object",
+            "properties": {
+                "access_filter": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 9,
+                        "minItems": 1,
+                        "maxItems": 2,
+                        "description": "アクセスするのに必要なレベル"
+                    }
+                },
+                "document": {
+                    "type": "string",
+                    "description": "説明文"
+                }
+            },
+            "required": [
+                "access_filter"
+            ]
+        },
+        "HubValue": {
+            "type": "array",
+            "items": {
+                "type": "number",
+                "description": "アクセスレベル",
+                "minimum": -1,
+                "maximum": 9
+            },
+            "minItems": 2,
+            "maxItems": 10,
+            "uniqueItems": true
+        },
+        "TableValue": {
+            "type": "object",
+            "description": "表",
             "additionalProperties": false,
             "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
-                },
-                "value": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/ItemInterface"
-                        },
-                        {
-                            "type": "object",
-                            "properties": {
-                                "class": {
-                                    "type": "string",
-                                    "description": "武器の種類\n軽量・標準・重量と近接・遠距離の組み合わせの文字列\n例：軽量近接武器",
-                                    "pattern": "^(軽量|標準|重量)(近接|遠距離)武器$"
-                                },
-                                "atk": {
-                                    "type": "number",
-                                    "minimum": 1,
-                                    "description": "攻撃力"
-                                },
-                                "requires": {
-                                    "type": "object",
-                                    "patternProperties": {
-                                        "(HAC|STR|DEX|INT|CHA)": {
-                                            "type": "number",
-                                            "minimum": 1,
-                                            "description": "必要量"
-                                        }
-                                    },
-                                    "additionalProperties": false,
-                                    "uniqueItems": true
-                                }
-                            },
-                            "required": [
-                                "class",
-                                "atk"
-                            ]
+                "table": {
+                    "type": "array",
+                    "description": "行",
+                    "items": {
+                        "type": "array",
+                        "description": "列",
+                        "items": {
+                            "type": "string",
+                            "description": "セル"
                         }
-                    ]
+                    }
+                },
+                "header": {
+                    "type": "boolean",
+                    "description": "ヘッダーがあるかどうか",
+                    "default": false
                 }
+            },
+            "required": [
+                "table"
+            ]
+        },
+        "DocumentValue": {
+            "type": "array",
+            "description": "文章",
+            "items": {
+                "type": "string",
+                "description": "段落"
             }
         },
-        "ArmorParams": {
+        "JudgeValue": {
             "type": "object",
+            "description": "判定の詳細",
             "additionalProperties": false,
             "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
+                "status": {
+                    "type": "string",
+                    "pattern": "[(HAC|STR|DEX|INT|CHA|LUK|提案)]",
+                    "description": "参照されるステータス"
                 },
-                "value": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/ItemInterface"
-                        },
-                        {
-                            "type": "object",
-                            "properties": {
-                                "dr": {
-                                    "type": "number",
-                                    "minimum": 1,
-                                    "description": "ダメージ減衰能力"
-                                },
-                                "requires": {
-                                    "type": "object",
-                                    "patternProperties": {
-                                        "(HAC|STR|DEX|INT|CHA)": {
-                                            "type": "number",
-                                            "minimum": 1,
-                                            "description": "必要量"
-                                        }
-                                    },
-                                    "additionalProperties": false,
-                                    "uniqueItems": true
-                                }
-                            },
-                            "required": [
-                                "dr"
-                            ]
-                        }
-                    ]
+                "skill": {
+                    "type": "string",
+                    "description": "参照されるスキル"
+                },
+                "adjustment": {
+                    "type": "string",
+                    "description": "修正値"
+                },
+                "formula": {
+                    "type": "string",
+                    "description": "計算式"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "説明"
                 }
-            }
+            },
+            "required": [
+                "status",
+                "skill",
+                "adjustment",
+                "formula"
+            ]
         },
-        "EnergyTankParams": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
+        "WeaponValue": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/ItemInterface"
                 },
-                "value": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/ItemInterface"
-                        },
-                        {
-                            "type": "object",
-                            "properties": {
-                                "capacity": {
-                                    "type": "number",
-                                    "minimum": 1,
-                                    "description": "容量"
-                                },
-                                "accumulate": {
-                                    "type": "number",
-                                    "minimum": 1,
-                                    "description": "回復量"
-                                },
-                                "requires": {
-                                    "type": "object",
-                                    "patternProperties": {
-                                        "(HAC|STR|DEX|INT|CHA)": {
-                                            "type": "number",
-                                            "minimum": 1,
-                                            "description": "必要量"
-                                        }
-                                    },
-                                    "additionalProperties": false,
-                                    "uniqueItems": true
-                                }
-                            },
-                            "required": [
-                                "capacity",
-                                "accumulate"
-                            ]
-                        }
-                    ]
-                }
-            }
-        },
-        "ConsumableParams": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
-                },
-                "value": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/ItemInterface"
-                        },
-                        {
-                            "type": "object",
-                            "properties": {
-                                "effects": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string",
-                                        "description": "効果"
-                                    },
-                                    "minItems": 1
-                                }
-                            },
-                            "required": [
-                                "effects"
-                            ]
-                        }
-                    ]
-                }
-            }
-        },
-        "SkillParams": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
-                },
-                "value": {
+                {
                     "type": "object",
                     "properties": {
-                        "explanation": {
+                        "class": {
                             "type": "string",
-                            "description": "説明"
+                            "description": "武器の種類\n軽量・標準・重量と近接・遠距離の組み合わせの文字列\n例：軽量近接武器",
+                            "pattern": "^(軽量|標準|重量)(近接|遠距離)武器$"
+                        },
+                        "atk": {
+                            "type": "number",
+                            "minimum": 1,
+                            "description": "攻撃力"
                         },
                         "requires": {
                             "type": "object",
-                            "properties": {
-                                "statuses": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string",
-                                        "description": "ステータス",
-                                        "enum": [
-                                            "HAC",
-                                            "STR",
-                                            "DEX",
-                                            "INT",
-                                            "CHA",
-                                            "LUK"
-                                        ]
-                                    },
-                                    "minItems": 1
-                                },
-                                "total_value": {
+                            "patternProperties": {
+                                "(HAC|STR|DEX|INT|CHA)": {
                                     "type": "number",
                                     "minimum": 1,
-                                    "description": "基礎必要量"
+                                    "description": "必要量"
                                 }
                             },
-                            "required": [
-                                "statuses",
-                                "total_value"
-                            ],
                             "additionalProperties": false,
                             "uniqueItems": true
                         }
                     },
                     "required": [
-                        "explanation",
-                        "requires"
+                        "class",
+                        "atk"
                     ]
                 }
-            }
-        },
-        "HubParams": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
-                },
-                "value": {
-                    "type": "array",
-                    "items": {
-                        "type": "number",
-                        "description": "アクセスレベル",
-                        "minimum": -1,
-                        "maximum": 10
-                    },
-                    "minItems": 2,
-                    "maxItems": 10
-                }
-            },
-            "required": [
-                "access_level",
-                "value"
             ]
         },
-        "EnemyParams": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "access_level": {
-                    "$ref": "#/definitions/AccessLevel"
+        "ArmorValue": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/ItemInterface"
                 },
-                "value": {
+                {
                     "type": "object",
                     "properties": {
-                        "hp": {
-                            "oneOf": [
-                                {
-                                    "type": "number",
-                                    "minimum": 1,
-                                    "description": "HP"
-                                },
-                                {
-                                    "type": "string",
-                                    "const": "Infinity",
-                                    "description": "HP"
-                                }
-                            ]
-                        },
-                        "atk": {
-                            "type": "number",
-                            "minimum": 0,
-                            "description": "攻撃力"
-                        },
                         "dr": {
                             "type": "number",
-                            "minimum": 0,
-                            "description": "防御力"
+                            "minimum": 1,
+                            "description": "ダメージ減衰能力"
                         },
-                        "hit": {
-                            "type": "number",
-                            "minimum": 0,
-                            "description": "命中率"
-                        },
-                        "avd": {
-                            "type": "number",
-                            "minimum": 0,
-                            "description": "回避率"
-                        },
-                        "ports": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "description": "能力",
-                                "properties": {
-                                    "name": {
-                                        "type": "string",
-                                        "description": "名前"
-                                    },
-                                    "effect": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string",
-                                            "description": "効果"
-                                        },
-                                        "minItems": 1
-                                    }
-                                },
-                                "required": [
-                                    "name",
-                                    "effect"
-                                ]
-                            }
-                        },
-                        "abilities": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "description": "能力",
-                                "properties": {
-                                    "name": {
-                                        "type": "string",
-                                        "description": "名前"
-                                    },
-                                    "effect": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string",
-                                            "description": "効果"
-                                        },
-                                        "minItems": 1
-                                    }
-                                },
-                                "required": [
-                                    "name",
-                                    "effect"
-                                ]
-                            }
+                        "requires": {
+                            "type": "object",
+                            "patternProperties": {
+                                "(HAC|STR|DEX|INT|CHA)": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "必要量"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "uniqueItems": true
                         }
                     },
                     "required": [
-                        "hp",
-                        "atk",
-                        "dr",
-                        "hit",
-                        "avd"
+                        "dr"
+                    ]
+                }
+            ]
+        },
+        "EnergyTankValue": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/ItemInterface"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "capacity": {
+                            "type": "number",
+                            "minimum": 1,
+                            "description": "容量"
+                        },
+                        "accumulate": {
+                            "type": "number",
+                            "minimum": 1,
+                            "description": "回復量"
+                        },
+                        "requires": {
+                            "type": "object",
+                            "patternProperties": {
+                                "(HAC|STR|DEX|INT|CHA)": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "description": "必要量"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "uniqueItems": true
+                        }
+                    },
+                    "required": [
+                        "capacity",
+                        "accumulate"
+                    ]
+                }
+            ]
+        },
+        "ConsumableValue": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/ItemInterface"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "effects": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "description": "効果"
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "effects"
+                    ]
+                }
+            ]
+        },
+        "SkillValue": {
+            "type": "object",
+            "properties": {
+                "explanation": {
+                    "type": "string",
+                    "description": "説明"
+                },
+                "requires": {
+                    "type": "object",
+                    "properties": {
+                        "statuses": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "description": "ステータス",
+                                "enum": [
+                                    "HAC",
+                                    "STR",
+                                    "DEX",
+                                    "INT",
+                                    "CHA",
+                                    "LUK"
+                                ]
+                            },
+                            "minItems": 1
+                        },
+                        "total_value": {
+                            "type": "number",
+                            "minimum": 1,
+                            "description": "基礎必要量"
+                        }
+                    },
+                    "required": [
+                        "statuses",
+                        "total_value"
                     ],
-                    "additionalProperties": false
+                    "additionalProperties": false,
+                    "uniqueItems": true
                 }
             },
             "required": [
-                "access_level",
-                "value"
+                "explanation",
+                "requires"
             ]
+        },
+        "EnemyValue": {
+            "type": "object",
+            "properties": {
+                "hp": {
+                    "oneOf": [
+                        {
+                            "type": "number",
+                            "minimum": 1,
+                            "description": "HP"
+                        },
+                        {
+                            "type": "string",
+                            "const": "Infinity",
+                            "description": "HP"
+                        }
+                    ]
+                },
+                "atk": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "攻撃力"
+                },
+                "dr": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "防御力"
+                },
+                "hit": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "命中率"
+                },
+                "avd": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "回避率"
+                },
+                "ports": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "description": "能力",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "名前"
+                            },
+                            "effect": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "description": "効果"
+                                },
+                                "minItems": 1
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "effect"
+                        ]
+                    }
+                },
+                "abilities": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "description": "能力",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "名前"
+                            },
+                            "effect": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "description": "効果"
+                                },
+                                "minItems": 1
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "effect"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "hp",
+                "atk",
+                "dr",
+                "hit",
+                "avd"
+            ],
+            "additionalProperties": false
         }
     }
 }

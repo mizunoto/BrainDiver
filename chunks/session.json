@@ -3,6 +3,7 @@
         "name": "セッションプレイ",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "session_introduction",
             "session_progress",
@@ -15,21 +16,16 @@
             "rule",
             "session"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "シナリオを選択、またはmdファイルをアップロードすることでそのシナリオを基にセッションを開始します。"
-            },
-            {
-                "access_level": 0,
-                "value": "外部シナリオはシステムとの矛盾により、使用できない可能性があります。"
-            }
+        "value": [
+            "シナリオを選択、またはmdファイルをアップロードすることでそのシナリオを基にセッションを開始します。",
+            "外部シナリオはシステムとの矛盾により、使用できない可能性があります。"
         ]
     },
     "session_introduction": {
         "name": "導入フェーズ",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -37,17 +33,15 @@
             "rule",
             "session"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "GMがシナリオの導入を読み上げ、プレイヤーに状況を伝えるフェーズです。"
-            }
+        "value": [
+            "GMがシナリオの導入を読み上げ、プレイヤーに状況を伝えるフェーズです。"
         ]
     },
     "session_progress": {
         "name": "進行フェーズ",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [
             "judge_general",
             "session_combat"
@@ -58,17 +52,15 @@
             "rule",
             "session"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "プレイヤーが情報を集めたり、探索したりしながら目的を遂行するフェーズです。任意の判定を行う場合、プレイヤーは目的、使用ステータス、関連スキル、関連アイテムの使用不使用を宣言し、GMが妥当と判断すれば判定を行います。"
-            }
+        "value": [
+            "プレイヤーが情報を集めたり、探索したりしながら目的を遂行するフェーズです。任意の判定を行う場合、プレイヤーは目的、使用ステータス、関連スキル、関連アイテムの使用不使用を宣言し、GMが妥当と判断すれば判定を行います。"
         ]
     },
     "session_combat": {
         "name": "進行フェーズ時の戦闘",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -76,17 +68,15 @@
             "rule",
             "session"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "不意の遭遇や奇襲判定の成功により、敵あるいは味方の最初の1ターン目が行動妨害状態で始まる可能性があります。"
-            }
+        "value": [
+            "不意の遭遇や奇襲判定の成功により、敵あるいは味方の最初の1ターン目が行動妨害状態で始まる可能性があります。"
         ]
     },
     "session_climax": {
         "name": "クライマックス",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -94,17 +84,15 @@
             "rule",
             "session"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "シナリオの目標を達成するための最終局面です"
-            }
+        "value": [
+            "シナリオの目標を達成するための最終局面です"
         ]
     },
     "session_estimate": {
         "name": "セッション評価",
         "type": "document",
         "priority": 0,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -112,11 +100,8 @@
             "rule",
             "session"
         ],
-        "params": [
-            {
-                "access_level": 0,
-                "value": "シナリオが完了し、GMがシナリオの評価基準に基づき報酬を付与するフェーズです。"
-            }
+        "value": [
+            "シナリオが完了し、GMがシナリオの評価基準に基づき報酬を付与するフェーズです。"
         ]
     }
 }
