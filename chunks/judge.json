@@ -102,7 +102,9 @@
         "type": "table",
         "priority": 0,
         "access_level": 7,
-        "includes": [],
+        "includes": [
+            "judge_temporary"
+        ],
         "genre": [
             "document",
             "system",

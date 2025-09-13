@@ -1,15 +1,14 @@
 {
     "level_7": {
-        "name": "レベル7・アクセスディナイド",
+        "name": "隔絶輪廻のブレインダイバー：レベル7・アクセスディナイド",
         "type": "hand_out",
-        "priority": 0,
+        "priority": -1,
         "access_level": 7,
         "includes": [
             "introduction",
             "warning",
             "rules",
-            "secret",
-            "glossary"
+            "secret"
         ],
         "genre": [
             "hand_out",

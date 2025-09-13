@@ -2,7 +2,7 @@
     "protocol": {
         "name": "隔絶輪廻のブレインダイバー：ダイバーズプロトコル",
         "type": "hand_out",
-        "priority": 0,
+        "priority": -1,
         "access_level": 0,
         "includes": [
             "introduction",

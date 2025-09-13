@@ -82,9 +82,7 @@
         "type": "document",
         "priority": 0,
         "access_level": 0,
-        "includes": [
-            "arm_unit_hacking"
-        ],
+        "includes": [],
         "genre": [
             "document",
             "system",
@@ -101,9 +99,7 @@
         "type": "document",
         "priority": 0,
         "access_level": 0,
-        "includes": [
-            "leg_unit_hacking"
-        ],
+        "includes": [],
         "genre": [
             "document",
             "system",
@@ -120,9 +116,7 @@
         "type": "document",
         "priority": 0,
         "access_level": 0,
-        "includes": [
-            "process_overload_hacking"
-        ],
+        "includes": [],
         "genre": [
             "document",
             "system",
@@ -139,9 +133,7 @@
         "type": "document",
         "priority": 0,
         "access_level": 0,
-        "includes": [
-            "mind_jack_hacking"
-        ],
+        "includes": [],
         "genre": [
             "document",
             "system",

@@ -1,0 +1,22 @@
+{
+    "hand_out": {
+        "name": "隔絶輪廻のブレインダイバー：パーマネント・アーカイブ",
+        "type": "hand_out",
+        "priority": -1,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "hand_out",
+            "archive"
+        ],
+        "value": {
+            "access_filter": [
+                0
+            ],
+            "document": "プレイ可能な組み込みシナリオ一覧"
+        }
+    }
+}

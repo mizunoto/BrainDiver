@@ -243,9 +243,7 @@
         "type": "document",
         "priority": 0,
         "access_level": 8,
-        "includes": [
-            "scenario_reward"
-        ],
+        "includes": [],
         "genre": [
             "document",
             "system",

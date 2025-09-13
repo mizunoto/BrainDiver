@@ -1,0 +1,28 @@
+{
+    "akashic":{
+        "name": "隔絶輪廻のブレインダイバー：アカシック・コード",
+        "type": "hand_out",
+        "priority": 0,
+        "access_level": 7,
+        "includes": [
+            "introduction",
+            "warning",
+            "glossary",
+            "additional",
+            "abilities"
+        ],
+        "genre": [
+            "document",
+            "system",
+            "rule",
+            "hand_out"
+        ],
+        "value": {
+            "access_filter": [
+                1,
+                6
+            ],
+            "document": "秘匿情報アーカイブ"
+        }
+    }
+}

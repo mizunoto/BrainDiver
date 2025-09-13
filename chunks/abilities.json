@@ -1,10 +1,54 @@
 {
     "abilities": {
+        "type": "hub",
+        "access_level": 0,
+        "value": [
+            0,
+            7
+        ]
+    },
+    "_abilities_0": {
         "name": "敵の持つ特殊能力",
         "type": "document",
         "priority": 0,
         "access_level": 0,
-        "includes": [],
+        "includes": [
+            "self_repair",
+            "target_lock",
+            "desperation",
+            "psycho_marking",
+            "over_load"
+        ],
+        "genre": [
+            "document",
+            "glossary",
+            "ability"
+        ],
+        "value": [
+            "敵の持つ特殊能力の一覧です。"
+        ],
+        "_comment": [
+            "シナリオ作成ガイドライン向け用語集作るか検討中",
+            "'additional'(武器の特性)についても同様"
+        ]
+    },
+    "_abilities_7": {
+        "name": "敵の持つ特殊能力",
+        "type": "document",
+        "priority": 0,
+        "access_level": 7,
+        "includes": [
+            "boost_shot",
+            "jamming_field",
+            "double_attack",
+            "emp_grenade",
+            "repair_drone",
+            "mind_crack",
+            "adaptive_armor",
+            "psycho_noise",
+            "unity_call",
+            "unintegrated_ability"
+        ],
         "genre": [
             "document",
             "glossary",
@@ -71,7 +115,7 @@
                 "自身のDRを次のターン終了まで0にする代わりに、今回の近接攻撃のダメージを+5する。"
             ],
             "user": "electron",
-            "cost": 1
+            "cost": 2
         }
     },
     "boost_shot": {
@@ -91,14 +135,14 @@
                 "効果：エネルギーを5消費し、そのターンの射撃攻撃のダメージを+3する。"
             ],
             "user": "machinus",
-            "cost": 1
+            "cost": 2
         }
     },
     "psycho_marking": {
         "name": "《サイコ・マーキング》",
         "type": "ability",
         "priority": 0,
-        "access_level": 1,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -111,7 +155,7 @@
                 "攻撃の代わりに、対象プレイヤー1人にマーキングを行う。マークされたプレイヤーは、次のターンまで他のシンセシスからの攻撃の回避判定に-10のペナルティを受ける。"
             ],
             "user": "synthesis",
-            "cost": 1
+            "cost": 2
         }
     },
     "jamming_field": {
@@ -131,7 +175,7 @@
                 "この敵がいる限り、戦闘エリア全体のHACを使用する判定に-10のペナルティを与える。"
             ],
             "user": "machinus",
-            "cost": 1
+            "cost": 3
         }
     },
     "double_attack": {
@@ -151,7 +195,7 @@
                 "効果：1ターンに2回攻撃を行う。ただし、2回目の攻撃は命中判定に-10のペナルティを受ける。"
             ],
             "user": "machinus,veteran_strayer",
-            "cost": 1
+            "cost": 3
         }
     },
     "emp_grenade": {
@@ -171,7 +215,7 @@
                 "効果：1セッションに1度だけ使用可能。範囲内のプレイヤー全員のエネルギーを1D100でロールし、出目分減少させる（最低保証10）。"
             ],
             "user": "electron,strayer,synthesis,tactical_machinus",
-            "cost": 1
+            "cost": 4
         }
     },
     "repair_drone": {
@@ -191,7 +235,7 @@
                 "効果：HP10の「リペア・ドローン」を1体召喚する。ドローンは毎ターン、HPが最も減っている同陣営のHPを5回復させる。"
             ],
             "user": "boss_machinus",
-            "cost": 1
+            "cost": 4
         }
     },
     "mind_crack": {
@@ -211,14 +255,14 @@
                 "プレイヤー1人を対象とし、HACで対抗判定を行う。失敗したプレイヤーは「処理負荷」が強制的に2蓄積する。"
             ],
             "user": "superior_synthesis",
-            "cost": 1
+            "cost": 5
         }
     },
     "over_load": {
         "name": "《オーバーロード》",
         "type": "ability",
         "priority": 0,
-        "access_level": 3,
+        "access_level": 0,
         "includes": [],
         "genre": [
             "document",
@@ -232,7 +276,7 @@
                 "この能力によってクリティカルは発生しない。"
             ],
             "user": "frenzy_machinus,boss_electron",
-            "cost": 1
+            "cost": 5
         }
     },
     "adaptive_armor": {
@@ -252,7 +296,7 @@
                 "効果：攻撃を受けるたび、その攻撃のダメージ属性（物理/エネルギーなど、GMが設定）に対してDRが+2されていく（上限あり）。"
             ],
             "user": "unique",
-            "cost": 1
+            "cost": 6
         }
     },
     "psycho_noise": {
@@ -272,7 +316,7 @@
                 "プレイヤー1人を対象とし、HACで対抗判定を行う。失敗したプレイヤーは、次のターンまで全ての行動の目標値が-15される。"
             ],
             "user": "synthesis",
-            "cost": 1
+            "cost": 5
         }
     },
     "unity_call": {
@@ -292,10 +336,10 @@
                 "HPが50%以下になった時、初級レベルのシンセシスを3体召喚する。"
             ],
             "user": "commander_synthesis",
-            "cost": 1
+            "cost": 5
         }
     },
-    "unintegrated": {
+    "unintegrated_ability": {
         "name": "《不統合意識体》",
         "type": "ability",
         "priority": 0,

@@ -1,8 +1,8 @@
 {
     "compiler": {
-        "name": "プロジェクト・コンパイラ",
+        "name": "隔絶輪廻のブレインダイバー：プロジェクト・コンパイラ",
         "type": "hand_out",
-        "priority": 0,
+        "priority": -1,
         "access_level": 8,
         "includes": [
             "introduction",
@@ -78,7 +78,7 @@
             "player_level",
             "additional",
             "enemy_archetype",
-            "drop_item",
+            "item_drop",
             "judge_table"
         ],
         "genre": [

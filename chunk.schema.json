@@ -29,6 +29,7 @@
                         "consumable",
                         "skill",
                         "enemy",
+                        "item_drop",
                         "ability"
                     ],
                     "$comment": "必要次第で追加する"
@@ -63,6 +64,7 @@
                             "protocol",
                             "level_7",
                             "compiler",
+                            "archive",
                             "table",
                             "system",
                             "rule",
@@ -601,32 +603,24 @@
         },
         "AdditionalValue": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
-                "value": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "explanation": {
-                            "type": "string",
-                            "description": "説明文"
-                        },
-                        "effects": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "description": "効果"
-                            },
-                            "minItems": 1
-                        }
+                "explanation": {
+                    "type": "string",
+                    "description": "説明文"
+                },
+                "effects": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "効果"
                     },
-                    "required": [
-                        "explanation",
-                        "effects"
-                    ]
+                    "minItems": 1
                 }
             },
             "required": [
-                "value"
+                "explanation",
+                "effects"
             ]
         },
         "ArmorValue": {
@@ -892,7 +886,8 @@
             "additionalProperties": false,
             "required": [
                 "explanation",
-                "effects"
+                "effects",
+                "cost"
             ]
         }
     }

@@ -5,6 +5,7 @@
         "priority": 0,
         "access_level": 0,
         "includes": [
+            "energy_table",
             "combat_energy"
         ],
         "genre": [
@@ -22,6 +23,8 @@
         "priority": 0,
         "access_level": 0,
         "includes": [
+            "energy_accumulate",
+            "energy_lack",
             "energy_before_combat"
         ],
         "genre": [
@@ -33,21 +36,6 @@
         "value": [
             "戦闘状態に突入すると、電子脳の戦闘プログラムがオンになり、自動的に遠距離攻撃の弾道を予測する領域探査モードが起動します。戦闘中はオフにすることができません。",
             "このモード起動中はHACによる遠距離攻撃の回避判定が可能になりますが、HAC値に比例して毎ターンエネルギーを消費します。この消費量はINTにより相殺可能ですが、0未満にはなりません。"
-        ]
-    },
-    "energy_use": {
-        "name": "エネルギー消費について",
-        "type": "document",
-        "priority": 0,
-        "access_level": 0,
-        "includes": [],
-        "genre": [
-            "document",
-            "system",
-            "rule"
-        ],
-        "value": [
-            "全てのハッキング、及び攻撃行動はエネルギーを消費します。エネルギーの最大値は装備しているエネルギータンクに準じます。"
         ]
     },
     "energy_table": {
@@ -125,7 +113,7 @@
             "エネルギー残量が武器の消費要求値に満たない場合、その攻撃で与えるダメージは (残エネルギー量 / 要求エネルギー量) の割合で減少(小数点以下切り捨て)します。ただし、与えるダメージは1未満にはなりません。(例：消費8の武器を残りエネルギー4で使った場合、ダメージは半減する)"
         ]
     },
-    "energy_regenerate": {
+    "energy_accumulate": {
         "name": "エネルギー回復",
         "type": "document",
         "priority": 0,

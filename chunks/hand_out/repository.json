@@ -1,13 +1,15 @@
 {
     "repository": {
-        "name": "repository",
+        "name": "隔絶輪廻のブレインダイバー：サイド・リポジトリ",
         "type": "hand_out",
-        "priority": 0,
+        "priority": -1,
         "access_level": 0,
         "includes": [
             "glossary",
             "item",
-            "skills"
+            "skills",
+            "abilities",
+            "additional"
         ],
         "genre": [
             "hand_out",
@@ -15,7 +17,6 @@
         ],
         "value": {
             "access_filter": [
-                0,
                 0
             ],
             "document": "資料集"
@@ -31,7 +32,7 @@
             "range",
             "armor",
             "energy_tank",
-            "consumable"
+            "consumables"
         ],
         "genre": [
             "document",

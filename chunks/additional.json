@@ -1,0 +1,93 @@
+{
+    "additional": {
+        "type": "hub",
+        "access_level": 0,
+        "value": [
+            0,
+            7
+        ]
+    },
+    "_additional_0": {
+        "name": "付与能力",
+        "type": "document",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [
+            "ooparts",
+            "over_charge",
+            "twin_attack"
+        ],
+        "genre": [
+            "document",
+            "additional"
+        ],
+        "value": [
+            "武器に付与されるの力の一覧です"
+        ]
+    },
+    "_additional_7": {
+        "name": "付与能力",
+        "type": "document",
+        "priority": 0,
+        "access_level": 7,
+        "includes": [],
+        "genre": [
+            "document",
+            "additional"
+        ],
+        "value": [
+            "武器に付与されるの力の一覧です"
+        ]
+    },
+    "ooparts": {
+        "name": "[オーパーツ]",
+        "type": "additional",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "additional"
+        ],
+        "value": {
+            "explanation": "旧時代の技術の名残で効率がいい。",
+            "effects": [
+                "付与された武器の攻撃によるエネルギー消費を-2する"
+            ]
+        }
+    },
+    "over_charge": {
+        "name": "[オーバーチャージ]",
+        "type": "additional",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "additional"
+        ],
+        "value": {
+            "explanation": "安全性を度外視して改造された、ハイリスク・ハイリターンな武器。",
+            "effects": [
+                "この武器のエネルギー消費は+3されるが、与えるダメージも+5"
+            ]
+        }
+    },
+    "twin_attack": {
+        "name": "[連撃]",
+        "type": "additional",
+        "priority": 0,
+        "access_level": 0,
+        "includes": [],
+        "genre": [
+            "document",
+            "additional"
+        ],
+        "value": {
+            "explanation": "何かしらの技術で使用者の速度を上げる効果を持つ。",
+            "effects": [
+                "1ターンに2回攻撃できるが、エネルギー消費も2回分必要になる。"
+            ]
+        }
+    }
+}

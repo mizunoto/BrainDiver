@@ -336,7 +336,9 @@
         "type": "document",
         "priority": 0,
         "access_level": 0,
-        "includes": [],
+        "includes": [
+            "sanctum_1"
+        ],
         "genre": [
             "document",
             "glossary"
